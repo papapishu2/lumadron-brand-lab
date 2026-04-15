@@ -100,8 +100,8 @@ function HomePage() {
       <section className="bg-secondary/50">
         <div className="mx-auto max-w-7xl px-4 py-20 lg:px-8">
           <div className="text-center">
-            <h2 className="font-heading text-3xl font-bold text-foreground">Marcas que representamos</h2>
-            <p className="mt-2 text-muted-foreground">Distribuidores oficiales de las mejores marcas del mercado</p>
+            <h2 className="font-heading text-3xl font-bold text-foreground">Principales marcas de drones para el agro y la industria</h2>
+            <p className="mt-2 text-muted-foreground">Distribuidores oficiales en Argentina</p>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {brands.map((brand) => (

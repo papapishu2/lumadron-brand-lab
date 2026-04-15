@@ -1,6 +1,7 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import lumadronLogo from "@/assets/lumadron-logo.png";
 
 const navItems = [
   { label: "Inicio", to: "/" },
@@ -20,13 +21,8 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-lg">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 lg:px-8">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
-          <div className="flex items-center gap-1.5">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-              <span className="font-heading text-sm font-bold text-primary-foreground">L</span>
-            </div>
-            <span className="font-heading text-xl font-bold text-foreground">Lumadron</span>
-          </div>
+        <Link to="/" className="flex items-center">
+          <img src={lumadronLogo} alt="Lumadron" className="h-8 w-auto" />
         </Link>
 
         {/* Desktop nav */}

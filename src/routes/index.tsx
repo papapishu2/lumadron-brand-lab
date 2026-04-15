@@ -1,26 +1,206 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight, Plane, Shield, Mountain, Droplets, MapPin, ChevronRight } from "lucide-react";
 
 export const Route = createFileRoute("/")({
-  component: Index,
+  component: HomePage,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
+const categories = [
+  { name: "Agricultura", description: "Pulverización, monitoreo y análisis de cultivos con drones autónomos.", icon: Droplets, color: "bg-green-500/10 text-green-600" },
+  { name: "Oil & Gas", description: "Inspección de infraestructura, monitoreo de ductos y detección de fugas.", icon: Plane, color: "bg-blue-500/10 text-blue-600" },
+  { name: "Minería", description: "Relevamiento topográfico, volumetría y control de operaciones mineras.", icon: Mountain, color: "bg-amber-500/10 text-amber-600" },
+  { name: "Seguridad", description: "Vigilancia perimetral, respuesta ante emergencias y monitoreo en tiempo real.", icon: Shield, color: "bg-red-500/10 text-red-600" },
+  { name: "Topografía", description: "Mapeo aéreo, fotogrametría y generación de modelos 3D de alta precisión.", icon: MapPin, color: "bg-violet-500/10 text-violet-600" },
+];
 
-function Index() {
-  return <PlaceholderIndex />;
+const brands = [
+  { name: "DJI", description: "Líder mundial en drones comerciales e industriales.", products: 8 },
+  { name: "XAG", description: "Especialista en drones agrícolas y smart farming.", products: 8 },
+  { name: "Hylio", description: "Drones de pulverización de alta capacidad.", products: 6 },
+];
+
+const featuredProducts = [
+  { name: "DJI Agras T50", brand: "DJI", category: "Agricultura", description: "Drone de pulverización de última generación con tanque de 40L." },
+  { name: "XAG P150", brand: "XAG", category: "Agricultura", description: "Drone agrícola autónomo con capacidad de 50L y IA avanzada." },
+  { name: "DJI Matrice 350 RTK", brand: "DJI", category: "Industrial", description: "Plataforma industrial para inspección y mapeo de alta precisión." },
+  { name: "DJI FlyCart 30", brand: "DJI", category: "Logística", description: "Drone de carga para entrega en zonas remotas, hasta 30kg." },
+];
+
+const blogPosts = [
+  { title: "Guía completa de drones agrícolas en Argentina 2025", category: "Guías", date: "15 Abr 2025" },
+  { title: "DJI Agras T50 vs XAG P150: comparativa definitiva", category: "Comparativas", date: "10 Abr 2025" },
+  { title: "Normativa ANAC para uso de drones comerciales", category: "Normativa", date: "5 Abr 2025" },
+];
+
+function HomePage() {
+  return (
+    <>
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-primary">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-accent/30" />
+        <div className="relative mx-auto flex max-w-7xl flex-col items-center px-4 py-24 text-center lg:px-8 lg:py-36">
+          <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-1.5 text-xs font-medium text-primary-foreground">
+            Distribuidor oficial en Argentina
+          </span>
+          <h1 className="font-heading text-4xl font-extrabold leading-tight text-primary-foreground md:text-5xl lg:text-6xl">
+            Drones y robótica para
+            <br />
+            <span className="text-accent">agro e industria</span>
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg text-primary-foreground/80">
+            Soluciones profesionales en drones, robótica y automatización para agricultura,
+            oil & gas, minería, seguridad y topografía en Argentina.
+          </p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Link
+              to="/productos"
+              className="inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3 font-heading text-sm font-semibold text-accent-foreground transition-colors hover:opacity-90"
+            >
+              Ver productos <ArrowRight size={16} />
+            </Link>
+            <Link
+              to="/contacto"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-primary-foreground/30 bg-primary-foreground/10 px-6 py-3 font-heading text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/20"
+            >
+              Solicitar asesoramiento
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Categories Grid */}
+      <section className="mx-auto max-w-7xl px-4 py-20 lg:px-8">
+        <div className="text-center">
+          <h2 className="font-heading text-3xl font-bold text-foreground">Categorías de uso</h2>
+          <p className="mt-2 text-muted-foreground">Soluciones para cada industria</p>
+        </div>
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          {categories.map((cat) => (
+            <Link
+              key={cat.name}
+              to="/categorias"
+              className="group rounded-xl border border-border bg-card p-6 transition-all hover:border-accent/30 hover:shadow-lg"
+            >
+              <div className={`inline-flex rounded-lg p-2.5 ${cat.color}`}>
+                <cat.icon size={22} />
+              </div>
+              <h3 className="mt-4 font-heading text-lg font-semibold text-card-foreground">{cat.name}</h3>
+              <p className="mt-1.5 text-sm text-muted-foreground">{cat.description}</p>
+              <span className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-accent opacity-0 transition-opacity group-hover:opacity-100">
+                Ver más <ChevronRight size={14} />
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Brands */}
+      <section className="bg-secondary/50">
+        <div className="mx-auto max-w-7xl px-4 py-20 lg:px-8">
+          <div className="text-center">
+            <h2 className="font-heading text-3xl font-bold text-foreground">Marcas que representamos</h2>
+            <p className="mt-2 text-muted-foreground">Distribuidores oficiales de las mejores marcas del mercado</p>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {brands.map((brand) => (
+              <Link
+                key={brand.name}
+                to="/marcas"
+                className="group rounded-xl border border-border bg-card p-8 text-center transition-all hover:border-accent/30 hover:shadow-lg"
+              >
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
+                  <span className="font-heading text-2xl font-bold text-primary">{brand.name}</span>
+                </div>
+                <h3 className="mt-5 font-heading text-xl font-bold text-card-foreground">{brand.name}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{brand.description}</p>
+                <p className="mt-3 text-xs font-medium text-accent">{brand.products} productos</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Products */}
+      <section className="mx-auto max-w-7xl px-4 py-20 lg:px-8">
+        <div className="flex items-end justify-between">
+          <div>
+            <h2 className="font-heading text-3xl font-bold text-foreground">Productos destacados</h2>
+            <p className="mt-2 text-muted-foreground">Lo más nuevo en drones profesionales</p>
+          </div>
+          <Link to="/productos" className="hidden items-center gap-1 text-sm font-medium text-accent hover:underline sm:inline-flex">
+            Ver todos <ArrowRight size={14} />
+          </Link>
+        </div>
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {featuredProducts.map((product) => (
+            <div
+              key={product.name}
+              className="group rounded-xl border border-border bg-card overflow-hidden transition-all hover:border-accent/30 hover:shadow-lg"
+            >
+              <div className="flex h-48 items-center justify-center bg-secondary/50">
+                <Plane size={48} className="text-muted-foreground/30" />
+              </div>
+              <div className="p-5">
+                <span className="text-xs font-medium text-accent">{product.brand} · {product.category}</span>
+                <h3 className="mt-1.5 font-heading text-base font-semibold text-card-foreground">{product.name}</h3>
+                <p className="mt-1.5 text-sm text-muted-foreground line-clamp-2">{product.description}</p>
+                <Link
+                  to="/contacto"
+                  className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary hover:text-accent"
+                >
+                  Consultar <ChevronRight size={14} />
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Blog Preview */}
+      <section className="bg-secondary/50">
+        <div className="mx-auto max-w-7xl px-4 py-20 lg:px-8">
+          <div className="flex items-end justify-between">
+            <div>
+              <h2 className="font-heading text-3xl font-bold text-foreground">Últimos artículos</h2>
+              <p className="mt-2 text-muted-foreground">Novedades, guías y comparativas</p>
+            </div>
+            <Link to="/blog" className="hidden items-center gap-1 text-sm font-medium text-accent hover:underline sm:inline-flex">
+              Ver blog <ArrowRight size={14} />
+            </Link>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {blogPosts.map((post) => (
+              <Link
+                key={post.title}
+                to="/blog"
+                className="group rounded-xl border border-border bg-card p-6 transition-all hover:border-accent/30 hover:shadow-lg"
+              >
+                <span className="text-xs font-medium text-accent">{post.category}</span>
+                <h3 className="mt-2 font-heading text-lg font-semibold text-card-foreground group-hover:text-accent transition-colors">{post.title}</h3>
+                <p className="mt-3 text-xs text-muted-foreground">{post.date}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="mx-auto max-w-7xl px-4 py-20 lg:px-8">
+        <div className="rounded-2xl bg-primary p-10 text-center md:p-16">
+          <h2 className="font-heading text-3xl font-bold text-primary-foreground md:text-4xl">
+            ¿Necesitás asesoramiento?
+          </h2>
+          <p className="mt-4 text-lg text-primary-foreground/80">
+            Nuestro equipo te ayuda a encontrar la solución ideal para tu operación.
+          </p>
+          <Link
+            to="/contacto"
+            className="mt-8 inline-flex items-center gap-2 rounded-lg bg-accent px-8 py-3 font-heading text-sm font-semibold text-accent-foreground transition-colors hover:opacity-90"
+          >
+            Contactanos <ArrowRight size={16} />
+          </Link>
+        </div>
+      </section>
+    </>
+  );
 }

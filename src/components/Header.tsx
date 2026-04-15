@@ -1,6 +1,7 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import lumadronLogo from "@/assets/lumadron-logo.png";
 
 const navItems = [
   { label: "Inicio", to: "/" },

@@ -1,6 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Plane, Shield, Mountain, Droplets, MapPin, ChevronRight } from "lucide-react";
 import heroBg from "@/assets/dji-hero.jpg";
+import imgAgrasT50 from "@/assets/dji-agras-t50.jpg";
+import imgXagP150 from "@/assets/xag-p150.png";
+import imgMatrice350 from "@/assets/dji-matrice-350.jpg";
+import imgFlycart30 from "@/assets/dji-flycart-30.jpg";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -21,10 +25,10 @@ const brands = [
 ];
 
 const featuredProducts = [
-  { name: "DJI Agras T50", brand: "DJI", category: "Agricultura", description: "Drone de pulverización de última generación con tanque de 40L." },
-  { name: "XAG P150", brand: "XAG", category: "Agricultura", description: "Drone agrícola autónomo con capacidad de 50L y IA avanzada." },
-  { name: "DJI Matrice 350 RTK", brand: "DJI", category: "Industrial", description: "Plataforma industrial para inspección y mapeo de alta precisión." },
-  { name: "DJI FlyCart 30", brand: "DJI", category: "Logística", description: "Drone de carga para entrega en zonas remotas, hasta 30kg." },
+  { name: "DJI Agras T50", brand: "DJI", category: "Agricultura", description: "Drone de pulverización de última generación con tanque de 40L.", image: imgAgrasT50 },
+  { name: "XAG P150", brand: "XAG", category: "Agricultura", description: "Drone agrícola autónomo con capacidad de 50L y IA avanzada.", image: imgXagP150 },
+  { name: "DJI Matrice 350 RTK", brand: "DJI", category: "Industrial", description: "Plataforma industrial para inspección y mapeo de alta precisión.", image: imgMatrice350 },
+  { name: "DJI FlyCart 30", brand: "DJI", category: "Logística", description: "Drone de carga para entrega en zonas remotas, hasta 30kg.", image: imgFlycart30 },
 ];
 
 const blogPosts = [
@@ -139,8 +143,8 @@ function HomePage() {
               key={product.name}
               className="group rounded-xl border border-border bg-card overflow-hidden transition-all hover:border-accent/30 hover:shadow-lg"
             >
-              <div className="flex h-48 items-center justify-center bg-secondary/50">
-                <Plane size={48} className="text-muted-foreground/30" />
+              <div className="flex h-48 items-center justify-center bg-secondary/50 overflow-hidden">
+                <img src={product.image} alt={product.name} className="h-full w-full object-cover" />
               </div>
               <div className="p-5">
                 <span className="text-xs font-medium text-accent">{product.brand} · {product.category}</span>

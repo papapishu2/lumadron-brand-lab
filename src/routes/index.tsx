@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Plane, Shield, Mountain, Droplets, MapPin, ChevronRight } from "lucide-react";
+import { ArrowRight, Fuel, Plane, Shield, Mountain, Droplets, MapPin, ChevronRight } from "lucide-react";
 import heroBg from "@/assets/dji-hero.jpg";
 import imgAgrasT50 from "@/assets/dji-agras-t50.jpg";
 import imgXagP150 from "@/assets/xag-p150.png";
@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
 
 const categories = [
   { name: "Agricultura", description: "Pulverización, monitoreo y análisis de cultivos con drones autónomos.", icon: Droplets, color: "bg-green-500/10 text-green-600" },
-  { name: "Oil & Gas", description: "Inspección de infraestructura, monitoreo de ductos y detección de fugas.", icon: Plane, color: "bg-blue-500/10 text-blue-600" },
+  { name: "Oil & Gas", description: "Inspección de infraestructura, monitoreo de ductos y detección de fugas.", icon: Fuel, color: "bg-blue-500/10 text-blue-600" },
   { name: "Minería", description: "Relevamiento topográfico, volumetría y control de operaciones mineras.", icon: Mountain, color: "bg-amber-500/10 text-amber-600" },
   { name: "Seguridad", description: "Vigilancia perimetral, respuesta ante emergencias y monitoreo en tiempo real.", icon: Shield, color: "bg-red-500/10 text-red-600" },
   { name: "Topografía", description: "Mapeo aéreo, fotogrametría y generación de modelos 3D de alta precisión.", icon: MapPin, color: "bg-violet-500/10 text-violet-600" },

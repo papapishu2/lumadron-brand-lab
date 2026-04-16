@@ -59,7 +59,7 @@ function HomePage() {
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
-              to="/productos"
+              to="/drones"
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3 font-heading text-sm font-semibold text-accent-foreground transition-colors hover:opacity-90"
             >
               Ver productos <ArrowRight size={16} />
@@ -133,7 +133,7 @@ function HomePage() {
             <h2 className="font-heading text-3xl font-bold text-foreground">Productos destacados</h2>
             <p className="mt-2 text-muted-foreground">Lo más nuevo en drones profesionales</p>
           </div>
-          <Link to="/productos" className="hidden items-center gap-1 text-sm font-medium text-accent hover:underline sm:inline-flex">
+          <Link to="/drones" className="hidden items-center gap-1 text-sm font-medium text-accent hover:underline sm:inline-flex">
             Ver todos <ArrowRight size={14} />
           </Link>
         </div>

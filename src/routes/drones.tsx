@@ -2,10 +2,14 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Plane, ChevronRight } from "lucide-react";
 
 export const Route = createFileRoute("/drones")({
-  component: ProductosPage,
+  component: DronesPage,
   head: () => ({
     meta: [
-      { title: "Productos — Lumadron" },
+      { title: "Drones — Lumadron" },
+      { name: "description", content: "Catálogo completo de drones DJI, XAG y Hylio para agricultura e industria en Argentina." },
+    ],
+  }),
+});
       { name: "description", content: "Catálogo completo de drones DJI, XAG y Hylio para agricultura e industria en Argentina." },
     ],
   }),

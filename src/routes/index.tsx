@@ -22,9 +22,9 @@ const categories = [
 ];
 
 const brands = [
-  { name: "DJI", description: "Líder mundial en drones comerciales e industriales.", products: 8, logo: logoDJI },
-  { name: "XAG", description: "Especialista en drones agrícolas y smart farming.", products: 8, logo: logoXAG },
-  { name: "Hylio", description: "Drones de pulverización de alta capacidad.", products: 6, logo: logoHylio },
+  { name: "DJI", description: "Líder mundial en drones comerciales e industriales.", products: 8, logo: logoDJI, logoClass: "h-10" },
+  { name: "XAG", description: "Especialista en drones agrícolas y smart farming.", products: 8, logo: logoXAG, logoClass: "h-14" },
+  { name: "Hylio", description: "Drones de pulverización de alta capacidad.", products: 6, logo: logoHylio, logoClass: "h-16" },
 ];
 
 const featuredProducts = [
@@ -118,7 +118,7 @@ function HomePage() {
                 className="group rounded-xl border border-border bg-card p-8 text-center transition-all hover:border-accent/30 hover:shadow-lg"
               >
                 <div className="mx-auto flex h-16 w-auto items-center justify-center px-4">
-                  <img src={brand.logo} alt={brand.name} className="h-12 w-auto object-contain" />
+                  <img src={brand.logo} alt={brand.name} className={`w-auto object-contain ${brand.logoClass}`} />
                 </div>
                 <h3 className="mt-5 font-heading text-xl font-bold text-card-foreground">{brand.name}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{brand.description}</p>

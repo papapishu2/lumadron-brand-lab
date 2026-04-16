@@ -16,6 +16,7 @@ import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as CategoriasRouteImport } from './routes/categorias'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DronesIndexRouteImport } from './routes/drones.index'
 import { Route as DronesSlugRouteImport } from './routes/drones.$slug'
 
 const NosotrosRoute = NosotrosRouteImport.update({
@@ -53,6 +54,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DronesIndexRoute = DronesIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => DronesRoute,
+} as any)
 const DronesSlugRoute = DronesSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -68,16 +74,17 @@ export interface FileRoutesByFullPath {
   '/marcas': typeof MarcasRoute
   '/nosotros': typeof NosotrosRoute
   '/drones/$slug': typeof DronesSlugRoute
+  '/drones/': typeof DronesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
   '/categorias': typeof CategoriasRoute
   '/contacto': typeof ContactoRoute
-  '/drones': typeof DronesRouteWithChildren
   '/marcas': typeof MarcasRoute
   '/nosotros': typeof NosotrosRoute
   '/drones/$slug': typeof DronesSlugRoute
+  '/drones': typeof DronesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -89,6 +96,7 @@ export interface FileRoutesById {
   '/marcas': typeof MarcasRoute
   '/nosotros': typeof NosotrosRoute
   '/drones/$slug': typeof DronesSlugRoute
+  '/drones/': typeof DronesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -101,16 +109,17 @@ export interface FileRouteTypes {
     | '/marcas'
     | '/nosotros'
     | '/drones/$slug'
+    | '/drones/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/blog'
     | '/categorias'
     | '/contacto'
-    | '/drones'
     | '/marcas'
     | '/nosotros'
     | '/drones/$slug'
+    | '/drones'
   id:
     | '__root__'
     | '/'
@@ -121,6 +130,7 @@ export interface FileRouteTypes {
     | '/marcas'
     | '/nosotros'
     | '/drones/$slug'
+    | '/drones/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -184,6 +194,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/drones/': {
+      id: '/drones/'
+      path: '/'
+      fullPath: '/drones/'
+      preLoaderRoute: typeof DronesIndexRouteImport
+      parentRoute: typeof DronesRoute
+    }
     '/drones/$slug': {
       id: '/drones/$slug'
       path: '/$slug'
@@ -196,10 +213,12 @@ declare module '@tanstack/react-router' {
 
 interface DronesRouteChildren {
   DronesSlugRoute: typeof DronesSlugRoute
+  DronesIndexRoute: typeof DronesIndexRoute
 }
 
 const DronesRouteChildren: DronesRouteChildren = {
   DronesSlugRoute: DronesSlugRoute,
+  DronesIndexRoute: DronesIndexRoute,
 }
 
 const DronesRouteWithChildren =
@@ -217,3 +236,12 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+  }
+}

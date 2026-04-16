@@ -117,8 +117,8 @@ function HomePage() {
                 to="/marcas"
                 className="group rounded-xl border border-border bg-card p-8 text-center transition-all hover:border-accent/30 hover:shadow-lg"
               >
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
-                  <span className="font-heading text-2xl font-bold text-primary">{brand.name}</span>
+                <div className="mx-auto flex h-16 w-auto items-center justify-center px-4">
+                  <img src={brand.logo} alt={brand.name} className="max-h-12 w-auto object-contain" />
                 </div>
                 <h3 className="mt-5 font-heading text-xl font-bold text-card-foreground">{brand.name}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{brand.description}</p>

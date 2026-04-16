@@ -31,10 +31,10 @@ const allProducts = [
   { name: "AG-230", brand: "Hylio", category: "Agricultura", description: "Drone de pulverización premium con 230L de capacidad y vuelo autónomo." },
 ];
 
-function ProductosPage() {
+function DronesPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-16 lg:px-8">
-      <h1 className="font-heading text-4xl font-bold text-foreground">Productos</h1>
+      <h1 className="font-heading text-4xl font-bold text-foreground">Drones para agricultura e industria</h1>
       <p className="mt-3 max-w-2xl text-lg text-muted-foreground">
         Catálogo completo de drones y equipamiento para agricultura e industria.
       </p>

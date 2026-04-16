@@ -7,7 +7,7 @@ const navItems = [
   { label: "Inicio", to: "/" },
   { label: "Categorías", to: "/categorias" },
   { label: "Marcas", to: "/marcas" },
-  { label: "Productos", to: "/productos" },
+  { label: "Drones", to: "/drones" },
   { label: "Blog", to: "/blog" },
   { label: "Nosotros", to: "/nosotros" },
   { label: "Contacto", to: "/contacto" },

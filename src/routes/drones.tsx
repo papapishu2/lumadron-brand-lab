@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Plane, ChevronRight } from "lucide-react";
+import { allProducts } from "@/data/products";
 
 export const Route = createFileRoute("/drones")({
   component: DronesPage,
@@ -10,26 +11,6 @@ export const Route = createFileRoute("/drones")({
     ],
   }),
 });
-
-const allProducts = [
-  { name: "DJI Agras T50", brand: "DJI", category: "Agricultura", description: "Drone de pulverización con tanque de 40L, IA para mapeo de terreno y vuelo autónomo." },
-  { name: "DJI Agras T25", brand: "DJI", category: "Agricultura", description: "Drone agrícola compacto con 20L de capacidad, ideal para lotes medianos." },
-  { name: "DJI FlyCart 30", brand: "DJI", category: "Logística", description: "Drone de carga pesada con hasta 30kg de capacidad para entrega en zonas remotas." },
-  { name: "DJI Mavic 3 Enterprise", brand: "DJI", category: "Inspección", description: "Drone compacto enterprise con cámara térmica y zoom para inspección e inteligencia." },
-  { name: "DJI Matrice 30", brand: "DJI", category: "Industrial", description: "Plataforma industrial compacta y resistente para inspección y respuesta ante emergencias." },
-  { name: "DJI Matrice 350 RTK", brand: "DJI", category: "Industrial", description: "Drone industrial premium con RTK integrado para topografía y mapeo de alta precisión." },
-  { name: "DJI Matrice 4T", brand: "DJI", category: "Industrial", description: "Última generación de plataforma enterprise con sensor térmico integrado." },
-  { name: "DJI Zenmuse L2", brand: "DJI", category: "Topografía", description: "Payload LIDAR de alta precisión para relevamiento topográfico y modelos 3D." },
-  { name: "XAG P150", brand: "XAG", category: "Agricultura", description: "Drone agrícola autónomo con 50L de capacidad y sistema de IA avanzada." },
-  { name: "XAG P100 Pro", brand: "XAG", category: "Agricultura", description: "Drone de pulverización de precisión con 40L y navegación RTK." },
-  { name: "XAG P60", brand: "XAG", category: "Agricultura", description: "Drone agrícola de 20L, compacto y eficiente para operaciones medianas." },
-  { name: "XAG V40", brand: "XAG", category: "Agricultura", description: "Drone de pulverización versátil con sistema de esparcimiento dual." },
-  { name: "XAG M500", brand: "XAG", category: "Agricultura", description: "Robot terrestre autónomo para pulverización en cultivos bajos." },
-  { name: "XAG RevoSpray", brand: "XAG", category: "Agricultura", description: "Sistema de pulverización inteligente con atomización centrífuga." },
-  { name: "HYL-150", brand: "Hylio", category: "Agricultura", description: "Drone de gran capacidad (150L) para pulverización en grandes extensiones." },
-  { name: "HYL-120", brand: "Hylio", category: "Agricultura", description: "Drone de pulverización de 120L con autonomía extendida." },
-  { name: "AG-230", brand: "Hylio", category: "Agricultura", description: "Drone de pulverización premium con 230L de capacidad y vuelo autónomo." },
-];
 
 function DronesPage() {
   return (
@@ -42,7 +23,7 @@ function DronesPage() {
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {allProducts.map((product) => (
           <div
-            key={product.name}
+            key={product.slug}
             className="group overflow-hidden rounded-xl border border-border bg-card transition-all hover:border-accent/30 hover:shadow-lg"
           >
             <div className="flex h-44 items-center justify-center bg-secondary/50">
@@ -56,7 +37,8 @@ function DronesPage() {
               <h3 className="mt-2 font-heading text-lg font-semibold text-card-foreground">{product.name}</h3>
               <p className="mt-1.5 text-sm text-muted-foreground line-clamp-2">{product.description}</p>
               <Link
-                to="/contacto"
+                to="/drones/$slug"
+                params={{ slug: product.slug }}
                 className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline"
               >
                 Más información <ChevronRight size={14} />

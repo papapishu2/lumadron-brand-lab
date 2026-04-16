@@ -1,5 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
+import djiLogo from "@/assets/brands/dji-logo.png";
+import xagLogo from "@/assets/brands/xag-logo.webp";
+import hylioLogo from "@/assets/brands/hylio-logo.png";
 
 export const Route = createFileRoute("/marcas")({
   component: MarcasPage,
@@ -14,18 +17,24 @@ export const Route = createFileRoute("/marcas")({
 const brands = [
   {
     name: "DJI",
+    logo: djiLogo,
+    logoClass: "h-12 w-auto",
     tagline: "Líder mundial en drones comerciales e industriales",
     description: "DJI es el fabricante de drones más grande del mundo, con una gama completa de soluciones para agricultura, inspección industrial, mapeo y seguridad.",
     products: ["Agras T50", "Agras T25", "FlyCart 30", "Mavic 3 Enterprise", "Matrice 30", "Matrice 350 RTK", "Matrice 4T", "Zenmuse L2"],
   },
   {
     name: "XAG",
+    logo: xagLogo,
+    logoClass: "h-10 w-auto",
     tagline: "Especialista en drones agrícolas y smart farming",
     description: "XAG desarrolla drones agrícolas autónomos con inteligencia artificial, sistemas de pulverización de precisión y herramientas de gestión de cultivos.",
     products: ["P150", "P100 Pro", "P60", "V40", "M500", "RevoSpray", "APC2", "Smart Farm Tools"],
   },
   {
     name: "Hylio",
+    logo: hylioLogo,
+    logoClass: "h-8 w-auto",
     tagline: "Drones de pulverización de alta capacidad",
     description: "Hylio fabrica drones de pulverización de gran capacidad con sistemas autónomos de planificación de misiones y gestión de flotas.",
     products: ["HYL-150", "HYL-120", "AG-230", "Spray System", "Mission Planner", "Autonomy Platform"],
@@ -44,9 +53,9 @@ function MarcasPage() {
         {brands.map((brand) => (
           <div key={brand.name} className="overflow-hidden rounded-xl border border-border bg-card">
             <div className="bg-primary/5 p-8">
-              <div className="flex items-center gap-4">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
-                  <span className="font-heading text-2xl font-bold text-primary">{brand.name}</span>
+              <div className="flex items-center gap-5">
+                <div className="flex h-20 w-28 items-center justify-center rounded-2xl bg-background border border-border px-4">
+                  <img src={brand.logo} alt={`Logo ${brand.name}`} className={brand.logoClass} />
                 </div>
                 <div>
                   <h2 className="font-heading text-2xl font-bold text-card-foreground">{brand.name}</h2>

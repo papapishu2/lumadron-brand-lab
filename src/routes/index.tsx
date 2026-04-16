@@ -5,6 +5,9 @@ import imgAgrasT50 from "@/assets/dji-agras-t50.jpg";
 import imgXagP150 from "@/assets/xag-p150.png";
 import imgMatrice350 from "@/assets/dji-matrice-350.jpg";
 import imgFlycart30 from "@/assets/dji-flycart-30.jpg";
+import logoDJI from "@/assets/dji-logo.svg";
+import logoXAG from "@/assets/xag-logo.png";
+import logoHylio from "@/assets/hylio-logo.png";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -19,9 +22,9 @@ const categories = [
 ];
 
 const brands = [
-  { name: "DJI", description: "Líder mundial en drones comerciales e industriales.", products: 8 },
-  { name: "XAG", description: "Especialista en drones agrícolas y smart farming.", products: 8 },
-  { name: "Hylio", description: "Drones de pulverización de alta capacidad.", products: 6 },
+  { name: "DJI", description: "Líder mundial en drones comerciales e industriales.", products: 8, logo: logoDJI },
+  { name: "XAG", description: "Especialista en drones agrícolas y smart farming.", products: 8, logo: logoXAG },
+  { name: "Hylio", description: "Drones de pulverización de alta capacidad.", products: 6, logo: logoHylio },
 ];
 
 const featuredProducts = [
@@ -114,8 +117,8 @@ function HomePage() {
                 to="/marcas"
                 className="group rounded-xl border border-border bg-card p-8 text-center transition-all hover:border-accent/30 hover:shadow-lg"
               >
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
-                  <span className="font-heading text-2xl font-bold text-primary">{brand.name}</span>
+                <div className="mx-auto flex h-16 w-auto items-center justify-center px-4">
+                  <img src={brand.logo} alt={brand.name} className="max-h-12 w-auto object-contain" />
                 </div>
                 <h3 className="mt-5 font-heading text-xl font-bold text-card-foreground">{brand.name}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{brand.description}</p>

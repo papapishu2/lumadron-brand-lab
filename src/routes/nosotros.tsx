@@ -17,7 +17,7 @@ function NosotrosPage() {
       <div className="max-w-3xl">
         <h1 className="font-heading text-4xl font-bold text-foreground">Nosotros</h1>
         <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-          Lumadron nace con la misión de acercar la tecnología de drones y robótica a las industrias
+          Lumadron nace con la misión de potenciar la tecnología de drones y robótica a las industrias
           argentinas. Somos distribuidores oficiales de DJI, XAG y Hylio, y brindamos asesoramiento
           técnico especializado para que cada operación encuentre la solución ideal.
         </p>

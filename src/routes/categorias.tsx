@@ -27,7 +27,7 @@ function CategoriasPage() {
         Cada industria tiene desafíos únicos. Encontrá la solución con drones ideal para tu operación.
       </p>
 
-      <div className="mt-12 space-y-8">
+      <div className="mt-12 grid gap-6 md:grid-cols-2">
         {categories.map((cat) => (
           <div key={cat.name} className="flex flex-col gap-6 rounded-xl border border-border bg-card p-8 md:flex-row md:items-start">
             <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl bg-accent/10">

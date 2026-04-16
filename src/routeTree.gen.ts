@@ -9,19 +9,14 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as ProductosRouteImport } from './routes/productos'
 import { Route as NosotrosRouteImport } from './routes/nosotros'
 import { Route as MarcasRouteImport } from './routes/marcas'
+import { Route as DronesRouteImport } from './routes/drones'
 import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as CategoriasRouteImport } from './routes/categorias'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
 
-const ProductosRoute = ProductosRouteImport.update({
-  id: '/productos',
-  path: '/productos',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const NosotrosRoute = NosotrosRouteImport.update({
   id: '/nosotros',
   path: '/nosotros',
@@ -30,6 +25,11 @@ const NosotrosRoute = NosotrosRouteImport.update({
 const MarcasRoute = MarcasRouteImport.update({
   id: '/marcas',
   path: '/marcas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DronesRoute = DronesRouteImport.update({
+  id: '/drones',
+  path: '/drones',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactoRoute = ContactoRouteImport.update({
@@ -58,18 +58,18 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRoute
   '/categorias': typeof CategoriasRoute
   '/contacto': typeof ContactoRoute
+  '/drones': typeof DronesRoute
   '/marcas': typeof MarcasRoute
   '/nosotros': typeof NosotrosRoute
-  '/productos': typeof ProductosRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
   '/categorias': typeof CategoriasRoute
   '/contacto': typeof ContactoRoute
+  '/drones': typeof DronesRoute
   '/marcas': typeof MarcasRoute
   '/nosotros': typeof NosotrosRoute
-  '/productos': typeof ProductosRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -77,9 +77,9 @@ export interface FileRoutesById {
   '/blog': typeof BlogRoute
   '/categorias': typeof CategoriasRoute
   '/contacto': typeof ContactoRoute
+  '/drones': typeof DronesRoute
   '/marcas': typeof MarcasRoute
   '/nosotros': typeof NosotrosRoute
-  '/productos': typeof ProductosRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -88,27 +88,27 @@ export interface FileRouteTypes {
     | '/blog'
     | '/categorias'
     | '/contacto'
+    | '/drones'
     | '/marcas'
     | '/nosotros'
-    | '/productos'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/blog'
     | '/categorias'
     | '/contacto'
+    | '/drones'
     | '/marcas'
     | '/nosotros'
-    | '/productos'
   id:
     | '__root__'
     | '/'
     | '/blog'
     | '/categorias'
     | '/contacto'
+    | '/drones'
     | '/marcas'
     | '/nosotros'
-    | '/productos'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -116,20 +116,13 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRoute
   CategoriasRoute: typeof CategoriasRoute
   ContactoRoute: typeof ContactoRoute
+  DronesRoute: typeof DronesRoute
   MarcasRoute: typeof MarcasRoute
   NosotrosRoute: typeof NosotrosRoute
-  ProductosRoute: typeof ProductosRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/productos': {
-      id: '/productos'
-      path: '/productos'
-      fullPath: '/productos'
-      preLoaderRoute: typeof ProductosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/nosotros': {
       id: '/nosotros'
       path: '/nosotros'
@@ -142,6 +135,13 @@ declare module '@tanstack/react-router' {
       path: '/marcas'
       fullPath: '/marcas'
       preLoaderRoute: typeof MarcasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/drones': {
+      id: '/drones'
+      path: '/drones'
+      fullPath: '/drones'
+      preLoaderRoute: typeof DronesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contacto': {
@@ -180,10 +180,19 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRoute,
   CategoriasRoute: CategoriasRoute,
   ContactoRoute: ContactoRoute,
+  DronesRoute: DronesRoute,
   MarcasRoute: MarcasRoute,
   NosotrosRoute: NosotrosRoute,
-  ProductosRoute: ProductosRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+  }
+}

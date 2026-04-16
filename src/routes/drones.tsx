@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Plane, ChevronRight } from "lucide-react";
 
-export const Route = createFileRoute("/productos")({
+export const Route = createFileRoute("/drones")({
   component: ProductosPage,
   head: () => ({
     meta: [

@@ -16,6 +16,7 @@ import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as CategoriasRouteImport } from './routes/categorias'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DronesSlugRouteImport } from './routes/drones.$slug'
 
 const NosotrosRoute = NosotrosRouteImport.update({
   id: '/nosotros',
@@ -52,24 +53,31 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DronesSlugRoute = DronesSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => DronesRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
   '/categorias': typeof CategoriasRoute
   '/contacto': typeof ContactoRoute
-  '/drones': typeof DronesRoute
+  '/drones': typeof DronesRouteWithChildren
   '/marcas': typeof MarcasRoute
   '/nosotros': typeof NosotrosRoute
+  '/drones/$slug': typeof DronesSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
   '/categorias': typeof CategoriasRoute
   '/contacto': typeof ContactoRoute
-  '/drones': typeof DronesRoute
+  '/drones': typeof DronesRouteWithChildren
   '/marcas': typeof MarcasRoute
   '/nosotros': typeof NosotrosRoute
+  '/drones/$slug': typeof DronesSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -77,9 +85,10 @@ export interface FileRoutesById {
   '/blog': typeof BlogRoute
   '/categorias': typeof CategoriasRoute
   '/contacto': typeof ContactoRoute
-  '/drones': typeof DronesRoute
+  '/drones': typeof DronesRouteWithChildren
   '/marcas': typeof MarcasRoute
   '/nosotros': typeof NosotrosRoute
+  '/drones/$slug': typeof DronesSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -91,6 +100,7 @@ export interface FileRouteTypes {
     | '/drones'
     | '/marcas'
     | '/nosotros'
+    | '/drones/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -100,6 +110,7 @@ export interface FileRouteTypes {
     | '/drones'
     | '/marcas'
     | '/nosotros'
+    | '/drones/$slug'
   id:
     | '__root__'
     | '/'
@@ -109,6 +120,7 @@ export interface FileRouteTypes {
     | '/drones'
     | '/marcas'
     | '/nosotros'
+    | '/drones/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -116,7 +128,7 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRoute
   CategoriasRoute: typeof CategoriasRoute
   ContactoRoute: typeof ContactoRoute
-  DronesRoute: typeof DronesRoute
+  DronesRoute: typeof DronesRouteWithChildren
   MarcasRoute: typeof MarcasRoute
   NosotrosRoute: typeof NosotrosRoute
 }
@@ -172,18 +184,45 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/drones/$slug': {
+      id: '/drones/$slug'
+      path: '/$slug'
+      fullPath: '/drones/$slug'
+      preLoaderRoute: typeof DronesSlugRouteImport
+      parentRoute: typeof DronesRoute
+    }
   }
 }
+
+interface DronesRouteChildren {
+  DronesSlugRoute: typeof DronesSlugRoute
+}
+
+const DronesRouteChildren: DronesRouteChildren = {
+  DronesSlugRoute: DronesSlugRoute,
+}
+
+const DronesRouteWithChildren =
+  DronesRoute._addFileChildren(DronesRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BlogRoute: BlogRoute,
   CategoriasRoute: CategoriasRoute,
   ContactoRoute: ContactoRoute,
-  DronesRoute: DronesRoute,
+  DronesRoute: DronesRouteWithChildren,
   MarcasRoute: MarcasRoute,
   NosotrosRoute: NosotrosRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+  }
+}

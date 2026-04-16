@@ -22,7 +22,7 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 lg:px-8">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <img src={lumadronLogo} alt="Lumadron" className="h-8 w-auto" />
+          <img src={lumadronLogo} alt="Lumadron" className="h-[2.3rem] w-auto" />
         </Link>
 
         {/* Desktop nav */}

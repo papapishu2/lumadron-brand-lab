@@ -1,0 +1,255 @@
+export interface Product {
+  slug: string;
+  name: string;
+  brand: string;
+  category: string;
+  description: string;
+  features: string[];
+  specs: Record<string, string>;
+}
+
+export const allProducts: Product[] = [
+  {
+    slug: "dji-agras-t50",
+    name: "DJI Agras T50",
+    brand: "DJI",
+    category: "Agricultura",
+    description: "Drone de pulverización con tanque de 40L, IA para mapeo de terreno y vuelo autónomo.",
+    features: [
+      "Tanque de 40 litros de capacidad",
+      "Sistema de IA para mapeo inteligente del terreno",
+      "Vuelo autónomo con planificación de rutas",
+      "Pulverización de precisión con boquillas duales",
+      "Resistente al agua y al polvo (IP67)",
+    ],
+    specs: { "Capacidad": "40L", "Autonomía": "~18 min", "Velocidad máx.": "15 m/s", "Peso máx. despegue": "52.8 kg" },
+  },
+  {
+    slug: "dji-agras-t25",
+    name: "DJI Agras T25",
+    brand: "DJI",
+    category: "Agricultura",
+    description: "Drone agrícola compacto con 20L de capacidad, ideal para lotes medianos.",
+    features: [
+      "Tanque de 20 litros, ideal para lotes medianos",
+      "Diseño compacto y fácil de transportar",
+      "Navegación RTK de alta precisión",
+      "Sistema de detección de obstáculos omnidireccional",
+    ],
+    specs: { "Capacidad": "20L", "Autonomía": "~15 min", "Velocidad máx.": "12 m/s", "Peso máx. despegue": "36.8 kg" },
+  },
+  {
+    slug: "dji-flycart-30",
+    name: "DJI FlyCart 30",
+    brand: "DJI",
+    category: "Logística",
+    description: "Drone de carga pesada con hasta 30kg de capacidad para entrega en zonas remotas.",
+    features: [
+      "Capacidad de carga de hasta 30 kg",
+      "Entrega autónoma en zonas remotas",
+      "Resistente a condiciones climáticas adversas",
+      "Sistema de liberación de carga inteligente",
+    ],
+    specs: { "Carga útil": "30 kg", "Autonomía": "~28 min (sin carga)", "Alcance": "16 km", "Velocidad máx.": "20 m/s" },
+  },
+  {
+    slug: "dji-mavic-3-enterprise",
+    name: "DJI Mavic 3 Enterprise",
+    brand: "DJI",
+    category: "Inspección",
+    description: "Drone compacto enterprise con cámara térmica y zoom para inspección e inteligencia.",
+    features: [
+      "Cámara térmica integrada",
+      "Zoom óptico 56x",
+      "Compacto y plegable para despliegue rápido",
+      "Transmisión de video a 15 km",
+    ],
+    specs: { "Sensor": "4/3 CMOS 20MP", "Zoom": "56x (híbrido)", "Autonomía": "~45 min", "Alcance": "15 km" },
+  },
+  {
+    slug: "dji-matrice-30",
+    name: "DJI Matrice 30",
+    brand: "DJI",
+    category: "Industrial",
+    description: "Plataforma industrial compacta y resistente para inspección y respuesta ante emergencias.",
+    features: [
+      "Diseño resistente a condiciones extremas (IP55)",
+      "Cámara zoom, gran angular y térmica",
+      "Vuelo autónomo con rutas predefinidas",
+      "Ideal para respuesta ante emergencias",
+    ],
+    specs: { "Protección": "IP55", "Autonomía": "~41 min", "Viento máx.": "15 m/s", "Alcance": "15 km" },
+  },
+  {
+    slug: "dji-matrice-350-rtk",
+    name: "DJI Matrice 350 RTK",
+    brand: "DJI",
+    category: "Industrial",
+    description: "Drone industrial premium con RTK integrado para topografía y mapeo de alta precisión.",
+    features: [
+      "RTK integrado para posicionamiento centimétrico",
+      "Compatible con múltiples payloads DJI",
+      "Hasta 55 minutos de autonomía",
+      "Sistema de redundancia de 6 baterías",
+    ],
+    specs: { "Autonomía": "~55 min", "Carga útil": "2.7 kg", "RTK": "Integrado", "Protección": "IP55" },
+  },
+  {
+    slug: "dji-matrice-4t",
+    name: "DJI Matrice 4T",
+    brand: "DJI",
+    category: "Industrial",
+    description: "Última generación de plataforma enterprise con sensor térmico integrado.",
+    features: [
+      "Sensor térmico de alta resolución integrado",
+      "Plataforma enterprise de última generación",
+      "Detección de obstáculos omnidireccional",
+      "Software de análisis térmico incluido",
+    ],
+    specs: { "Sensor térmico": "640×512", "Autonomía": "~42 min", "Protección": "IP55", "Alcance": "20 km" },
+  },
+  {
+    slug: "dji-zenmuse-l2",
+    name: "DJI Zenmuse L2",
+    brand: "DJI",
+    category: "Topografía",
+    description: "Payload LIDAR de alta precisión para relevamiento topográfico y modelos 3D.",
+    features: [
+      "LIDAR de alta precisión (±2 cm)",
+      "Generación de modelos 3D en tiempo real",
+      "Compatible con Matrice 350 RTK",
+      "Software Terra para procesamiento de datos",
+    ],
+    specs: { "Precisión": "±2 cm", "Puntos/s": "240,000", "Rango": "250 m", "FOV": "70°" },
+  },
+  {
+    slug: "xag-p150",
+    name: "XAG P150",
+    brand: "XAG",
+    category: "Agricultura",
+    description: "Drone agrícola autónomo con 50L de capacidad y sistema de IA avanzada.",
+    features: [
+      "Tanque de 50 litros de gran capacidad",
+      "Sistema de IA avanzada para mapeo",
+      "Vuelo completamente autónomo",
+      "Recarga rápida de batería",
+    ],
+    specs: { "Capacidad": "50L", "Cobertura": "21 ha/h", "Autonomía": "~20 min", "Ancho pulverización": "11 m" },
+  },
+  {
+    slug: "xag-p100-pro",
+    name: "XAG P100 Pro",
+    brand: "XAG",
+    category: "Agricultura",
+    description: "Drone de pulverización de precisión con 40L y navegación RTK.",
+    features: [
+      "40 litros de capacidad",
+      "Navegación RTK centimétrica",
+      "Pulverización de precisión variable",
+      "Detección de obstáculos por radar",
+    ],
+    specs: { "Capacidad": "40L", "Cobertura": "16 ha/h", "RTK": "Integrado", "Autonomía": "~18 min" },
+  },
+  {
+    slug: "xag-p60",
+    name: "XAG P60",
+    brand: "XAG",
+    category: "Agricultura",
+    description: "Drone agrícola de 20L, compacto y eficiente para operaciones medianas.",
+    features: [
+      "20 litros de capacidad",
+      "Compacto y fácil de transportar",
+      "Operación eficiente en lotes medianos",
+      "Sistema de navegación inteligente",
+    ],
+    specs: { "Capacidad": "20L", "Cobertura": "10 ha/h", "Autonomía": "~15 min", "Peso": "14.5 kg (vacío)" },
+  },
+  {
+    slug: "xag-v40",
+    name: "XAG V40",
+    brand: "XAG",
+    category: "Agricultura",
+    description: "Drone de pulverización versátil con sistema de esparcimiento dual.",
+    features: [
+      "Sistema de esparcimiento dual (líquido y granular)",
+      "Diseño versátil para múltiples aplicaciones",
+      "Navegación autónoma por IA",
+      "Resistente a condiciones de campo",
+    ],
+    specs: { "Capacidad líquido": "20L", "Capacidad granular": "25 kg", "Cobertura": "12 ha/h", "Autonomía": "~16 min" },
+  },
+  {
+    slug: "xag-m500",
+    name: "XAG M500",
+    brand: "XAG",
+    category: "Agricultura",
+    description: "Robot terrestre autónomo para pulverización en cultivos bajos.",
+    features: [
+      "Robot terrestre autónomo (UGV)",
+      "Ideal para cultivos bajos y viñedos",
+      "Navegación por GPS y sensores LIDAR",
+      "Operación en terrenos irregulares",
+    ],
+    specs: { "Tipo": "UGV (terrestre)", "Capacidad": "150L", "Cobertura": "8 ha/h", "Autonomía": "~8 h" },
+  },
+  {
+    slug: "xag-revospray",
+    name: "XAG RevoSpray",
+    brand: "XAG",
+    category: "Agricultura",
+    description: "Sistema de pulverización inteligente con atomización centrífuga.",
+    features: [
+      "Atomización centrífuga de alta eficiencia",
+      "Distribución uniforme del producto",
+      "Compatible con drones XAG",
+      "Reducción de desperdicio de agroquímicos",
+    ],
+    specs: { "Tipo": "Payload", "Atomización": "Centrífuga", "Tamaño gota": "50-300 µm", "Flujo": "6 L/min" },
+  },
+  {
+    slug: "hyl-150",
+    name: "HYL-150",
+    brand: "Hylio",
+    category: "Agricultura",
+    description: "Drone de gran capacidad (150L) para pulverización en grandes extensiones.",
+    features: [
+      "Tanque de 150 litros de capacidad",
+      "Diseñado para grandes extensiones",
+      "Vuelo autónomo con planificación de rutas",
+      "Estructura robusta para uso intensivo",
+    ],
+    specs: { "Capacidad": "150L", "Cobertura": "40 ha/h", "Autonomía": "~12 min", "Ancho pulverización": "14 m" },
+  },
+  {
+    slug: "hyl-120",
+    name: "HYL-120",
+    brand: "Hylio",
+    category: "Agricultura",
+    description: "Drone de pulverización de 120L con autonomía extendida.",
+    features: [
+      "120 litros de capacidad",
+      "Autonomía extendida para mayor eficiencia",
+      "Sistema GPS de alta precisión",
+      "Fácil mantenimiento en campo",
+    ],
+    specs: { "Capacidad": "120L", "Cobertura": "32 ha/h", "Autonomía": "~15 min", "Ancho pulverización": "12 m" },
+  },
+  {
+    slug: "ag-230",
+    name: "AG-230",
+    brand: "Hylio",
+    category: "Agricultura",
+    description: "Drone de pulverización premium con 230L de capacidad y vuelo autónomo.",
+    features: [
+      "230 litros — máxima capacidad del mercado",
+      "Vuelo autónomo con IA de planificación",
+      "Ideal para establecimientos de gran escala",
+      "Soporte técnico dedicado",
+    ],
+    specs: { "Capacidad": "230L", "Cobertura": "55 ha/h", "Autonomía": "~10 min", "Ancho pulverización": "16 m" },
+  },
+];
+
+export function getProductBySlug(slug: string): Product | undefined {
+  return allProducts.find((p) => p.slug === slug);
+}

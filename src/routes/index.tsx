@@ -5,9 +5,9 @@ import imgAgrasT50 from "@/assets/dji-agras-t50.jpg";
 import imgXagP150 from "@/assets/xag-p150.png";
 import imgMatrice350 from "@/assets/dji-matrice-350.jpg";
 import imgFlycart30 from "@/assets/dji-flycart-30.jpg";
-import logoDJI from "@/assets/dji-logo.svg";
-import logoXAG from "@/assets/xag-logo.png";
-import logoHylio from "@/assets/hylio-logo.png";
+import logoDJI from "@/assets/brands/dji-logo.png";
+import logoXAG from "@/assets/brands/xag-logo.webp";
+import logoHylio from "@/assets/brands/hylio-logo.png";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -23,8 +23,8 @@ const categories = [
 
 const brands = [
   { name: "DJI", description: "Líder mundial en drones comerciales e industriales.", products: 8, logo: logoDJI, logoClass: "h-12" },
-  { name: "XAG", description: "Especialista en drones agrícolas y smart farming.", products: 8, logo: logoXAG, logoClass: "h-12" },
-  { name: "Hylio", description: "Drones de pulverización de alta capacidad.", products: 6, logo: logoHylio, logoClass: "h-12" },
+  { name: "XAG", description: "Especialista en drones agrícolas y smart farming.", products: 8, logo: logoXAG, logoClass: "h-10" },
+  { name: "Hylio", description: "Drones de pulverización de alta capacidad.", products: 6, logo: logoHylio, logoClass: "h-8" },
 ];
 
 const featuredProducts = [

@@ -5,6 +5,9 @@ import imgAgrasT50 from "@/assets/dji-agras-t50.jpg";
 import imgXagP150 from "@/assets/xag-p150.png";
 import imgMatrice350 from "@/assets/dji-matrice-350.jpg";
 import imgFlycart30 from "@/assets/dji-flycart-30.jpg";
+import logoDJI from "@/assets/dji-logo.svg";
+import logoXAG from "@/assets/xag-logo.png";
+import logoHylio from "@/assets/hylio-logo.png";
 
 export const Route = createFileRoute("/")({
   component: HomePage,

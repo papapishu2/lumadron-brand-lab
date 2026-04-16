@@ -10,10 +10,6 @@ export const Route = createFileRoute("/drones")({
     ],
   }),
 });
-      { name: "description", content: "Catálogo completo de drones DJI, XAG y Hylio para agricultura e industria en Argentina." },
-    ],
-  }),
-});
 
 const allProducts = [
   { name: "DJI Agras T50", brand: "DJI", category: "Agricultura", description: "Drone de pulverización con tanque de 40L, IA para mapeo de terreno y vuelo autónomo." },

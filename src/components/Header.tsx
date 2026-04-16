@@ -5,9 +5,9 @@ import lumadronLogo from "@/assets/lumadron-logo.png";
 
 const navItems = [
   { label: "Inicio", to: "/" },
+  { label: "Drones", to: "/drones" },
   { label: "Categorías", to: "/categorias" },
   { label: "Marcas", to: "/marcas" },
-  { label: "Productos", to: "/productos" },
   { label: "Blog", to: "/blog" },
   { label: "Nosotros", to: "/nosotros" },
   { label: "Contacto", to: "/contacto" },

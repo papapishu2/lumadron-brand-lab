@@ -59,7 +59,7 @@ function DronesPage() {
                 to="/contacto"
                 className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline"
               >
-                Consultar precio <ChevronRight size={14} />
+                Más información <ChevronRight size={14} />
               </Link>
             </div>
           </div>

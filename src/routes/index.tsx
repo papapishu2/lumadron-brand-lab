@@ -117,8 +117,7 @@ function HomePage() {
                 <div className="mx-auto flex h-16 w-auto items-center justify-center px-4">
                   <img src={brand.logo} alt={brand.name} className={`w-auto object-contain ${brand.logoClass}`} />
                 </div>
-                <h3 className="mt-5 font-heading text-xl font-bold text-card-foreground">{brand.name}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{brand.description}</p>
+                <p className="mt-5 text-sm text-muted-foreground">{brand.description}</p>
                 <p className="mt-3 text-xs font-medium text-accent">{brand.products} productos</p>
               </Link>
             ))}

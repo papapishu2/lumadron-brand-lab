@@ -55,7 +55,7 @@ function MarcasPage() {
             <div className="bg-primary/5 p-8">
               <div className="flex items-center gap-5">
                 <div className="flex h-20 w-28 items-center justify-center rounded-2xl bg-background border border-border px-4">
-                  <img src={brand.logo} alt={`Logo ${brand.name}`} className={brand.logoClass} />
+                  <img src={brand.logo} alt={`Logo ${brand.name}`} className={`${brand.logoClass} object-contain`} />
                 </div>
                 <div>
                   <h2 className="font-heading text-2xl font-bold text-card-foreground">{brand.name}</h2>

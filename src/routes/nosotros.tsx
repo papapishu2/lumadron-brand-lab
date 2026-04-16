@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Target, Users, Award, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/nosotros")({
   component: NosotrosPage,
@@ -28,38 +28,6 @@ function NosotrosPage() {
         </p>
       </div>
 
-      <div className="mt-16 grid gap-8 md:grid-cols-3">
-        <div className="rounded-xl border border-border bg-card p-8">
-          <div className="inline-flex rounded-xl bg-accent/10 p-3">
-            <Target size={24} className="text-accent" />
-          </div>
-          <h3 className="mt-4 font-heading text-xl font-bold text-card-foreground">Misión</h3>
-          <p className="mt-2 text-muted-foreground">
-            Democratizar el acceso a tecnología de drones profesionales en Argentina,
-            con asesoramiento técnico y soporte de excelencia.
-          </p>
-        </div>
-        <div className="rounded-xl border border-border bg-card p-8">
-          <div className="inline-flex rounded-xl bg-accent/10 p-3">
-            <Users size={24} className="text-accent" />
-          </div>
-          <h3 className="mt-4 font-heading text-xl font-bold text-card-foreground">Equipo</h3>
-          <p className="mt-2 text-muted-foreground">
-            Profesionales especializados en aeronáutica, agronomía e ingeniería industrial,
-            con experiencia real en operaciones con drones.
-          </p>
-        </div>
-        <div className="rounded-xl border border-border bg-card p-8">
-          <div className="inline-flex rounded-xl bg-accent/10 p-3">
-            <Award size={24} className="text-accent" />
-          </div>
-          <h3 className="mt-4 font-heading text-xl font-bold text-card-foreground">Compromiso</h3>
-          <p className="mt-2 text-muted-foreground">
-            Distribuidores oficiales certificados, con garantía de fábrica, capacitación
-            incluida y soporte técnico postventa.
-          </p>
-        </div>
-      </div>
 
       <div className="mt-16 rounded-2xl bg-primary p-10 text-center md:p-14">
         <h2 className="font-heading text-2xl font-bold text-primary-foreground md:text-3xl">

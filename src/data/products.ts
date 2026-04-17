@@ -1,3 +1,11 @@
+import djiT100 from "@/assets/products/dji-agras-t100-1.png";
+import djiT70p from "@/assets/products/dji-agras-t70p-1.png";
+import djiT50 from "@/assets/products/dji-agras-t50-1.png";
+import djiT25p from "@/assets/products/dji-agras-t25p-1.png";
+import xagP150Max from "@/assets/products/xag-p150-max-1.png";
+import hylioPegasus from "@/assets/products/hylio-pegasus-1.png";
+import hylioAres from "@/assets/products/hylio-ares-1.png";
+
 export interface Product {
   slug: string;
   name: string;
@@ -7,7 +15,18 @@ export interface Product {
   features: string[];
   specs: Record<string, string>;
   officialUrl?: string;
+  image?: string;
 }
+
+export const productImages: Record<string, string> = {
+  "dji-agras-t100": djiT100,
+  "dji-agras-t70p": djiT70p,
+  "dji-agras-t50": djiT50,
+  "dji-agras-t25p": djiT25p,
+  "xag-p150-max": xagP150Max,
+  "hylio-pegasus": hylioPegasus,
+  "hylio-ares-hyl-150": hylioAres,
+};
 
 export const allProducts: Product[] = [
   // ============ DJI Agriculture ============

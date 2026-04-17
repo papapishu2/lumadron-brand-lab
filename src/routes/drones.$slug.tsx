@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ChevronRight, CheckCircle2, Send } from "lucide-react"; // v2
-import { getProductBySlug, allProducts } from "@/data/products";
+import { getProductBySlug, allProducts, productImages } from "@/data/products";
 
 export const Route = createFileRoute("/drones/$slug")({
   component: ProductDetailPage,
@@ -71,17 +71,27 @@ function ProductDetailPage() {
           <div className="grid items-center gap-12 lg:grid-cols-5">
             {/* Image area — 3 cols */}
             <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl border border-border bg-background shadow-sm lg:col-span-3">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
-              <div className="relative text-center">
-                <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-primary/10">
-                  <span className="font-heading text-2xl font-bold text-primary">
-                    {product.brand.charAt(0)}
-                  </span>
-                </div>
-                <p className="mt-3 text-sm text-muted-foreground">
-                  Imagen del producto
-                </p>
-              </div>
+              {productImages[product.slug] ? (
+                <img
+                  src={productImages[product.slug]}
+                  alt={product.name}
+                  className="h-full w-full object-contain"
+                />
+              ) : (
+                <>
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
+                  <div className="relative text-center">
+                    <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-primary/10">
+                      <span className="font-heading text-2xl font-bold text-primary">
+                        {product.brand.charAt(0)}
+                      </span>
+                    </div>
+                    <p className="mt-3 text-sm text-muted-foreground">
+                      Imagen del producto
+                    </p>
+                  </div>
+                </>
+              )}
             </div>
 
             {/* Info — 2 cols */}
@@ -216,12 +226,21 @@ function ProductDetailPage() {
                   params={{ slug: rel.slug }}
                   className="group overflow-hidden rounded-xl border border-border bg-card transition-all hover:border-accent/30 hover:shadow-lg"
                 >
-                  <div className="flex h-32 items-center justify-center bg-secondary/40">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
-                      <span className="font-heading text-sm font-bold text-primary">
-                        {rel.brand.charAt(0)}
-                      </span>
-                    </div>
+                  <div className="flex h-32 items-center justify-center overflow-hidden bg-secondary/40">
+                    {productImages[rel.slug] ? (
+                      <img
+                        src={productImages[rel.slug]}
+                        alt={rel.name}
+                        className="h-full w-full object-contain"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                        <span className="font-heading text-sm font-bold text-primary">
+                          {rel.brand.charAt(0)}
+                        </span>
+                      </div>
+                    )}
                   </div>
                   <div className="p-5">
                     <span className="text-xs font-medium uppercase tracking-wider text-primary">

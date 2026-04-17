@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Plane, ChevronRight } from "lucide-react";
 import { useMemo, useState } from "react";
-import { allProducts } from "@/data/products";
+import { allProducts, productImages } from "@/data/products";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/drones/")({
@@ -75,8 +75,17 @@ function DronesPage() {
             key={product.slug}
             className="group overflow-hidden rounded-xl border border-border bg-card transition-all hover:border-accent/30 hover:shadow-lg"
           >
-            <div className="flex h-44 items-center justify-center bg-secondary/50">
-              <Plane size={40} className="text-muted-foreground/20" />
+            <div className="flex h-44 items-center justify-center overflow-hidden bg-secondary/50">
+              {productImages[product.slug] ? (
+                <img
+                  src={productImages[product.slug]}
+                  alt={product.name}
+                  className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                />
+              ) : (
+                <Plane size={40} className="text-muted-foreground/20" />
+              )}
             </div>
             <div className="p-5">
               <div className="flex items-center gap-2">

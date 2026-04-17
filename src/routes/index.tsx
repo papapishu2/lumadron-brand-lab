@@ -32,9 +32,9 @@ const featuredProducts = [
 ];
 
 const blogPosts = [
-  { title: "Guía completa de drones agrícolas en Argentina 2025", category: "Guías", date: "15 Abr 2025" },
-  { title: "DJI Agras T50 vs XAG P150: comparativa definitiva", category: "Comparativas", date: "10 Abr 2025" },
-  { title: "Normativa ANAC para uso de drones comerciales", category: "Normativa", date: "5 Abr 2025" },
+  { slug: "guia-drones-agricolas-argentina-2025", title: "Guía completa de drones agrícolas en Argentina 2025", category: "Guías" },
+  { slug: "dji-agras-t50-vs-xag-p150-comparativa", title: "DJI Agras T50 vs XAG P150: comparativa definitiva", category: "Comparativas" },
+  { slug: "normativa-anac-drones-comerciales", title: "Normativa ANAC para uso de drones comerciales", category: "Normativa" },
 ];
 
 function HomePage() {
@@ -174,13 +174,13 @@ function HomePage() {
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {blogPosts.map((post) => (
               <Link
-                key={post.title}
-                to="/blog"
+                key={post.slug}
+                to="/blog/$slug"
+                params={{ slug: post.slug }}
                 className="group rounded-xl border border-border bg-card p-6 transition-all hover:border-accent/30 hover:shadow-lg"
               >
                 <span className="text-xs font-medium text-accent">{post.category}</span>
                 <h3 className="mt-2 font-heading text-lg font-semibold text-card-foreground group-hover:text-accent transition-colors">{post.title}</h3>
-                <p className="mt-3 text-xs text-muted-foreground">{post.date}</p>
               </Link>
             ))}
           </div>

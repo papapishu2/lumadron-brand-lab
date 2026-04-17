@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/contacto")({
@@ -31,15 +31,6 @@ function ContactoPage() {
               <div>
                 <h3 className="font-heading text-sm font-semibold text-foreground">Email</h3>
                 <p className="text-sm text-muted-foreground">info@lumadron.com</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-accent/10">
-                <Phone size={20} className="text-accent" />
-              </div>
-              <div>
-                <h3 className="font-heading text-sm font-semibold text-foreground">Teléfono</h3>
-                <p className="text-sm text-muted-foreground">+54 11 0000-0000</p>
               </div>
             </div>
             <div className="flex items-start gap-4">

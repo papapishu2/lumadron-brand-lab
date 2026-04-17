@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Droplets, Fuel, Mountain, Shield, MapPin, ArrowRight } from "lucide-react";
+import { Droplets, Fuel, Shield, MapPin, ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/categorias")({
   component: CategoriasPage,

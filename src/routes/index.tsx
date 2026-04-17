@@ -147,10 +147,11 @@ function HomePage() {
                 <h3 className="mt-1.5 font-heading text-base font-semibold text-card-foreground">{product.name}</h3>
                 <p className="mt-1.5 text-sm text-muted-foreground line-clamp-2">{product.description}</p>
                 <Link
-                  to="/contacto"
+                  to="/drones/$slug"
+                  params={{ slug: product.slug }}
                   className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary hover:text-accent"
                 >
-                  Consultar <ChevronRight size={14} />
+                  Más información <ChevronRight size={14} />
                 </Link>
               </div>
             </div>

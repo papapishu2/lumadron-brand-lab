@@ -1,10 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Fuel, Plane, Shield, Mountain, Droplets, MapPin, ChevronRight } from "lucide-react";
 import heroBg from "@/assets/dji-hero.jpg";
-import imgAgrasT50 from "@/assets/dji-agras-t50.jpg";
-import imgXagP150 from "@/assets/xag-p150.png";
-import imgMatrice350 from "@/assets/dji-matrice-350.jpg";
-import imgFlycart30 from "@/assets/dji-flycart-30.jpg";
+import { productImages } from "@/data/products";
 import logoDJI from "@/assets/brands/dji-logo.png";
 import logoXAG from "@/assets/brands/xag-logo.webp";
 import logoHylio from "@/assets/brands/hylio-logo.png";
@@ -28,10 +25,10 @@ const brands = [
 ];
 
 const featuredProducts = [
-  { name: "DJI Agras T50", brand: "DJI", category: "Agricultura", description: "Drone de pulverización de última generación con tanque de 40L.", image: imgAgrasT50 },
-  { name: "XAG P150", brand: "XAG", category: "Agricultura", description: "Drone agrícola autónomo con capacidad de 50L y IA avanzada.", image: imgXagP150 },
-  { name: "DJI Matrice 350 RTK", brand: "DJI", category: "Industrial", description: "Plataforma industrial para inspección y mapeo de alta precisión.", image: imgMatrice350 },
-  { name: "DJI FlyCart 30", brand: "DJI", category: "Logística", description: "Drone de carga para entrega en zonas remotas, hasta 30kg.", image: imgFlycart30 },
+  { slug: "dji-agras-t50", name: "DJI Agras T50", brand: "DJI", category: "Agricultura", description: "Drone de pulverización de última generación con tanque de 40L.", image: productImages["dji-agras-t50"] },
+  { slug: "xag-p150", name: "XAG P150", brand: "XAG", category: "Agricultura", description: "Drone agrícola autónomo con capacidad de 50L y IA avanzada.", image: productImages["xag-p150"] },
+  { slug: "dji-flycart-100", name: "DJI FlyCart 100", brand: "DJI", category: "Logística", description: "Drone de carga industrial de gran capacidad para zonas remotas.", image: productImages["dji-flycart-100"] },
+  { slug: "dji-flycart-30", name: "DJI FlyCart 30", brand: "DJI", category: "Logística", description: "Drone de carga para entrega en zonas remotas, hasta 30kg.", image: productImages["dji-flycart-30"] },
 ];
 
 const blogPosts = [
@@ -150,10 +147,11 @@ function HomePage() {
                 <h3 className="mt-1.5 font-heading text-base font-semibold text-card-foreground">{product.name}</h3>
                 <p className="mt-1.5 text-sm text-muted-foreground line-clamp-2">{product.description}</p>
                 <Link
-                  to="/contacto"
+                  to="/drones/$slug"
+                  params={{ slug: product.slug }}
                   className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary hover:text-accent"
                 >
-                  Consultar <ChevronRight size={14} />
+                  Más información <ChevronRight size={14} />
                 </Link>
               </div>
             </div>

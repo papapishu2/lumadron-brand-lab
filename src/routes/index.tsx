@@ -1,10 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Fuel, Plane, Shield, Mountain, Droplets, MapPin, ChevronRight } from "lucide-react";
 import heroBg from "@/assets/dji-hero.jpg";
-import imgAgrasT50 from "@/assets/dji-agras-t50.jpg";
-import imgXagP150 from "@/assets/xag-p150.png";
-import imgMatrice350 from "@/assets/dji-matrice-350.jpg";
-import imgFlycart30 from "@/assets/dji-flycart-30.jpg";
+import { productImages } from "@/data/products";
 import logoDJI from "@/assets/brands/dji-logo.png";
 import logoXAG from "@/assets/brands/xag-logo.webp";
 import logoHylio from "@/assets/brands/hylio-logo.png";

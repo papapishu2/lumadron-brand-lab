@@ -45,7 +45,7 @@ function HomePage() {
         <img src={heroBg} alt="" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/30" />
         <div className="relative mx-auto flex max-w-7xl flex-col items-center px-4 py-24 text-center lg:px-8 lg:py-36">
-          <h1 className="font-heading text-4xl font-extrabold leading-tight text-primary-foreground md:text-5xl lg:text-6xl">
+          <h1 className="font-heading text-3xl font-extrabold leading-tight text-primary-foreground sm:text-4xl md:text-5xl lg:text-6xl">
             Drones y robótica para
             <br />
             <span className="text-[#fa4301]">agro e industria</span>

@@ -35,15 +35,6 @@ function ContactoPage() {
             </div>
             <div className="flex items-start gap-4">
               <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-accent/10">
-                <Phone size={20} className="text-accent" />
-              </div>
-              <div>
-                <h3 className="font-heading text-sm font-semibold text-foreground">Teléfono</h3>
-                <p className="text-sm text-muted-foreground">+54 11 0000-0000</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-accent/10">
                 <MapPin size={20} className="text-accent" />
               </div>
               <div>

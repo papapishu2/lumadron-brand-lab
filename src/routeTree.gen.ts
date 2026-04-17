@@ -17,6 +17,7 @@ import { Route as CategoriasRouteImport } from './routes/categorias'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DronesIndexRouteImport } from './routes/drones.index'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as DronesSlugRouteImport } from './routes/drones.$slug'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
@@ -60,6 +61,11 @@ const DronesIndexRoute = DronesIndexRouteImport.update({
   path: '/',
   getParentRoute: () => DronesRoute,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => BlogRoute,
+} as any)
 const DronesSlugRoute = DronesSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -81,17 +87,18 @@ export interface FileRoutesByFullPath {
   '/nosotros': typeof NosotrosRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/drones/$slug': typeof DronesSlugRoute
+  '/blog/': typeof BlogIndexRoute
   '/drones/': typeof DronesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/blog': typeof BlogRouteWithChildren
   '/categorias': typeof CategoriasRoute
   '/contacto': typeof ContactoRoute
   '/marcas': typeof MarcasRoute
   '/nosotros': typeof NosotrosRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/drones/$slug': typeof DronesSlugRoute
+  '/blog': typeof BlogIndexRoute
   '/drones': typeof DronesIndexRoute
 }
 export interface FileRoutesById {
@@ -105,6 +112,7 @@ export interface FileRoutesById {
   '/nosotros': typeof NosotrosRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/drones/$slug': typeof DronesSlugRoute
+  '/blog/': typeof BlogIndexRoute
   '/drones/': typeof DronesIndexRoute
 }
 export interface FileRouteTypes {
@@ -119,17 +127,18 @@ export interface FileRouteTypes {
     | '/nosotros'
     | '/blog/$slug'
     | '/drones/$slug'
+    | '/blog/'
     | '/drones/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/blog'
     | '/categorias'
     | '/contacto'
     | '/marcas'
     | '/nosotros'
     | '/blog/$slug'
     | '/drones/$slug'
+    | '/blog'
     | '/drones'
   id:
     | '__root__'
@@ -142,6 +151,7 @@ export interface FileRouteTypes {
     | '/nosotros'
     | '/blog/$slug'
     | '/drones/$slug'
+    | '/blog/'
     | '/drones/'
   fileRoutesById: FileRoutesById
 }
@@ -213,6 +223,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DronesIndexRouteImport
       parentRoute: typeof DronesRoute
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof BlogRoute
+    }
     '/drones/$slug': {
       id: '/drones/$slug'
       path: '/$slug'
@@ -232,10 +249,12 @@ declare module '@tanstack/react-router' {
 
 interface BlogRouteChildren {
   BlogSlugRoute: typeof BlogSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
 }
 
 const BlogRouteChildren: BlogRouteChildren = {
   BlogSlugRoute: BlogSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
 }
 
 const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)

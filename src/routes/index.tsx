@@ -25,10 +25,10 @@ const brands = [
 ];
 
 const featuredProducts = [
-  { name: "DJI Agras T50", brand: "DJI", category: "Agricultura", description: "Drone de pulverización de última generación con tanque de 40L.", image: imgAgrasT50 },
-  { name: "XAG P150", brand: "XAG", category: "Agricultura", description: "Drone agrícola autónomo con capacidad de 50L y IA avanzada.", image: imgXagP150 },
-  { name: "DJI Matrice 350 RTK", brand: "DJI", category: "Industrial", description: "Plataforma industrial para inspección y mapeo de alta precisión.", image: imgMatrice350 },
-  { name: "DJI FlyCart 30", brand: "DJI", category: "Logística", description: "Drone de carga para entrega en zonas remotas, hasta 30kg.", image: imgFlycart30 },
+  { slug: "dji-agras-t50", name: "DJI Agras T50", brand: "DJI", category: "Agricultura", description: "Drone de pulverización de última generación con tanque de 40L.", image: productImages["dji-agras-t50"] },
+  { slug: "xag-p150", name: "XAG P150", brand: "XAG", category: "Agricultura", description: "Drone agrícola autónomo con capacidad de 50L y IA avanzada.", image: productImages["xag-p150"] },
+  { slug: "dji-flycart-100", name: "DJI FlyCart 100", brand: "DJI", category: "Logística", description: "Drone de carga industrial de gran capacidad para zonas remotas.", image: productImages["dji-flycart-100"] },
+  { slug: "dji-flycart-30", name: "DJI FlyCart 30", brand: "DJI", category: "Logística", description: "Drone de carga para entrega en zonas remotas, hasta 30kg.", image: productImages["dji-flycart-30"] },
 ];
 
 const blogPosts = [

@@ -51,7 +51,7 @@ function HomePage() {
             <span className="text-[#fa4301]">agro e industria</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-primary-foreground/80">
-            Soluciones profesionales en drones, robótica y automatización para agricultura,
+            Información sobre drones, robótica y automatización para agricultura,
             oil & gas, minería, seguridad y topografía en Argentina.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">

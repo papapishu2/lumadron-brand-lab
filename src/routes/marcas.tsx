@@ -21,7 +21,7 @@ const brands = [
     logoClass: "h-12 w-auto",
     tagline: "Líder mundial en drones comerciales e industriales",
     description: "DJI es el fabricante de drones más grande del mundo, con una gama completa de soluciones para agricultura, inspección industrial, mapeo y seguridad.",
-    products: ["Agras T50", "Agras T25", "FlyCart 30", "Mavic 3 Enterprise", "Matrice 30", "Matrice 350 RTK", "Matrice 4T", "Zenmuse L2"],
+    products: ["Agras T100", "Agras T70P", "Agras T50", "Agras T25P", "Agras T25", "Mavic 3M", "FlyCart 100", "FlyCart 30"],
   },
   {
     name: "XAG",
@@ -29,7 +29,7 @@ const brands = [
     logoClass: "h-10 w-auto",
     tagline: "Especialista en drones agrícolas y smart farming",
     description: "XAG desarrolla drones agrícolas autónomos con inteligencia artificial, sistemas de pulverización de precisión y herramientas de gestión de cultivos.",
-    products: ["P150", "P100 Pro", "P60", "V40", "M500", "RevoSpray", "APC2", "Smart Farm Tools"],
+    products: ["P150 Max", "P150", "P100 Pro", "P60"],
   },
   {
     name: "Hylio",
@@ -37,7 +37,7 @@ const brands = [
     logoClass: "h-8 w-auto",
     tagline: "Drones de pulverización de alta capacidad",
     description: "Hylio fabrica drones de pulverización de gran capacidad con sistemas autónomos de planificación de misiones y gestión de flotas.",
-    products: ["HYL-150", "HYL-120", "AG-230", "Spray System", "Mission Planner", "Autonomy Platform"],
+    products: ["PEGASUS", "ARES HYL-150", "ATLAS HYL-300", "PHOTON"],
   },
 ];
 

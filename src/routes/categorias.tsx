@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Droplets, Fuel, Mountain, Shield, MapPin, ArrowRight } from "lucide-react";
+import { Droplets, Fuel, Shield, MapPin, ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/categorias")({
   component: CategoriasPage,
@@ -12,11 +12,10 @@ export const Route = createFileRoute("/categorias")({
 });
 
 const categories = [
-  { name: "Agricultura", description: "Pulverización aérea, monitoreo multiespectral, análisis de cultivos y agricultura de precisión con drones autónomos.", icon: Droplets, products: ["DJI Agras T50", "DJI Agras T25", "XAG P150", "XAG P100 Pro", "HYL-150"] },
-  { name: "Oil & Gas", description: "Inspección visual y térmica de infraestructura, monitoreo de ductos, detección de fugas y emisiones.", icon: Fuel, products: ["DJI Matrice 350 RTK", "DJI Matrice 4T", "DJI Mavic 3 Enterprise"] },
-  { name: "Minería", description: "Relevamiento topográfico, cálculo volumétrico, control de operaciones y monitoreo ambiental.", icon: Mountain, products: ["DJI Matrice 350 RTK", "DJI Zenmuse L2", "DJI Matrice 30"] },
-  { name: "Seguridad", description: "Vigilancia perimetral, respuesta ante emergencias, monitoreo en tiempo real y reconocimiento aéreo.", icon: Shield, products: ["DJI Mavic 3 Enterprise", "DJI Matrice 30", "DJI Matrice 4T"] },
-  { name: "Topografía", description: "Fotogrametría de alta resolución, generación de modelos 3D, mapeo catastral y LIDAR aéreo.", icon: MapPin, products: ["DJI Zenmuse L2", "DJI Matrice 350 RTK", "DJI Matrice 30"] },
+  { name: "Agricultura", description: "Pulverización aérea, esparcido, monitoreo multiespectral y agricultura de precisión con drones autónomos.", icon: Droplets, products: ["DJI Agras T100", "DJI Agras T50", "XAG P150 Max", "XAG P100 Pro", "Hylio ARES HYL-150"] },
+  { name: "Logística", description: "Transporte de carga pesada y entregas en zonas remotas o de difícil acceso.", icon: Fuel, products: ["DJI FlyCart 100", "DJI FlyCart 30"] },
+  { name: "Inspección", description: "Inspección visual, térmica y multiespectral para infraestructura, energía y respuesta rápida.", icon: Shield, products: ["Hylio PHOTON", "DJI Mavic 3M"] },
+  { name: "Topografía", description: "Mapeo agrícola, fotogrametría y análisis multiespectral para relevamiento de precisión.", icon: MapPin, products: ["DJI Mavic 3M", "Hylio PHOTON"] },
 ];
 
 function CategoriasPage() {

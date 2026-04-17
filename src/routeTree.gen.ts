@@ -18,6 +18,7 @@ import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DronesIndexRouteImport } from './routes/drones.index'
 import { Route as DronesSlugRouteImport } from './routes/drones.$slug'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const NosotrosRoute = NosotrosRouteImport.update({
   id: '/nosotros',
@@ -64,37 +65,45 @@ const DronesSlugRoute = DronesSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => DronesRoute,
 } as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => BlogRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/categorias': typeof CategoriasRoute
   '/contacto': typeof ContactoRoute
   '/drones': typeof DronesRouteWithChildren
   '/marcas': typeof MarcasRoute
   '/nosotros': typeof NosotrosRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/drones/$slug': typeof DronesSlugRoute
   '/drones/': typeof DronesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/categorias': typeof CategoriasRoute
   '/contacto': typeof ContactoRoute
   '/marcas': typeof MarcasRoute
   '/nosotros': typeof NosotrosRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/drones/$slug': typeof DronesSlugRoute
   '/drones': typeof DronesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/categorias': typeof CategoriasRoute
   '/contacto': typeof ContactoRoute
   '/drones': typeof DronesRouteWithChildren
   '/marcas': typeof MarcasRoute
   '/nosotros': typeof NosotrosRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/drones/$slug': typeof DronesSlugRoute
   '/drones/': typeof DronesIndexRoute
 }
@@ -108,6 +117,7 @@ export interface FileRouteTypes {
     | '/drones'
     | '/marcas'
     | '/nosotros'
+    | '/blog/$slug'
     | '/drones/$slug'
     | '/drones/'
   fileRoutesByTo: FileRoutesByTo
@@ -118,6 +128,7 @@ export interface FileRouteTypes {
     | '/contacto'
     | '/marcas'
     | '/nosotros'
+    | '/blog/$slug'
     | '/drones/$slug'
     | '/drones'
   id:
@@ -129,13 +140,14 @@ export interface FileRouteTypes {
     | '/drones'
     | '/marcas'
     | '/nosotros'
+    | '/blog/$slug'
     | '/drones/$slug'
     | '/drones/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  BlogRoute: typeof BlogRoute
+  BlogRoute: typeof BlogRouteWithChildren
   CategoriasRoute: typeof CategoriasRoute
   ContactoRoute: typeof ContactoRoute
   DronesRoute: typeof DronesRouteWithChildren
@@ -208,8 +220,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DronesSlugRouteImport
       parentRoute: typeof DronesRoute
     }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof BlogRoute
+    }
   }
 }
+
+interface BlogRouteChildren {
+  BlogSlugRoute: typeof BlogSlugRoute
+}
+
+const BlogRouteChildren: BlogRouteChildren = {
+  BlogSlugRoute: BlogSlugRoute,
+}
+
+const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 interface DronesRouteChildren {
   DronesSlugRoute: typeof DronesSlugRoute
@@ -226,7 +255,7 @@ const DronesRouteWithChildren =
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  BlogRoute: BlogRoute,
+  BlogRoute: BlogRouteWithChildren,
   CategoriasRoute: CategoriasRoute,
   ContactoRoute: ContactoRoute,
   DronesRoute: DronesRouteWithChildren,
@@ -236,3 +265,12 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+  }
+}

@@ -2,9 +2,18 @@ import djiT100 from "@/assets/products/dji-agras-t100-1.png";
 import djiT70p from "@/assets/products/dji-agras-t70p-1.png";
 import djiT50 from "@/assets/products/dji-agras-t50-1.png";
 import djiT25p from "@/assets/products/dji-agras-t25p-1.png";
+import djiT25 from "@/assets/products/dji-agras-t25-1.png";
+import djiMavic3M from "@/assets/products/dji-mavic-3m-1.png";
+import djiFlycart30 from "@/assets/products/dji-flycart-30-1.png";
+import djiFlycart100 from "@/assets/products/dji-flycart-100-1.png";
 import xagP150Max from "@/assets/products/xag-p150-max-1.png";
+import xagP150 from "@/assets/products/xag-p150-1.png";
+import xagP100Pro from "@/assets/products/xag-p100-pro-1.png";
+import xagP60 from "@/assets/products/xag-p60-1.png";
 import hylioPegasus from "@/assets/products/hylio-pegasus-1.png";
 import hylioAres from "@/assets/products/hylio-ares-1.png";
+import hylioAtlas from "@/assets/products/hylio-atlas-1.png";
+import hylioPhoton from "@/assets/products/hylio-photon-1.png";
 
 export interface Product {
   slug: string;
@@ -23,9 +32,18 @@ export const productImages: Record<string, string> = {
   "dji-agras-t70p": djiT70p,
   "dji-agras-t50": djiT50,
   "dji-agras-t25p": djiT25p,
+  "dji-agras-t25": djiT25,
+  "dji-mavic-3m": djiMavic3M,
+  "dji-flycart-30": djiFlycart30,
+  "dji-flycart-100": djiFlycart100,
   "xag-p150-max": xagP150Max,
+  "xag-p150": xagP150,
+  "xag-p100-pro": xagP100Pro,
+  "xag-p60": xagP60,
   "hylio-pegasus": hylioPegasus,
   "hylio-ares-hyl-150": hylioAres,
+  "hylio-atlas-hyl-300": hylioAtlas,
+  "hylio-photon": hylioPhoton,
 };
 
 export const allProducts: Product[] = [

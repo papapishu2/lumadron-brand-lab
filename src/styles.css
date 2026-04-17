@@ -148,3 +148,35 @@
     font-family: var(--font-heading);
   }
 }
+
+/* Blog post body content */
+.blog-content p.lead {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--muted-foreground);
+}
+.blog-content h2 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--foreground);
+}
+.blog-content p {
+  line-height: 1.75;
+}
+.blog-content a {
+  color: var(--accent);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+.blog-content a:hover {
+  text-decoration-thickness: 2px;
+}
+.blog-content strong {
+  color: var(--foreground);
+  font-weight: 600;
+}

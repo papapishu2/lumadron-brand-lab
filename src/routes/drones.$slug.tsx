@@ -75,7 +75,7 @@ function ProductDetailPage() {
                 <img
                   src={productImages[product.slug]}
                   alt={product.name}
-                  className="h-full w-full object-contain"
+                  className="h-full w-full object-cover"
                 />
               ) : (
                 <>
@@ -231,7 +231,7 @@ function ProductDetailPage() {
                       <img
                         src={productImages[rel.slug]}
                         alt={rel.name}
-                        className="h-full w-full object-contain"
+                        className="h-full w-full object-cover"
                         loading="lazy"
                       />
                     ) : (

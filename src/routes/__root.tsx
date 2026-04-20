@@ -50,6 +50,13 @@ export const Route = createRootRoute({
       { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },
       { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
     ],
+    scripts: [
+      { src: "https://www.googletagmanager.com/gtag/js?id=G-S7C6SSL47L", async: true },
+      {
+        children:
+          "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-S7C6SSL47L');",
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,

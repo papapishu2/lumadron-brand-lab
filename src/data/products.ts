@@ -234,7 +234,7 @@ export const allProducts: Product[] = [
     slug: "dji-flycart-30",
     name: "DJI FlyCart 30",
     brand: "DJI",
-    categories: ["Oil & Gas"],
+    categories: ["Oil & Gas", "Minería"],
     description:
       "Drone de entrega con capacidad de hasta 40 kg de carga y alcance de 28 km.",
     features: [

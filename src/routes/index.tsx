@@ -11,12 +11,12 @@ export const Route = createFileRoute("/")({
 });
 
 const categories = [
-  { slug: "agricultura", name: "Agricultura", description: "Pulverización, monitoreo y análisis de cultivos con drones autónomos.", icon: Droplets, color: "bg-green-500/10 text-green-600" },
-  { slug: "oil-gas", name: "Oil & Gas", description: "Inspección de infraestructura, monitoreo de ductos y detección de fugas.", icon: Fuel, color: "bg-blue-500/10 text-blue-600" },
-  { slug: "mineria", name: "Minería", description: "Relevamiento topográfico, volumetría y control de operaciones mineras.", icon: Mountain, color: "bg-amber-500/10 text-amber-600" },
-  { slug: "seguridad", name: "Seguridad", description: "Vigilancia perimetral, respuesta ante emergencias y monitoreo en tiempo real.", icon: Shield, color: "bg-red-500/10 text-red-600" },
-  { slug: "topografia", name: "Topografía", description: "Mapeo aéreo, fotogrametría y generación de modelos 3D de alta precisión.", icon: MapPin, color: "bg-violet-500/10 text-violet-600" },
-];
+  { to: "/drones-agricultura", name: "Agricultura", description: "Pulverización, monitoreo y análisis de cultivos con drones autónomos.", icon: Droplets, color: "bg-green-500/10 text-green-600" },
+  { to: "/drones-oil-gas", name: "Oil & Gas", description: "Inspección de infraestructura, monitoreo de ductos y detección de fugas.", icon: Fuel, color: "bg-blue-500/10 text-blue-600" },
+  { to: "/drones-mineria", name: "Minería", description: "Relevamiento topográfico, volumetría y control de operaciones mineras.", icon: Mountain, color: "bg-amber-500/10 text-amber-600" },
+  { to: "/drones-seguridad", name: "Seguridad", description: "Vigilancia perimetral, respuesta ante emergencias y monitoreo en tiempo real.", icon: Shield, color: "bg-red-500/10 text-red-600" },
+  { to: "/drones-topografia", name: "Topografía", description: "Mapeo aéreo, fotogrametría y generación de modelos 3D de alta precisión.", icon: MapPin, color: "bg-violet-500/10 text-violet-600" },
+] as const;
 
 const brands = [
   { name: "DJI", description: "Líder mundial en drones comerciales e industriales.", products: 8, logo: logoDJI, logoClass: "h-12" },
@@ -81,8 +81,7 @@ function HomePage() {
           {categories.map((cat) => (
             <Link
               key={cat.name}
-              to="/categorias/$slug"
-              params={{ slug: cat.slug }}
+              to={cat.to}
               className="group rounded-xl border border-border bg-card p-6 transition-all hover:border-accent/30 hover:shadow-lg"
             >
               <div className={`inline-flex rounded-lg p-2.5 ${cat.color}`}>

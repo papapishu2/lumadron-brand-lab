@@ -1,41 +1,17 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import { ArrowRight, Check, ChevronRight } from "lucide-react";
-import { getCategoryBySlug, categoryLandings } from "@/data/categories";
+import { type CategoryLanding, categoryLandings } from "@/data/categories";
 import { allProducts, productImages } from "@/data/products";
 
-export const Route = createFileRoute("/categorias/$slug")({
-  loader: ({ params }) => {
-    const category = getCategoryBySlug(params.slug);
-    if (!category) throw notFound();
-    return { category };
-  },
-  head: ({ loaderData }) => {
-    if (!loaderData) return { meta: [{ title: "Categoría — Lumadron" }] };
-    const { category } = loaderData;
-    return {
-      meta: [
-        { title: category.metaTitle },
-        { name: "description", content: category.metaDescription },
-        { property: "og:title", content: category.metaTitle },
-        { property: "og:description", content: category.metaDescription },
-        { property: "og:image", content: category.heroImage },
-        { property: "twitter:image", content: category.heroImage },
-      ],
-    };
-  },
-  component: CategoryLandingPage,
-  notFoundComponent: () => (
-    <div className="mx-auto max-w-3xl px-4 py-24 text-center">
-      <h1 className="font-heading text-3xl font-bold">Categoría no encontrada</h1>
-      <Link to="/categorias" className="mt-6 inline-flex items-center gap-1 text-accent hover:underline">
-        Ver todas las categorías <ArrowRight size={14} />
-      </Link>
-    </div>
-  ),
-});
+const categoryRoutes: Record<string, string> = {
+  agricultura: "/drones-agricultura",
+  "oil-gas": "/drones-oil-gas",
+  mineria: "/drones-mineria",
+  seguridad: "/drones-seguridad",
+  topografia: "/drones-topografia",
+};
 
-function CategoryLandingPage() {
-  const { category } = Route.useLoaderData();
+export function CategoryLandingView({ category }: { category: CategoryLanding }) {
   const products = category.productSlugs
     .map((slug) => allProducts.find((p) => p.slug === slug))
     .filter((p): p is NonNullable<typeof p> => Boolean(p));
@@ -66,14 +42,6 @@ function CategoryLandingPage() {
           <p className="mt-6 max-w-2xl text-lg text-primary-foreground/85">
             {category.heroSubtitle}
           </p>
-          <div className="mt-8">
-            <a
-              href="#productos"
-              className="inline-flex items-center justify-center gap-2 rounded-lg border border-primary-foreground/30 bg-primary-foreground/10 px-6 py-3 font-heading text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/20"
-            >
-              Ver productos
-            </a>
-          </div>
         </div>
       </section>
 
@@ -171,8 +139,7 @@ function CategoryLandingPage() {
             .map((c) => (
               <Link
                 key={c.slug}
-                to="/categorias/$slug"
-                params={{ slug: c.slug }}
+                to={categoryRoutes[c.slug]}
                 className="rounded-full border border-border bg-card px-5 py-2 text-sm font-medium text-foreground transition-colors hover:border-accent/40 hover:text-accent"
               >
                 {c.name}
@@ -201,3 +168,5 @@ function CategoryLandingPage() {
     </>
   );
 }
+
+export { categoryRoutes };

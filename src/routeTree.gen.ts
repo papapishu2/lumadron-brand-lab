@@ -11,6 +11,11 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as NosotrosRouteImport } from './routes/nosotros'
 import { Route as MarcasRouteImport } from './routes/marcas'
+import { Route as DronesTopografiaRouteImport } from './routes/drones-topografia'
+import { Route as DronesSeguridadRouteImport } from './routes/drones-seguridad'
+import { Route as DronesOilGasRouteImport } from './routes/drones-oil-gas'
+import { Route as DronesMineriaRouteImport } from './routes/drones-mineria'
+import { Route as DronesAgriculturaRouteImport } from './routes/drones-agricultura'
 import { Route as DronesRouteImport } from './routes/drones'
 import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as BlogRouteImport } from './routes/blog'
@@ -19,7 +24,6 @@ import { Route as DronesIndexRouteImport } from './routes/drones.index'
 import { Route as CategoriasIndexRouteImport } from './routes/categorias.index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as DronesSlugRouteImport } from './routes/drones.$slug'
-import { Route as CategoriasSlugRouteImport } from './routes/categorias.$slug'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const NosotrosRoute = NosotrosRouteImport.update({
@@ -30,6 +34,31 @@ const NosotrosRoute = NosotrosRouteImport.update({
 const MarcasRoute = MarcasRouteImport.update({
   id: '/marcas',
   path: '/marcas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DronesTopografiaRoute = DronesTopografiaRouteImport.update({
+  id: '/drones-topografia',
+  path: '/drones-topografia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DronesSeguridadRoute = DronesSeguridadRouteImport.update({
+  id: '/drones-seguridad',
+  path: '/drones-seguridad',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DronesOilGasRoute = DronesOilGasRouteImport.update({
+  id: '/drones-oil-gas',
+  path: '/drones-oil-gas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DronesMineriaRoute = DronesMineriaRouteImport.update({
+  id: '/drones-mineria',
+  path: '/drones-mineria',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DronesAgriculturaRoute = DronesAgriculturaRouteImport.update({
+  id: '/drones-agricultura',
+  path: '/drones-agricultura',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DronesRoute = DronesRouteImport.update({
@@ -72,11 +101,6 @@ const DronesSlugRoute = DronesSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => DronesRoute,
 } as any)
-const CategoriasSlugRoute = CategoriasSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => CategoriasRoute,
-} as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -88,10 +112,14 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRouteWithChildren
   '/contacto': typeof ContactoRoute
   '/drones': typeof DronesRouteWithChildren
+  '/drones-agricultura': typeof DronesAgriculturaRoute
+  '/drones-mineria': typeof DronesMineriaRoute
+  '/drones-oil-gas': typeof DronesOilGasRoute
+  '/drones-seguridad': typeof DronesSeguridadRoute
+  '/drones-topografia': typeof DronesTopografiaRoute
   '/marcas': typeof MarcasRoute
   '/nosotros': typeof NosotrosRoute
   '/blog/$slug': typeof BlogSlugRoute
-  '/categorias/$slug': typeof CategoriasSlugRoute
   '/drones/$slug': typeof DronesSlugRoute
   '/blog/': typeof BlogIndexRoute
   '/categorias/': typeof CategoriasIndexRoute
@@ -100,10 +128,14 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contacto': typeof ContactoRoute
+  '/drones-agricultura': typeof DronesAgriculturaRoute
+  '/drones-mineria': typeof DronesMineriaRoute
+  '/drones-oil-gas': typeof DronesOilGasRoute
+  '/drones-seguridad': typeof DronesSeguridadRoute
+  '/drones-topografia': typeof DronesTopografiaRoute
   '/marcas': typeof MarcasRoute
   '/nosotros': typeof NosotrosRoute
   '/blog/$slug': typeof BlogSlugRoute
-  '/categorias/$slug': typeof CategoriasSlugRoute
   '/drones/$slug': typeof DronesSlugRoute
   '/blog': typeof BlogIndexRoute
   '/categorias': typeof CategoriasIndexRoute
@@ -115,10 +147,14 @@ export interface FileRoutesById {
   '/blog': typeof BlogRouteWithChildren
   '/contacto': typeof ContactoRoute
   '/drones': typeof DronesRouteWithChildren
+  '/drones-agricultura': typeof DronesAgriculturaRoute
+  '/drones-mineria': typeof DronesMineriaRoute
+  '/drones-oil-gas': typeof DronesOilGasRoute
+  '/drones-seguridad': typeof DronesSeguridadRoute
+  '/drones-topografia': typeof DronesTopografiaRoute
   '/marcas': typeof MarcasRoute
   '/nosotros': typeof NosotrosRoute
   '/blog/$slug': typeof BlogSlugRoute
-  '/categorias/$slug': typeof CategoriasSlugRoute
   '/drones/$slug': typeof DronesSlugRoute
   '/blog/': typeof BlogIndexRoute
   '/categorias/': typeof CategoriasIndexRoute
@@ -131,10 +167,14 @@ export interface FileRouteTypes {
     | '/blog'
     | '/contacto'
     | '/drones'
+    | '/drones-agricultura'
+    | '/drones-mineria'
+    | '/drones-oil-gas'
+    | '/drones-seguridad'
+    | '/drones-topografia'
     | '/marcas'
     | '/nosotros'
     | '/blog/$slug'
-    | '/categorias/$slug'
     | '/drones/$slug'
     | '/blog/'
     | '/categorias/'
@@ -143,10 +183,14 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/contacto'
+    | '/drones-agricultura'
+    | '/drones-mineria'
+    | '/drones-oil-gas'
+    | '/drones-seguridad'
+    | '/drones-topografia'
     | '/marcas'
     | '/nosotros'
     | '/blog/$slug'
-    | '/categorias/$slug'
     | '/drones/$slug'
     | '/blog'
     | '/categorias'
@@ -157,10 +201,14 @@ export interface FileRouteTypes {
     | '/blog'
     | '/contacto'
     | '/drones'
+    | '/drones-agricultura'
+    | '/drones-mineria'
+    | '/drones-oil-gas'
+    | '/drones-seguridad'
+    | '/drones-topografia'
     | '/marcas'
     | '/nosotros'
     | '/blog/$slug'
-    | '/categorias/$slug'
     | '/drones/$slug'
     | '/blog/'
     | '/categorias/'
@@ -172,6 +220,11 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRouteWithChildren
   ContactoRoute: typeof ContactoRoute
   DronesRoute: typeof DronesRouteWithChildren
+  DronesAgriculturaRoute: typeof DronesAgriculturaRoute
+  DronesMineriaRoute: typeof DronesMineriaRoute
+  DronesOilGasRoute: typeof DronesOilGasRoute
+  DronesSeguridadRoute: typeof DronesSeguridadRoute
+  DronesTopografiaRoute: typeof DronesTopografiaRoute
   MarcasRoute: typeof MarcasRoute
   NosotrosRoute: typeof NosotrosRoute
   CategoriasIndexRoute: typeof CategoriasIndexRoute
@@ -191,6 +244,41 @@ declare module '@tanstack/react-router' {
       path: '/marcas'
       fullPath: '/marcas'
       preLoaderRoute: typeof MarcasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/drones-topografia': {
+      id: '/drones-topografia'
+      path: '/drones-topografia'
+      fullPath: '/drones-topografia'
+      preLoaderRoute: typeof DronesTopografiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/drones-seguridad': {
+      id: '/drones-seguridad'
+      path: '/drones-seguridad'
+      fullPath: '/drones-seguridad'
+      preLoaderRoute: typeof DronesSeguridadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/drones-oil-gas': {
+      id: '/drones-oil-gas'
+      path: '/drones-oil-gas'
+      fullPath: '/drones-oil-gas'
+      preLoaderRoute: typeof DronesOilGasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/drones-mineria': {
+      id: '/drones-mineria'
+      path: '/drones-mineria'
+      fullPath: '/drones-mineria'
+      preLoaderRoute: typeof DronesMineriaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/drones-agricultura': {
+      id: '/drones-agricultura'
+      path: '/drones-agricultura'
+      fullPath: '/drones-agricultura'
+      preLoaderRoute: typeof DronesAgriculturaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/drones': {
@@ -249,13 +337,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DronesSlugRouteImport
       parentRoute: typeof DronesRoute
     }
-    '/categorias/$slug': {
-      id: '/categorias/$slug'
-      path: '/$slug'
-      fullPath: '/categorias/$slug'
-      preLoaderRoute: typeof CategoriasSlugRouteImport
-      parentRoute: typeof CategoriasRoute
-    }
     '/blog/$slug': {
       id: '/blog/$slug'
       path: '/$slug'
@@ -296,6 +377,11 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRouteWithChildren,
   ContactoRoute: ContactoRoute,
   DronesRoute: DronesRouteWithChildren,
+  DronesAgriculturaRoute: DronesAgriculturaRoute,
+  DronesMineriaRoute: DronesMineriaRoute,
+  DronesOilGasRoute: DronesOilGasRoute,
+  DronesSeguridadRoute: DronesSeguridadRoute,
+  DronesTopografiaRoute: DronesTopografiaRoute,
   MarcasRoute: MarcasRoute,
   NosotrosRoute: NosotrosRoute,
   CategoriasIndexRoute: CategoriasIndexRoute,

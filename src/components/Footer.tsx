@@ -14,11 +14,11 @@ export function Footer() {
           <div>
             <h4 className="font-heading text-sm font-semibold uppercase tracking-wider opacity-60">Categorías</h4>
             <ul className="mt-3 space-y-2 text-sm opacity-80">
-              <li><Link to="/categorias" className="hover:opacity-100">Agricultura</Link></li>
-              <li><Link to="/categorias" className="hover:opacity-100">Oil & Gas</Link></li>
-              <li><Link to="/categorias" className="hover:opacity-100">Minería</Link></li>
-              <li><Link to="/categorias" className="hover:opacity-100">Seguridad</Link></li>
-              <li><Link to="/categorias" className="hover:opacity-100">Topografía</Link></li>
+              <li><Link to="/drones-agricultura" className="hover:opacity-100">Agricultura</Link></li>
+              <li><Link to="/drones-oil-gas" className="hover:opacity-100">Oil & Gas</Link></li>
+              <li><Link to="/drones-mineria" className="hover:opacity-100">Minería</Link></li>
+              <li><Link to="/drones-seguridad" className="hover:opacity-100">Seguridad</Link></li>
+              <li><Link to="/drones-topografia" className="hover:opacity-100">Topografía</Link></li>
             </ul>
           </div>
           <div>

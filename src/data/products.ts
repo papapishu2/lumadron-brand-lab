@@ -19,7 +19,7 @@ export interface Product {
   slug: string;
   name: string;
   brand: string;
-  category: string;
+  categories: string[];
   description: string;
   features: string[];
   specs: Record<string, string>;
@@ -52,7 +52,7 @@ export const allProducts: Product[] = [
     slug: "dji-agras-t100",
     name: "DJI Agras T100",
     brand: "DJI",
-    category: "Agricultura",
+    categories: ["Agricultura"],
     description:
       "Drone agrícola multirol con 100 kg de carga máxima. Admite fumigación, esparcido y levantamiento de cargas.",
     features: [
@@ -79,7 +79,7 @@ export const allProducts: Product[] = [
     slug: "dji-agras-t70p",
     name: "DJI Agras T70P",
     brand: "DJI",
-    category: "Agricultura",
+    categories: ["Agricultura"],
     description:
       "Drone agrícola de alto rendimiento con tanque de aspersión de 75 L y tanque de esparcido de 100 L.",
     features: [
@@ -105,7 +105,7 @@ export const allProducts: Product[] = [
     slug: "dji-agras-t50",
     name: "DJI Agras T50",
     brand: "DJI",
-    category: "Agricultura",
+    categories: ["Agricultura"],
     description:
       "Drone agrícola de gama media con sistema de aspersión dual y radar de arreglo en fase.",
     features: [
@@ -133,7 +133,7 @@ export const allProducts: Product[] = [
     slug: "dji-agras-t25p",
     name: "DJI Agras T25P",
     brand: "DJI",
-    category: "Agricultura",
+    categories: ["Agricultura"],
     description:
       "Drone agrícola compacto con tanque de 25 L (spray) y 30 L (spread). Diseñado para lotes medianos.",
     features: [
@@ -158,7 +158,7 @@ export const allProducts: Product[] = [
     slug: "dji-agras-t25",
     name: "DJI Agras T25",
     brand: "DJI",
-    category: "Agricultura",
+    categories: ["Agricultura"],
     description:
       "Drone agrícola compacto para operaciones pequeñas y medianas. Tanque de 20 L (spray) / 35 L (spread).",
     features: [
@@ -185,7 +185,7 @@ export const allProducts: Product[] = [
     slug: "dji-mavic-3m",
     name: "DJI Mavic 3M",
     brand: "DJI",
-    category: "Topografía",
+    categories: ["Agricultura", "Oil & Gas", "Minería", "Seguridad", "Topografía"],
     description:
       "Drone de mapeo agrícola con cámara RGB de 20 MP y 4 cámaras multiespectrales (verde, rojo, red edge y NIR).",
     features: [
@@ -210,7 +210,7 @@ export const allProducts: Product[] = [
     slug: "dji-flycart-100",
     name: "DJI FlyCart 100",
     brand: "DJI",
-    category: "Oil & Gas",
+    categories: ["Oil & Gas", "Minería"],
     description:
       "Drone de transporte de carga pesada. Soporta hasta 170 kg de peso total de despegue.",
     features: [
@@ -234,7 +234,7 @@ export const allProducts: Product[] = [
     slug: "dji-flycart-30",
     name: "DJI FlyCart 30",
     brand: "DJI",
-    category: "Oil & Gas",
+    categories: ["Oil & Gas"],
     description:
       "Drone de entrega con capacidad de hasta 40 kg de carga y alcance de 28 km.",
     features: [
@@ -260,7 +260,7 @@ export const allProducts: Product[] = [
     slug: "xag-p150-max",
     name: "XAG P150 Max",
     brand: "XAG",
-    category: "Agricultura",
+    categories: ["Agricultura"],
     description:
       "Drone agrícola tope de gama de XAG con payload de 80 kg y mapeo en tiempo real.",
     features: [
@@ -286,7 +286,7 @@ export const allProducts: Product[] = [
     slug: "xag-p150",
     name: "XAG P150",
     brand: "XAG",
-    category: "Agricultura",
+    categories: ["Agricultura"],
     description:
       "Drone agrícola quadcopter plegable con payload de 70 kg y diseño modular.",
     features: [
@@ -311,7 +311,7 @@ export const allProducts: Product[] = [
     slug: "xag-p100-pro",
     name: "XAG P100 Pro",
     brand: "XAG",
-    category: "Agricultura",
+    categories: ["Agricultura"],
     description:
       "Drone quadcopter plegable con payload de 50 kg. Sistema RevoSpray 3 y RevoCast 3.",
     features: [
@@ -338,7 +338,7 @@ export const allProducts: Product[] = [
     slug: "xag-p60",
     name: "XAG P60",
     brand: "XAG",
-    category: "Agricultura",
+    categories: ["Agricultura"],
     description:
       "Drone agrícola compacto de 30 kg de payload. Ideal para pequeños y medianos productores.",
     features: [
@@ -365,7 +365,7 @@ export const allProducts: Product[] = [
     slug: "hylio-pegasus",
     name: "Hylio PEGASUS",
     brand: "Hylio",
-    category: "Agricultura",
+    categories: ["Agricultura"],
     description:
       "Drone compacto de precisión para tratamientos puntuales: 2.5 / 4 galones de capacidad.",
     features: [
@@ -386,7 +386,7 @@ export const allProducts: Product[] = [
     slug: "hylio-ares-hyl-150",
     name: "Hylio ARES HYL-150",
     brand: "Hylio",
-    category: "Agricultura",
+    categories: ["Agricultura"],
     description:
       "Drone de carga pesada fabricado en Texas. 13 / 20 galones de payload, hasta 70 acres/h. Swarm-enabled.",
     features: [
@@ -413,7 +413,7 @@ export const allProducts: Product[] = [
     slug: "hylio-atlas-hyl-300",
     name: "Hylio ATLAS HYL-300",
     brand: "Hylio",
-    category: "Agricultura",
+    categories: ["Agricultura"],
     description:
       "Drone de gran formato Hylio para pulverización, siembra y fertilización a gran escala. 30 / 50 galones.",
     features: [
@@ -435,7 +435,7 @@ export const allProducts: Product[] = [
     slug: "hylio-photon",
     name: "Hylio PHOTON",
     brand: "Hylio",
-    category: "Seguridad",
+    categories: ["Oil & Gas", "Minería", "Seguridad", "Topografía"],
     description:
       "Drone scout IP55 para respuesta rápida y análisis agronómico. Sensores térmicos EO/IR + RGB de alta resolución.",
     features: [

@@ -25,10 +25,10 @@ const brands = [
 ];
 
 const featuredProducts = [
-  { slug: "dji-agras-t50", name: "DJI Agras T50", brand: "DJI", category: "Agricultura", description: "Drone de pulverización de última generación con tanque de 40L.", image: productImages["dji-agras-t50"] },
-  { slug: "xag-p150", name: "XAG P150", brand: "XAG", category: "Agricultura", description: "Drone agrícola autónomo con capacidad de 50L y IA avanzada.", image: productImages["xag-p150"] },
-  { slug: "dji-flycart-100", name: "DJI FlyCart 100", brand: "DJI", category: "Logística", description: "Drone de carga industrial de gran capacidad para zonas remotas.", image: productImages["dji-flycart-100"] },
-  { slug: "dji-flycart-30", name: "DJI FlyCart 30", brand: "DJI", category: "Logística", description: "Drone de carga para entrega en zonas remotas, hasta 30kg.", image: productImages["dji-flycart-30"] },
+  { slug: "dji-agras-t50", name: "DJI Agras T50", brand: "DJI", categories: ["Agricultura"], description: "Drone de pulverización de última generación con tanque de 40L.", image: productImages["dji-agras-t50"] },
+  { slug: "xag-p150", name: "XAG P150", brand: "XAG", categories: ["Agricultura"], description: "Drone agrícola autónomo con capacidad de 50L y IA avanzada.", image: productImages["xag-p150"] },
+  { slug: "dji-flycart-100", name: "DJI FlyCart 100", brand: "DJI", categories: ["Oil & Gas", "Minería"], description: "Drone de carga industrial de gran capacidad para zonas remotas.", image: productImages["dji-flycart-100"] },
+  { slug: "dji-flycart-30", name: "DJI FlyCart 30", brand: "DJI", categories: ["Oil & Gas"], description: "Drone de carga para entrega en zonas remotas, hasta 30kg.", image: productImages["dji-flycart-30"] },
 ];
 
 const blogPosts = [
@@ -144,7 +144,7 @@ function HomePage() {
                 <img src={product.image} alt={product.name} className="h-full w-full object-cover" />
               </div>
               <div className="p-5">
-                <span className="text-xs font-medium text-accent">{product.brand} · {product.category}</span>
+                <span className="text-xs font-medium text-accent">{product.brand} · {product.categories.join(" · ")}</span>
                 <h3 className="mt-1.5 font-heading text-base font-semibold text-card-foreground">{product.name}</h3>
                 <p className="mt-1.5 text-sm text-muted-foreground line-clamp-2">{product.description}</p>
                 <Link

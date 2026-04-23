@@ -101,7 +101,7 @@ function ProductDetailPage() {
                   {product.brand}
                 </span>
                 <span className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">
-                  {product.category}
+                  {product.categories.join(" · ")}
                 </span>
               </div>
 

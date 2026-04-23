@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { categoryLandings } from "@/data/categories";
+import { categoryRoutes } from "@/components/CategoryLandingView";
 
 export const Route = createFileRoute("/categorias/")({
   component: CategoriasPage,
@@ -24,8 +25,7 @@ function CategoriasPage() {
         {categoryLandings.map((cat) => (
           <Link
             key={cat.slug}
-            to="/categorias/$slug"
-            params={{ slug: cat.slug }}
+            to={categoryRoutes[cat.slug]}
             className="group overflow-hidden rounded-xl border border-border bg-card transition-all hover:border-accent/30 hover:shadow-lg"
           >
             <div className="relative h-48 overflow-hidden">

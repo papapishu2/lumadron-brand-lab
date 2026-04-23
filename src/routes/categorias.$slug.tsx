@@ -66,13 +66,7 @@ function CategoryLandingPage() {
           <p className="mt-6 max-w-2xl text-lg text-primary-foreground/85">
             {category.heroSubtitle}
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link
-              to="/contacto"
-              className="inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3 font-heading text-sm font-semibold text-accent-foreground transition-colors hover:opacity-90"
-            >
-              Solicitar asesoramiento <ArrowRight size={16} />
-            </Link>
+          <div className="mt-8">
             <a
               href="#productos"
               className="inline-flex items-center justify-center gap-2 rounded-lg border border-primary-foreground/30 bg-primary-foreground/10 px-6 py-3 font-heading text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/20"

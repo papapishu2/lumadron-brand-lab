@@ -185,7 +185,7 @@ export const allProducts: Product[] = [
     slug: "dji-mavic-3m",
     name: "DJI Mavic 3M",
     brand: "DJI",
-    category: "Agricultura",
+    category: "Topografía",
     description:
       "Drone de mapeo agrícola con cámara RGB de 20 MP y 4 cámaras multiespectrales (verde, rojo, red edge y NIR).",
     features: [
@@ -210,7 +210,7 @@ export const allProducts: Product[] = [
     slug: "dji-flycart-100",
     name: "DJI FlyCart 100",
     brand: "DJI",
-    category: "Logística",
+    category: "Oil & Gas",
     description:
       "Drone de transporte de carga pesada. Soporta hasta 170 kg de peso total de despegue.",
     features: [
@@ -234,7 +234,7 @@ export const allProducts: Product[] = [
     slug: "dji-flycart-30",
     name: "DJI FlyCart 30",
     brand: "DJI",
-    category: "Logística",
+    category: "Oil & Gas",
     description:
       "Drone de entrega con capacidad de hasta 40 kg de carga y alcance de 28 km.",
     features: [
@@ -435,7 +435,7 @@ export const allProducts: Product[] = [
     slug: "hylio-photon",
     name: "Hylio PHOTON",
     brand: "Hylio",
-    category: "Inspección",
+    category: "Seguridad",
     description:
       "Drone scout IP55 para respuesta rápida y análisis agronómico. Sensores térmicos EO/IR + RGB de alta resolución.",
     features: [

@@ -19,6 +19,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as DronesIndexRouteImport } from './routes/drones.index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as DronesSlugRouteImport } from './routes/drones.$slug'
+import { Route as CategoriasSlugRouteImport } from './routes/categorias.$slug'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const NosotrosRoute = NosotrosRouteImport.update({
@@ -71,6 +72,11 @@ const DronesSlugRoute = DronesSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => DronesRoute,
 } as any)
+const CategoriasSlugRoute = CategoriasSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => CategoriasRoute,
+} as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -80,23 +86,25 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/blog': typeof BlogRouteWithChildren
-  '/categorias': typeof CategoriasRoute
+  '/categorias': typeof CategoriasRouteWithChildren
   '/contacto': typeof ContactoRoute
   '/drones': typeof DronesRouteWithChildren
   '/marcas': typeof MarcasRoute
   '/nosotros': typeof NosotrosRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/categorias/$slug': typeof CategoriasSlugRoute
   '/drones/$slug': typeof DronesSlugRoute
   '/blog/': typeof BlogIndexRoute
   '/drones/': typeof DronesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/categorias': typeof CategoriasRoute
+  '/categorias': typeof CategoriasRouteWithChildren
   '/contacto': typeof ContactoRoute
   '/marcas': typeof MarcasRoute
   '/nosotros': typeof NosotrosRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/categorias/$slug': typeof CategoriasSlugRoute
   '/drones/$slug': typeof DronesSlugRoute
   '/blog': typeof BlogIndexRoute
   '/drones': typeof DronesIndexRoute
@@ -105,12 +113,13 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/blog': typeof BlogRouteWithChildren
-  '/categorias': typeof CategoriasRoute
+  '/categorias': typeof CategoriasRouteWithChildren
   '/contacto': typeof ContactoRoute
   '/drones': typeof DronesRouteWithChildren
   '/marcas': typeof MarcasRoute
   '/nosotros': typeof NosotrosRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/categorias/$slug': typeof CategoriasSlugRoute
   '/drones/$slug': typeof DronesSlugRoute
   '/blog/': typeof BlogIndexRoute
   '/drones/': typeof DronesIndexRoute
@@ -126,6 +135,7 @@ export interface FileRouteTypes {
     | '/marcas'
     | '/nosotros'
     | '/blog/$slug'
+    | '/categorias/$slug'
     | '/drones/$slug'
     | '/blog/'
     | '/drones/'
@@ -137,6 +147,7 @@ export interface FileRouteTypes {
     | '/marcas'
     | '/nosotros'
     | '/blog/$slug'
+    | '/categorias/$slug'
     | '/drones/$slug'
     | '/blog'
     | '/drones'
@@ -150,6 +161,7 @@ export interface FileRouteTypes {
     | '/marcas'
     | '/nosotros'
     | '/blog/$slug'
+    | '/categorias/$slug'
     | '/drones/$slug'
     | '/blog/'
     | '/drones/'
@@ -158,7 +170,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BlogRoute: typeof BlogRouteWithChildren
-  CategoriasRoute: typeof CategoriasRoute
+  CategoriasRoute: typeof CategoriasRouteWithChildren
   ContactoRoute: typeof ContactoRoute
   DronesRoute: typeof DronesRouteWithChildren
   MarcasRoute: typeof MarcasRoute
@@ -237,6 +249,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DronesSlugRouteImport
       parentRoute: typeof DronesRoute
     }
+    '/categorias/$slug': {
+      id: '/categorias/$slug'
+      path: '/$slug'
+      fullPath: '/categorias/$slug'
+      preLoaderRoute: typeof CategoriasSlugRouteImport
+      parentRoute: typeof CategoriasRoute
+    }
     '/blog/$slug': {
       id: '/blog/$slug'
       path: '/$slug'
@@ -259,6 +278,18 @@ const BlogRouteChildren: BlogRouteChildren = {
 
 const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
+interface CategoriasRouteChildren {
+  CategoriasSlugRoute: typeof CategoriasSlugRoute
+}
+
+const CategoriasRouteChildren: CategoriasRouteChildren = {
+  CategoriasSlugRoute: CategoriasSlugRoute,
+}
+
+const CategoriasRouteWithChildren = CategoriasRoute._addFileChildren(
+  CategoriasRouteChildren,
+)
+
 interface DronesRouteChildren {
   DronesSlugRoute: typeof DronesSlugRoute
   DronesIndexRoute: typeof DronesIndexRoute
@@ -275,7 +306,7 @@ const DronesRouteWithChildren =
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BlogRoute: BlogRouteWithChildren,
-  CategoriasRoute: CategoriasRoute,
+  CategoriasRoute: CategoriasRouteWithChildren,
   ContactoRoute: ContactoRoute,
   DronesRoute: DronesRouteWithChildren,
   MarcasRoute: MarcasRoute,

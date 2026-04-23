@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Droplets, Fuel, Shield, MapPin, ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
+import { categoryLandings } from "@/data/categories";
 
 export const Route = createFileRoute("/categorias")({
   component: CategoriasPage,
@@ -11,13 +12,6 @@ export const Route = createFileRoute("/categorias")({
   }),
 });
 
-const categories = [
-  { name: "Agricultura", description: "Pulverización aérea, esparcido, monitoreo multiespectral y agricultura de precisión con drones autónomos.", icon: Droplets, products: ["DJI Agras T100", "DJI Agras T50", "XAG P150 Max", "XAG P100 Pro", "Hylio ARES HYL-150"] },
-  { name: "Logística", description: "Transporte de carga pesada y entregas en zonas remotas o de difícil acceso.", icon: Fuel, products: ["DJI FlyCart 100", "DJI FlyCart 30"] },
-  { name: "Inspección", description: "Inspección visual, térmica y multiespectral para infraestructura, energía y respuesta rápida.", icon: Shield, products: ["Hylio PHOTON", "DJI Mavic 3M"] },
-  { name: "Topografía", description: "Mapeo agrícola, fotogrametría y análisis multiespectral para relevamiento de precisión.", icon: MapPin, products: ["DJI Mavic 3M", "Hylio PHOTON"] },
-];
-
 function CategoriasPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-16 lg:px-8">
@@ -26,29 +20,49 @@ function CategoriasPage() {
         Cada industria tiene desafíos únicos. Encontrá la solución con drones ideal para tu operación.
       </p>
 
-      <div className="mt-12 grid gap-6 md:grid-cols-2">
-        {categories.map((cat) => (
-          <div key={cat.name} className="flex flex-col gap-6 rounded-xl border border-border bg-card p-8 md:flex-row md:items-start">
-            <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl bg-accent/10">
-              <cat.icon size={28} className="text-accent" />
+      <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {categoryLandings.map((cat) => (
+          <Link
+            key={cat.slug}
+            to="/categorias/$slug"
+            params={{ slug: cat.slug }}
+            className="group overflow-hidden rounded-xl border border-border bg-card transition-all hover:border-accent/30 hover:shadow-lg"
+          >
+            <div className="relative h-48 overflow-hidden">
+              <img
+                src={cat.heroImage}
+                alt={cat.name}
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent" />
+              <h2 className="absolute bottom-4 left-5 font-heading text-2xl font-bold text-primary-foreground">
+                {cat.name}
+              </h2>
             </div>
-            <div className="flex-1">
-              <h2 className="font-heading text-2xl font-bold text-card-foreground">{cat.name}</h2>
-              <p className="mt-2 text-muted-foreground">{cat.description}</p>
-              <div className="mt-4">
-                <h4 className="text-sm font-semibold text-foreground">Productos recomendados:</h4>
-                <div className="mt-2 flex flex-wrap gap-2">
-                  {cat.products.map((p) => (
-                    <span key={p} className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground">{p}</span>
-                  ))}
-                </div>
-              </div>
-              <Link to="/contacto" className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline">
-                Consultá por esta solución <ArrowRight size={14} />
-              </Link>
+            <div className="p-6">
+              <p className="text-sm text-muted-foreground line-clamp-3">{cat.heroSubtitle}</p>
+              <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-accent">
+                Ver soluciones <ChevronRight size={14} />
+              </span>
             </div>
-          </div>
+          </Link>
         ))}
+      </div>
+
+      <div className="mt-16 rounded-2xl bg-primary p-10 text-center md:p-14">
+        <h2 className="font-heading text-2xl font-bold text-primary-foreground md:text-3xl">
+          ¿No estás seguro qué categoría aplica?
+        </h2>
+        <p className="mt-3 text-primary-foreground/80">
+          Contanos sobre tu operación y te recomendamos la mejor solución.
+        </p>
+        <Link
+          to="/contacto"
+          className="mt-7 inline-flex items-center gap-2 rounded-lg bg-accent px-7 py-3 font-heading text-sm font-semibold text-accent-foreground transition-colors hover:opacity-90"
+        >
+          Contactanos <ArrowRight size={16} />
+        </Link>
       </div>
     </div>
   );

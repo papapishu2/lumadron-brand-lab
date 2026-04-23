@@ -19,7 +19,7 @@ export interface Product {
   slug: string;
   name: string;
   brand: string;
-  category: string;
+  categories: string[];
   description: string;
   features: string[];
   specs: Record<string, string>;

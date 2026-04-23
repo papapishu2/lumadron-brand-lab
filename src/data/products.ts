@@ -185,7 +185,7 @@ export const allProducts: Product[] = [
     slug: "dji-mavic-3m",
     name: "DJI Mavic 3M",
     brand: "DJI",
-    category: "Agricultura",
+    category: "Topografía",
     description:
       "Drone de mapeo agrícola con cámara RGB de 20 MP y 4 cámaras multiespectrales (verde, rojo, red edge y NIR).",
     features: [

@@ -138,7 +138,7 @@ function CategoryLandingPage() {
                 </div>
                 <div className="p-5">
                   <span className="text-xs font-medium text-accent">
-                    {product.brand} · {product.category}
+                    {product.brand} · {product.categories.join(" · ")}
                   </span>
                   <h3 className="mt-1.5 font-heading text-base font-semibold text-card-foreground">
                     {product.name}

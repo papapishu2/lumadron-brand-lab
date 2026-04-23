@@ -27,7 +27,7 @@ function DronesPage() {
     [],
   );
   const categories = useMemo(
-    () => ["Todas", ...Array.from(new Set(allProducts.map((p) => p.category)))],
+    () => ["Todas", ...Array.from(new Set(allProducts.flatMap((p) => p.categories)))],
     [],
   );
 
@@ -36,7 +36,7 @@ function DronesPage() {
       allProducts.filter(
         (p) =>
           (brand === "Todas" || p.brand === brand) &&
-          (category === "Todas" || p.category === category),
+          (category === "Todas" || p.categories.includes(category)),
       ),
     [brand, category],
   );
@@ -93,7 +93,7 @@ function DronesPage() {
                   {product.brand}
                 </span>
                 <span className="text-xs text-muted-foreground">
-                  {product.category}
+                  {product.categories.join(" · ")}
                 </span>
               </div>
               <h3 className="mt-2 font-heading text-lg font-semibold text-card-foreground">

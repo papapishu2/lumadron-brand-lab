@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { categoryLandings } from "@/data/categories";
 
-export const Route = createFileRoute("/categorias")({
+export const Route = createFileRoute("/categorias/")({
   component: CategoriasPage,
   head: () => ({
     meta: [

@@ -210,7 +210,7 @@ export const allProducts: Product[] = [
     slug: "dji-flycart-100",
     name: "DJI FlyCart 100",
     brand: "DJI",
-    category: "Logística",
+    category: "Oil & Gas",
     description:
       "Drone de transporte de carga pesada. Soporta hasta 170 kg de peso total de despegue.",
     features: [

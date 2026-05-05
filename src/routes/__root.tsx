@@ -1,27 +1,33 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
+import drone404 from "../assets/404-drone.png";
 
 import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-[60vh] items-center justify-center px-4">
-      <div className="max-w-md text-center">
-        <h1 className="font-heading text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 font-heading text-xl font-semibold text-foreground">Página no encontrada</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          La página que buscás no existe o fue movida.
-        </p>
-        <div className="mt-6">
-          <Link
-            to="/"
-            className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            Volver al inicio
-          </Link>
-        </div>
-      </div>
+    <div className="flex min-h-[80vh] flex-col items-center justify-center bg-white px-4 py-16 text-center">
+      <img
+        src={drone404}
+        alt="Drone Lumadron"
+        width={280}
+        height={280}
+        className="h-56 w-56 object-contain sm:h-64 sm:w-64"
+      />
+      <h1 className="mt-8 font-heading text-6xl font-extrabold text-[#335685] sm:text-7xl">404</h1>
+      <h2 className="mt-3 font-heading text-xl font-semibold text-[#335685] sm:text-2xl">
+        Esta página despegó sin rumbo
+      </h2>
+      <p className="mt-3 max-w-md text-sm text-neutral-600 sm:text-base">
+        La página que buscás no existe o fue movida. Volvé al inicio para seguir explorando.
+      </p>
+      <Link
+        to="/"
+        className="mt-8 inline-flex items-center justify-center rounded-lg bg-[#fa4301] px-6 py-3 font-heading text-sm font-semibold text-white transition-opacity hover:opacity-90"
+      >
+        Volver al inicio
+      </Link>
     </div>
   );
 }

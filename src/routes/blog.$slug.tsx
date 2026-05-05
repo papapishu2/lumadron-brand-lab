@@ -6,16 +6,26 @@ export const Route = createFileRoute("/blog/$slug")({
   component: BlogPostPage,
   head: ({ params }) => {
     const post = getBlogPostBySlug(params.slug);
+    if (!post) {
+      return {
+        meta: [
+          { title: "Artículo no encontrado | Blog Lumadron" },
+          { name: "description", content: "El artículo que buscás no existe o fue removido." },
+        ],
+      };
+    }
+    const title = `${post.title} | Blog Lumadron`;
     return {
       meta: [
-        {
-          title: post ? `${post.title} — Lumadron Blog` : "Artículo no encontrado — Lumadron",
-        },
-        { name: "description", content: post?.excerpt ?? "" },
-        { property: "og:title", content: post?.title ?? "Lumadron Blog" },
-        { property: "og:description", content: post?.excerpt ?? "" },
-        ...(post?.image ? [{ property: "og:image", content: post.image }] : []),
-        ...(post?.image ? [{ name: "twitter:image", content: post.image }] : []),
+        { title },
+        { name: "description", content: post.excerpt },
+        { property: "og:title", content: title },
+        { property: "og:description", content: post.excerpt },
+        { property: "og:type", content: "article" },
+        { property: "article:section", content: post.category },
+        { property: "article:published_time", content: post.date },
+        { property: "og:image", content: post.image },
+        { name: "twitter:image", content: post.image },
       ],
     };
   },

@@ -6,14 +6,28 @@ export const Route = createFileRoute("/drones/$slug")({
   component: ProductDetailPage,
   head: ({ params }) => {
     const product = getProductBySlug(params.slug);
+    if (!product) {
+      return {
+        meta: [
+          { title: "Producto no encontrado — Lumadron" },
+          { name: "description", content: "El drone que buscás no está disponible en el catálogo de Lumadron." },
+        ],
+      };
+    }
+    const cats = product.categories.join(", ");
+    const title = `${product.name} | Drone ${product.brand} para ${cats} | Lumadron`;
+    const description = product.description.length > 155
+      ? product.description.slice(0, 152) + "..."
+      : product.description;
     return {
       meta: [
-        {
-          title: product
-            ? `${product.name} — Lumadron`
-            : "Producto no encontrado — Lumadron",
-        },
-        { name: "description", content: product?.description ?? "" },
+        { title },
+        { name: "description", content: description },
+        { property: "og:title", content: title },
+        { property: "og:description", content: description },
+        { property: "og:type", content: "product" },
+        ...(product.image ? [{ property: "og:image", content: product.image }] : []),
+        ...(product.image ? [{ name: "twitter:image", content: product.image }] : []),
       ],
     };
   },

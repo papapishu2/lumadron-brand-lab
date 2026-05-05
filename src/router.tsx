@@ -1,5 +1,33 @@
-import { createRouter, useRouter } from "@tanstack/react-router";
+import { createRouter, useRouter, Link } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
+import drone404 from "./assets/404-drone.png";
+
+function DefaultNotFoundComponent() {
+  return (
+    <div className="flex min-h-[80vh] flex-col items-center justify-center bg-white px-4 py-16 text-center">
+      <img
+        src={drone404}
+        alt="Drone Lumadron"
+        width={280}
+        height={280}
+        className="h-56 w-56 object-contain sm:h-64 sm:w-64"
+      />
+      <h1 className="mt-8 font-heading text-6xl font-extrabold text-[#335685] sm:text-7xl">404</h1>
+      <h2 className="mt-3 font-heading text-xl font-semibold text-[#335685] sm:text-2xl">
+        Esta página despegó sin rumbo
+      </h2>
+      <p className="mt-3 max-w-md text-sm text-neutral-600 sm:text-base">
+        La página que buscás no existe o fue movida. Volvé al inicio para seguir explorando.
+      </p>
+      <Link
+        to="/"
+        className="mt-8 inline-flex items-center justify-center rounded-lg bg-[#fa4301] px-6 py-3 font-heading text-sm font-semibold text-white transition-opacity hover:opacity-90"
+      >
+        Volver al inicio
+      </Link>
+    </div>
+  );
+}
 
 function DefaultErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   const router = useRouter();
@@ -61,6 +89,7 @@ export const getRouter = () => {
     scrollRestoration: true,
     defaultPreloadStaleTime: 0,
     defaultErrorComponent: DefaultErrorComponent,
+    defaultNotFoundComponent: DefaultNotFoundComponent,
   });
 
   return router;

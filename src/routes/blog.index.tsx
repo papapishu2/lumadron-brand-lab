@@ -6,8 +6,10 @@ export const Route = createFileRoute("/blog/")({
   component: BlogPage,
   head: () => ({
     meta: [
-      { title: "Blog — Lumadron" },
-      { name: "description", content: "Novedades, guías, comparativas y normativa sobre drones y robótica en Argentina." },
+      { title: "Blog de Drones y Robótica | Lumadron Argentina" },
+      { name: "description", content: "Guías, comparativas y normativa ANAC sobre drones DJI, XAG e Hylio para agro, minería, oil & gas y topografía." },
+      { property: "og:title", content: "Blog de Drones y Robótica | Lumadron Argentina" },
+      { property: "og:description", content: "Guías, comparativas y normativa ANAC sobre drones DJI, XAG e Hylio para agro, minería, oil & gas y topografía." },
     ],
   }),
 });

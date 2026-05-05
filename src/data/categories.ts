@@ -53,9 +53,9 @@ export const categoryLandings: CategoryLanding[] = [
       "hylio-ares-hyl-150",
       "dji-mavic-3m",
     ],
-    metaTitle: "Drones para agricultura — Lumadron",
+    metaTitle: "Drones Agrícolas en Argentina | DJI Agras, XAG e Hylio",
     metaDescription:
-      "Pulverización, esparcido y mapeo multiespectral con drones DJI Agras, XAG e Hylio para el agro argentino.",
+      "Drones para pulverización, esparcido y mapeo NDVI. Modelos DJI Agras, XAG P150 e Hylio para agricultura de precisión en Argentina.",
   },
   {
     slug: "oil-gas",
@@ -79,9 +79,9 @@ export const categoryLandings: CategoryLanding[] = [
       ],
     },
     productSlugs: ["hylio-photon", "dji-mavic-3m", "dji-flycart-100", "dji-flycart-30"],
-    metaTitle: "Drones para Oil & Gas — Lumadron",
+    metaTitle: "Drones para Oil & Gas | Inspección y Logística Aérea",
     metaDescription:
-      "Inspección térmica, monitoreo de ductos y logística aérea con drones para la industria del petróleo y gas.",
+      "Inspección térmica de ductos y plantas, detección de fugas y logística remota con drones DJI FlyCart e Hylio Photon en yacimientos.",
   },
   {
     slug: "mineria",
@@ -105,9 +105,9 @@ export const categoryLandings: CategoryLanding[] = [
       ],
     },
     productSlugs: ["dji-mavic-3m", "hylio-photon", "dji-flycart-100"],
-    metaTitle: "Drones para minería — Lumadron",
+    metaTitle: "Drones para Minería | Volumetría y Mapeo RTK",
     metaDescription:
-      "Volumetría, mapeo topográfico y monitoreo de operaciones mineras con drones DJI e Hylio en Argentina.",
+      "Volumetría de stockpiles, mapeo topográfico RTK y monitoreo de taludes con drones DJI Mavic 3M e Hylio Photon para minería en Argentina.",
   },
   {
     slug: "seguridad",
@@ -131,9 +131,9 @@ export const categoryLandings: CategoryLanding[] = [
       ],
     },
     productSlugs: ["hylio-photon", "dji-mavic-3m"],
-    metaTitle: "Drones para seguridad — Lumadron",
+    metaTitle: "Drones para Seguridad | Vigilancia y Respuesta Rápida",
     metaDescription:
-      "Vigilancia perimetral, monitoreo térmico y respuesta rápida con drones para seguridad y emergencias.",
+      "Vigilancia perimetral, cámaras térmicas y soporte a fuerzas de seguridad y emergencias con drones profesionales en Argentina.",
   },
   {
     slug: "topografia",
@@ -157,9 +157,9 @@ export const categoryLandings: CategoryLanding[] = [
       ],
     },
     productSlugs: ["dji-mavic-3m", "hylio-photon"],
-    metaTitle: "Drones para topografía — Lumadron",
+    metaTitle: "Drones para Topografía | Fotogrametría RTK y Modelos 3D",
     metaDescription:
-      "Mapeo aéreo, fotogrametría y modelos 3D con drones DJI Mavic 3M e Hylio Photon. Precisión centimétrica.",
+      "Mapeo aéreo, ortomosaicos y modelos 3D con precisión centimétrica usando drones RTK/PPK para obras, agro y energía en Argentina.",
   },
 ];
 

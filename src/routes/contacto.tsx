@@ -6,8 +6,10 @@ export const Route = createFileRoute("/contacto")({
   component: ContactoPage,
   head: () => ({
     meta: [
-      { title: "Contacto — Lumadron" },
-      { name: "description", content: "Contactá a Lumadron para asesoramiento sobre drones y robótica para tu industria." },
+      { title: "Contacto Lumadron | Asesoramiento en Drones DJI, XAG e Hylio" },
+      { name: "description", content: "Hablá con nuestros especialistas para elegir el drone ideal para tu operación agrícola, minera, energética o de seguridad en Argentina." },
+      { property: "og:title", content: "Contacto Lumadron | Asesoramiento en Drones DJI, XAG e Hylio" },
+      { property: "og:description", content: "Hablá con nuestros especialistas para elegir el drone ideal para tu operación agrícola, minera, energética o de seguridad en Argentina." },
     ],
   }),
 });

@@ -8,12 +8,14 @@ export const Route = createFileRoute("/drones/")({
   component: DronesPage,
   head: () => ({
     meta: [
-      { title: "Drones — Lumadron" },
+      { title: "Catálogo de Drones DJI, XAG e Hylio | Lumadron Argentina" },
       {
         name: "description",
         content:
-          "Catálogo completo de drones DJI, XAG y Hylio para agricultura e industria en Argentina.",
+          "Catálogo completo de drones agrícolas, de inspección y carga: DJI Agras, FlyCart, Mavic, XAG P-Series e Hylio. Especificaciones y aplicaciones.",
       },
+      { property: "og:title", content: "Catálogo de Drones DJI, XAG e Hylio | Lumadron Argentina" },
+      { property: "og:description", content: "Catálogo completo de drones agrícolas, de inspección y carga: DJI Agras, FlyCart, Mavic, XAG P-Series e Hylio." },
     ],
   }),
 });

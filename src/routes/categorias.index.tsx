@@ -7,8 +7,10 @@ export const Route = createFileRoute("/categorias/")({
   component: CategoriasPage,
   head: () => ({
     meta: [
-      { title: "Categorías — Lumadron" },
-      { name: "description", content: "Soluciones con drones para agricultura, oil & gas, minería, seguridad y topografía." },
+      { title: "Soluciones con Drones por Industria | Lumadron Argentina" },
+      { name: "description", content: "Drones para agricultura, oil & gas, minería, seguridad y topografía. Elegí la solución según tu industria." },
+      { property: "og:title", content: "Soluciones con Drones por Industria | Lumadron Argentina" },
+      { property: "og:description", content: "Drones para agricultura, oil & gas, minería, seguridad y topografía. Elegí la solución según tu industria." },
     ],
   }),
 });

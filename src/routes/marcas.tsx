@@ -8,8 +8,10 @@ export const Route = createFileRoute("/marcas")({
   component: MarcasPage,
   head: () => ({
     meta: [
-      { title: "Marcas — Lumadron" },
-      { name: "description", content: "Distribuidores oficiales de DJI, XAG y Hylio en Argentina." },
+      { title: "Marcas DJI, XAG e Hylio en Argentina | Lumadron" },
+      { name: "description", content: "Distribuidor oficial de DJI Agras, XAG y Hylio en Argentina. Drones agrícolas e industriales con respaldo, repuestos y soporte técnico." },
+      { property: "og:title", content: "Marcas DJI, XAG e Hylio en Argentina | Lumadron" },
+      { property: "og:description", content: "Distribuidor oficial de DJI Agras, XAG y Hylio en Argentina. Drones agrícolas e industriales con respaldo, repuestos y soporte técnico." },
     ],
   }),
 });

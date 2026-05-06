@@ -1,6 +1,7 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
+import { Toaster } from "../components/ui/sonner";
 import drone404 from "../assets/404-drone.png";
 
 import appCss from "../styles.css?url";
@@ -93,6 +94,7 @@ function RootComponent() {
         <Outlet />
       </main>
       <Footer />
+      <Toaster />
     </div>
   );
 }

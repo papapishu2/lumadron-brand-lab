@@ -392,6 +392,7 @@ export const blogPosts: BlogPost[] = [
 <p>Si tu empresa o establecimiento evalúa incorporar drones para seguridad, podemos ayudarte a diseñar el programa. Visitá nuestra categoría <a href="/drones-seguridad">drones para seguridad</a> o escribinos desde <a href="/contacto">contacto</a>.</p>
 `,
   },
+];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);

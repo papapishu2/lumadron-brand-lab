@@ -23,16 +23,16 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: "guia-drones-agricolas-argentina-2025",
-    title: "Guía completa de drones agrícolas en Argentina 2025",
+    slug: "guia-drones-agricolas-argentina-2026",
+    title: "Guía completa de drones agrícolas en Argentina 2026",
     excerpt:
       "Todo lo que necesitás saber para elegir el drone agrícola ideal para tu operación: capacidad, autonomía, precisión y costo por hectárea.",
     category: "Guías",
-    date: "15 Abr 2025",
+    date: "15 Abr 2026",
     readTime: "8 min",
     image: guiaDronesAgricolas,
     content: `
-<p class="lead">El uso de <strong>drones agrícolas en Argentina</strong> dejó de ser una promesa para convertirse en una herramienta concreta de producción. En 2025, productores de soja, maíz, trigo y economías regionales ya integran aeronaves no tripuladas para pulverizar, sembrar, fertilizar y monitorear cultivos con precisión centimétrica. Esta guía resume lo que necesitás saber antes de invertir.</p>
+<p class="lead">El uso de <strong>drones agrícolas en Argentina</strong> dejó de ser una promesa para convertirse en una herramienta concreta de producción. En 2026, productores de soja, maíz, trigo y economías regionales ya integran aeronaves no tripuladas para pulverizar, sembrar, fertilizar y monitorear cultivos con precisión centimétrica. Esta guía resume lo que necesitás saber antes de invertir.</p>
 
 <h2>Por qué adoptar drones en el agro</h2>
 <p>Los <em>UAV agrícolas</em> permiten aplicar fitosanitarios en momentos críticos donde el suelo está demasiado húmedo para una pulverizadora autopropulsada, reducen la deriva, optimizan el uso de agua y bajan el costo por hectárea. Frente a una avioneta, ofrecen mayor precisión, menor riesgo operativo y posibilidad de trabajar en lotes chicos o de geometría irregular.</p>
@@ -47,7 +47,7 @@ export const blogPosts: BlogPost[] = [
 <p>El mercado argentino se concentra en tres jugadores con soporte local: <a href="/marcas">DJI, XAG y Hylio</a>. DJI domina por ecosistema y disponibilidad de repuestos; XAG se destaca en autonomía y aplicación variable; Hylio es la opción para quienes buscan equipos pensados para soja, maíz y trigo en escala extensiva, como el <a href="/drones/hylio-ares-hyl-150">Hylio AG-150 Ares</a>.</p>
 
 <h2>Aplicaciones más allá de la pulverización</h2>
-<p>Un drone multiespectral como el <a href="/drones/dji-mavic-3m">DJI Mavic 3M</a> permite generar mapas NDVI para diagnóstico de cultivo, prescripciones variables y detección temprana de plagas. La sinergia entre un drone scout y un drone aplicador es la práctica recomendada para 2025.</p>
+<p>Un drone multiespectral como el <a href="/drones/dji-mavic-3m">DJI Mavic 3M</a> permite generar mapas NDVI para diagnóstico de cultivo, prescripciones variables y detección temprana de plagas. La sinergia entre un drone scout y un drone aplicador es la práctica recomendada para 2026.</p>
 
 <h2>Costos y retorno</h2>
 <p>El costo por hectárea pulverizada con drone se ubica entre USD 6 y USD 12 según escala, autonomía de baterías y logística de carga. Para operaciones de servicio a terceros, el repago del equipo se da en 12 a 24 meses. Para productores, el ahorro proviene de ventanas operativas más amplias y menor pisado del lote.</p>
@@ -65,7 +65,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Analizamos en detalle las dos opciones más populares del mercado para pulverización aérea en agricultura de precisión.",
     category: "Comparativas",
-    date: "10 Abr 2025",
+    date: "10 Abr 2026",
     readTime: "12 min",
     image: djiVsXag,
     content: `
@@ -90,7 +90,7 @@ export const blogPosts: BlogPost[] = [
 <p>El <strong>T50</strong> es la opción más segura para quien ya conoce el ecosistema DJI y trabaja en lotes con relieve. El <strong>P150</strong> destaca en lotes planos y grandes, donde el caudal extra y la autonomía hacen la diferencia. Ninguno es mejor en abstracto: depende de tu operación.</p>
 
 <h2>Cómo decidir</h2>
-<p>Si necesitás ayuda para elegir, revisá nuestra <a href="/blog/guia-drones-agricolas-argentina-2025">guía completa de drones agrícolas</a>, mirá las opciones por <a href="/categorias">industria</a> o escribinos desde <a href="/contacto">contacto</a> para una recomendación personalizada.</p>
+<p>Si necesitás ayuda para elegir, revisá nuestra <a href="/blog/guia-drones-agricolas-argentina-2026">guía completa de drones agrícolas</a>, mirá las opciones por <a href="/categorias">industria</a> o escribinos desde <a href="/contacto">contacto</a> para una recomendación personalizada.</p>
 `,
   },
   {
@@ -99,11 +99,11 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Requisitos legales, registración, seguros y permisos necesarios para operar drones comerciales en Argentina.",
     category: "Normativa",
-    date: "5 Abr 2025",
+    date: "5 Abr 2026",
     readTime: "6 min",
     image: normativaAnac,
     content: `
-<p class="lead">Operar un <strong>drone comercial en Argentina</strong> requiere cumplir con la regulación de la Administración Nacional de Aviación Civil (ANAC). La normativa busca un equilibrio entre habilitar el uso productivo de los UAV y garantizar la seguridad operacional. Esta guía resume lo esencial para 2025.</p>
+<p class="lead">Operar un <strong>drone comercial en Argentina</strong> requiere cumplir con la regulación de la Administración Nacional de Aviación Civil (ANAC). La normativa busca un equilibrio entre habilitar el uso productivo de los UAV y garantizar la seguridad operacional. Esta guía resume lo esencial para 2026.</p>
 
 <h2>Categorías de operación</h2>
 <p>La ANAC clasifica los vehículos aéreos no tripulados según peso y uso. Los drones de pulverización agrícola como el <a href="/drones/dji-agras-t50">DJI Agras T50</a> o el <a href="/drones/xag-p150-max">XAG P150 Max</a> se ubican en la categoría de mayor peso, lo que implica requisitos más estrictos de registro, seguro y operador.</p>
@@ -127,7 +127,7 @@ export const blogPosts: BlogPost[] = [
 <p>Llevá un registro de cada vuelo con fecha, lote, producto aplicado, condiciones meteorológicas y matrícula del equipo. Esto facilita auditorías y trazabilidad ante un cliente o un organismo de control.</p>
 
 <h2>Recursos relacionados</h2>
-<p>Si recién empezás, te recomendamos leer también nuestra <a href="/blog/guia-drones-agricolas-argentina-2025">guía completa de drones agrícolas</a> y la nota sobre los <a href="/blog/errores-comunes-drones-agricolas">5 errores comunes al implementar drones</a>. Para conocer las opciones por industria, visitá <a href="/categorias">nuestras categorías</a> o explorá el portfolio de <a href="/marcas">marcas representadas</a>.</p>
+<p>Si recién empezás, te recomendamos leer también nuestra <a href="/blog/guia-drones-agricolas-argentina-2026">guía completa de drones agrícolas</a> y la nota sobre los <a href="/blog/errores-comunes-drones-agricolas">5 errores comunes al implementar drones</a>. Para conocer las opciones por industria, visitá <a href="/categorias">nuestras categorías</a> o explorá el portfolio de <a href="/marcas">marcas representadas</a>.</p>
 
 <h2>Asesoramiento</h2>
 <p>Desde Lumadron acompañamos el proceso completo: registro, capacitación y selección del equipo. Si necesitás orientación, escribinos desde <a href="/contacto">contacto</a>.</p>
@@ -139,7 +139,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Casos de uso reales de drones en operaciones mineras: volumetría, inspección de taludes y monitoreo ambiental.",
     category: "Casos de uso",
-    date: "1 Abr 2025",
+    date: "1 Abr 2026",
     readTime: "10 min",
     image: dronesMineria,
     content: `
@@ -167,7 +167,7 @@ export const blogPosts: BlogPost[] = [
 <p>Los datos capturados se procesan en plataformas como Pix4D, DroneDeploy o Bentley. La interoperabilidad con el sistema de planificación minero es clave para que el dato se convierta en decisión.</p>
 
 <h2>Casos relacionados</h2>
-<p>Más allá de la minería, estas tecnologías se aplican en oil &amp; gas, construcción y agricultura de precisión. Conocé las industrias donde trabajamos en nuestra página de <a href="/categorias">categorías</a> y revisá el portfolio de <a href="/marcas">marcas</a> que representamos. Para profundizar en aplicaciones agrícolas, leé la <a href="/blog/guia-drones-agricolas-argentina-2025">guía completa de drones agrícolas</a>.</p>
+<p>Más allá de la minería, estas tecnologías se aplican en oil &amp; gas, construcción y agricultura de precisión. Conocé las industrias donde trabajamos en nuestra página de <a href="/categorias">categorías</a> y revisá el portfolio de <a href="/marcas">marcas</a> que representamos. Para profundizar en aplicaciones agrícolas, leé la <a href="/blog/guia-drones-agricolas-argentina-2026">guía completa de drones agrícolas</a>.</p>
 
 <h2>Próximos pasos</h2>
 <p>Si tu operación minera evalúa incorporar drones, podemos ayudarte a definir el equipo, los entregables y el plan de capacitación. Escribinos desde <a href="/contacto">contacto</a>.</p>
@@ -179,7 +179,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Review detallado del AG-230 de Hylio, con 230L de capacidad y sistema autónomo de planificación de misiones.",
     category: "Reviews",
-    date: "28 Mar 2025",
+    date: "28 Mar 2026",
     readTime: "9 min",
     image: hylioAg230,
     content: `
@@ -207,7 +207,7 @@ export const blogPosts: BlogPost[] = [
 <p>Por su tamaño, requiere especial atención a la <a href="/blog/normativa-anac-drones-comerciales-argentina">normativa ANAC</a> y a las regulaciones provinciales sobre fitosanitarios. La capacitación del piloto y la documentación de cada vuelo son innegociables.</p>
 
 <h2>Veredicto</h2>
-<p>El AG-230 no es para todos. Es la herramienta correcta cuando la escala lo justifica y el modelo de negocio premia la productividad por hora. Si tu operación crece y los equipos medianos se quedan cortos, vale la evaluación. Para una mirada general del mercado, te recomendamos leer la <a href="/blog/guia-drones-agricolas-argentina-2025">guía completa de drones agrícolas</a> y explorar nuestras <a href="/categorias">categorías por industria</a>. Para una propuesta concreta, escribinos desde <a href="/contacto">contacto</a>.</p>
+<p>El AG-230 no es para todos. Es la herramienta correcta cuando la escala lo justifica y el modelo de negocio premia la productividad por hora. Si tu operación crece y los equipos medianos se quedan cortos, vale la evaluación. Para una mirada general del mercado, te recomendamos leer la <a href="/blog/guia-drones-agricolas-argentina-2026">guía completa de drones agrícolas</a> y explorar nuestras <a href="/categorias">categorías por industria</a>. Para una propuesta concreta, escribinos desde <a href="/contacto">contacto</a>.</p>
 `,
   },
   {
@@ -216,20 +216,20 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Los errores más frecuentes que cometen los productores al adoptar tecnología drone y cómo evitarlos.",
     category: "Guías",
-    date: "25 Mar 2025",
+    date: "25 Mar 2026",
     readTime: "7 min",
     image: erroresDronesAgro,
     content: `
 <p class="lead">Adoptar <strong>drones agrícolas</strong> sin un plan suele generar frustración y retornos por debajo de lo esperado. Estos son los cinco errores más frecuentes que vemos en productores y empresas de servicio, y cómo evitarlos antes de invertir.</p>
 
 <h2>1. Comprar el equipo equivocado para la escala</h2>
-<p>Elegir un drone chico para una operación grande, o un equipo enorme para lotes mixtos, es el error más caro. Antes de decidir, definí hectáreas anuales, ventana operativa y tipo de cultivo. La <a href="/blog/guia-drones-agricolas-argentina-2025">guía completa de drones agrícolas</a> ayuda a hacer este match. Si dudás entre dos referencias, mirá nuestra comparativa <a href="/blog/dji-agras-t50-vs-xag-p150-comparativa">T50 vs P150</a>.</p>
+<p>Elegir un drone chico para una operación grande, o un equipo enorme para lotes mixtos, es el error más caro. Antes de decidir, definí hectáreas anuales, ventana operativa y tipo de cultivo. La <a href="/blog/guia-drones-agricolas-argentina-2026">guía completa de drones agrícolas</a> ayuda a hacer este match. Si dudás entre dos referencias, mirá nuestra comparativa <a href="/blog/dji-agras-t50-vs-xag-p150-comparativa">T50 vs P150</a>.</p>
 
 <h2>2. Subestimar la logística de baterías y carga</h2>
 <p>Un drone como el <a href="/drones/dji-agras-t50">DJI Agras T50</a> consume baterías a un ritmo que muchos no anticipan. Sin un set adecuado, generador en campo y plan de rotación, la productividad cae a la mitad. Calculá el set mínimo según litros de aplicación por hora y tiempo de carga.</p>
 
 <h2>3. Ignorar la regulación</h2>
-<p>Volar sin matrícula, sin piloto certificado o sin seguro es un riesgo legal y operativo enorme. La <a href="/blog/normativa-anac-drones-comerciales-argentina">normativa ANAC</a> es clara y los controles aumentaron en 2024 y 2025. Cumplir desde el día uno evita multas y problemas con clientes.</p>
+<p>Volar sin matrícula, sin piloto certificado o sin seguro es un riesgo legal y operativo enorme. La <a href="/blog/normativa-anac-drones-comerciales-argentina">normativa ANAC</a> es clara y los controles aumentaron en 2025 y 2026. Cumplir desde el día uno evita multas y problemas con clientes.</p>
 
 <h2>4. No invertir en capacitación</h2>
 <p>Un buen drone con un mal operador es plata mal gastada. La curva de aprendizaje real toma semanas e incluye planificación de misiones, mantenimiento, lectura de mapas y resolución de fallas. Invertí en formación continua del piloto y del personal de apoyo.</p>
@@ -250,7 +250,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Cómo usar drones RTK para levantamientos topográficos centimétricos: equipos, flujo de trabajo y entregables aceptados por colegios profesionales.",
     category: "Topografía",
-    date: "20 Abr 2025",
+    date: "20 Abr 2026",
     readTime: "9 min",
     image: dronesTopografiaRtk,
     content: `
@@ -287,7 +287,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Inspección termográfica de ductos, antorchas y tanques con drones: cómo reducen riesgo, paradas y costos en operaciones de oil & gas.",
     category: "Oil & Gas",
-    date: "18 Abr 2025",
+    date: "18 Abr 2026",
     readTime: "8 min",
     image: dronesOilGasInspeccion,
     content: `
@@ -324,7 +324,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Comparativa entre el DJI FlyCart 30 y FlyCart 100 para logística aérea en minería, energía y agro: capacidad, autonomía y casos de uso.",
     category: "Comparativas",
-    date: "16 Abr 2025",
+    date: "16 Abr 2026",
     readTime: "8 min",
     image: dronesCargaFlycart,
     content: `
@@ -357,11 +357,11 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "drones-seguridad-perimetral-industrial",
-    title: "Drones para seguridad perimetral industrial: guía 2025",
+    title: "Drones para seguridad perimetral industrial: guía 2026",
     excerpt:
       "Cómo armar un programa de vigilancia con drones en plantas, depósitos y campos: equipos, automatización y respuesta ante eventos.",
     category: "Seguridad",
-    date: "12 Abr 2025",
+    date: "12 Abr 2026",
     readTime: "8 min",
     image: dronesSeguridadPerimetral,
     content: `

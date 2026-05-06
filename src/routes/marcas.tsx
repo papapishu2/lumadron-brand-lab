@@ -89,8 +89,8 @@ function MarcasPage() {
               <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Productos</h3>
               <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
                 {brand.products.map((p) => (
-                  <div key={p.slug} className="rounded-lg border border-border bg-background p-4 text-center">
-                    <Link to="/drones/$slug" params={{ slug: p.slug }} className="font-heading text-sm font-semibold text-foreground hover:text-accent">
+                  <div key={p.slug} className="flex flex-col items-center rounded-lg border border-border bg-background p-4 text-center">
+                    <Link to="/drones/$slug" params={{ slug: p.slug }} className="block font-heading text-sm font-semibold text-foreground hover:text-accent">
                       {brand.name} {p.name}
                     </Link>
                     <Link to="/drones/$slug" params={{ slug: p.slug }} className="mt-2 inline-flex items-center gap-1 text-xs text-accent hover:underline">

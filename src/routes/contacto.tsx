@@ -32,7 +32,7 @@ function ContactoPage() {
               </div>
               <div>
                 <h3 className="font-heading text-sm font-semibold text-foreground">Email</h3>
-                <p className="text-sm text-muted-foreground">info@lumadron.com</p>
+                <p className="text-sm text-muted-foreground">drones@lumadron.com</p>
               </div>
             </div>
             <div className="flex items-start gap-4">

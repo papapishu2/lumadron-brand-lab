@@ -9,9 +9,9 @@ export const Route = createFileRoute("/marcas")({
   head: () => ({
     meta: [
       { title: "Marcas DJI, XAG e Hylio en Argentina | Lumadron" },
-      { name: "description", content: "Distribuidor oficial de DJI Agras, XAG y Hylio en Argentina. Drones agrícolas e industriales con respaldo, repuestos y soporte técnico." },
+      { name: "description", content: "Especialistas en DJI Agras, XAG y Hylio en Argentina. Drones agrícolas e industriales con respaldo, repuestos y soporte técnico." },
       { property: "og:title", content: "Marcas DJI, XAG e Hylio en Argentina | Lumadron" },
-      { property: "og:description", content: "Distribuidor oficial de DJI Agras, XAG y Hylio en Argentina. Drones agrícolas e industriales con respaldo, repuestos y soporte técnico." },
+      { property: "og:description", content: "Especialistas en DJI Agras, XAG y Hylio en Argentina. Drones agrícolas e industriales con respaldo, repuestos y soporte técnico." },
     ],
   }),
 });
@@ -67,7 +67,7 @@ function MarcasPage() {
     <div className="mx-auto max-w-7xl px-4 py-16 lg:px-8">
       <h1 className="font-heading text-4xl font-bold text-foreground">Nuestras marcas</h1>
       <p className="mt-3 max-w-2xl text-lg text-muted-foreground">
-        Somos distribuidores oficiales de las mejores marcas de drones profesionales del mundo.
+        Somos especialistas en las mejores marcas de drones profesionales del mundo.
       </p>
 
       <div className="mt-12 space-y-10">

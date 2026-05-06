@@ -23,7 +23,16 @@ const brands = [
     logoClass: "h-12 w-auto",
     tagline: "Líder mundial en drones comerciales e industriales",
     description: "DJI es el fabricante de drones más grande del mundo, con una gama completa de soluciones para agricultura, inspección industrial, mapeo y seguridad.",
-    products: ["Agras T100", "Agras T70P", "Agras T50", "Agras T25P", "Agras T25", "Mavic 3M", "FlyCart 100", "FlyCart 30"],
+    products: [
+      { name: "Agras T100", slug: "dji-agras-t100" },
+      { name: "Agras T70P", slug: "dji-agras-t70p" },
+      { name: "Agras T50", slug: "dji-agras-t50" },
+      { name: "Agras T25P", slug: "dji-agras-t25p" },
+      { name: "Agras T25", slug: "dji-agras-t25" },
+      { name: "Mavic 3M", slug: "dji-mavic-3m" },
+      { name: "FlyCart 100", slug: "dji-flycart-100" },
+      { name: "FlyCart 30", slug: "dji-flycart-30" },
+    ],
   },
   {
     name: "XAG",
@@ -31,7 +40,12 @@ const brands = [
     logoClass: "h-10 w-auto",
     tagline: "Especialista en drones agrícolas y smart farming",
     description: "XAG desarrolla drones agrícolas autónomos con inteligencia artificial, sistemas de pulverización de precisión y herramientas de gestión de cultivos.",
-    products: ["P150 Max", "P150", "P100 Pro", "P60"],
+    products: [
+      { name: "P150 Max", slug: "xag-p150-max" },
+      { name: "P150", slug: "xag-p150" },
+      { name: "P100 Pro", slug: "xag-p100-pro" },
+      { name: "P60", slug: "xag-p60" },
+    ],
   },
   {
     name: "Hylio",
@@ -39,7 +53,12 @@ const brands = [
     logoClass: "h-8 w-auto",
     tagline: "Drones de pulverización de alta capacidad",
     description: "Hylio fabrica drones de pulverización de gran capacidad con sistemas autónomos de planificación de misiones y gestión de flotas.",
-    products: ["PEGASUS", "ARES HYL-150", "ATLAS HYL-300", "PHOTON"],
+    products: [
+      { name: "PEGASUS", slug: "hylio-pegasus" },
+      { name: "ARES HYL-150", slug: "hylio-ares-hyl-150" },
+      { name: "ATLAS HYL-300", slug: "hylio-atlas-hyl-300" },
+      { name: "PHOTON", slug: "hylio-photon" },
+    ],
   },
 ];
 
@@ -70,10 +89,10 @@ function MarcasPage() {
               <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Productos</h3>
               <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
                 {brand.products.map((p) => (
-                  <div key={p} className="rounded-lg border border-border bg-background p-4 text-center">
-                    <p className="font-heading text-sm font-semibold text-foreground">{brand.name} {p}</p>
-                    <Link to="/contacto" className="mt-2 inline-flex items-center gap-1 text-xs text-accent hover:underline">
-                      Consultar <ArrowRight size={12} />
+                  <div key={p.slug} className="rounded-lg border border-border bg-background p-4 text-center">
+                    <p className="font-heading text-sm font-semibold text-foreground">{brand.name} {p.name}</p>
+                    <Link to="/drones/$slug" params={{ slug: p.slug }} className="mt-2 inline-flex items-center gap-1 text-xs text-accent hover:underline">
+                      Ver producto <ArrowRight size={12} />
                     </Link>
                   </div>
                 ))}

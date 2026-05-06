@@ -4,6 +4,10 @@ import normativaAnac from "@/assets/blog/normativa-anac.jpg";
 import dronesMineria from "@/assets/blog/drones-mineria.jpg";
 import hylioAg230 from "@/assets/blog/hylio-ag230.jpg";
 import erroresDronesAgro from "@/assets/blog/errores-drones-agro.jpg";
+import dronesTopografiaRtk from "@/assets/blog/drones-topografia-rtk.jpg";
+import dronesOilGasInspeccion from "@/assets/blog/drones-oil-gas-inspeccion.jpg";
+import dronesCargaFlycart from "@/assets/blog/drones-carga-flycart.jpg";
+import dronesSeguridadPerimetral from "@/assets/blog/drones-seguridad-perimetral.jpg";
 
 export interface BlogPost {
   slug: string;

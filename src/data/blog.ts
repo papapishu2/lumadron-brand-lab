@@ -244,7 +244,154 @@ export const blogPosts: BlogPost[] = [
 <p>Definí objetivos claros, elegí el equipo según escala, capacitá al equipo, cumplí la normativa e integrá el dato. Explorá nuestras <a href="/categorias">categorías por industria</a>, conocé las <a href="/marcas">marcas que representamos</a> y, si querés discutir tu caso, escribinos desde <a href="/contacto">contacto</a>.</p>
 `,
   },
-];
+  {
+    slug: "drones-rtk-topografia-precision-argentina",
+    title: "Drones RTK para topografía de precisión en Argentina",
+    excerpt:
+      "Cómo usar drones RTK para levantamientos topográficos centimétricos: equipos, flujo de trabajo y entregables aceptados por colegios profesionales.",
+    category: "Topografía",
+    date: "20 Abr 2025",
+    readTime: "9 min",
+    image: dronesTopografiaRtk,
+    content: `
+<p class="lead">Los <strong>drones RTK</strong> transformaron la topografía profesional en Argentina. Con precisión centimétrica, tiempos de campo reducidos a un tercio y entregables digitales aceptados por colegios y municipios, hoy son la herramienta estándar para obras viales, loteos, minería y agricultura de precisión.</p>
+
+<h2>Qué es RTK y por qué importa</h2>
+<p>RTK (Real Time Kinematic) corrige la señal GNSS del drone usando una base fija o una red NTRIP, llevando la precisión de metros a centímetros. Sin RTK, un mapa fotogramétrico es una referencia visual; con RTK, es un producto topográfico utilizable para replanteo, cómputo y proyecto.</p>
+
+<h2>Equipos recomendados</h2>
+<p>El <a href="/drones/dji-mavic-3m">DJI Mavic 3M</a> integra RTK y cámara multiespectral, ideal para combinar topografía y monitoreo agronómico en una sola misión. Para levantamientos puros se suman plataformas dedicadas con LiDAR. La elección depende del tamaño del lote, la cobertura vegetal y el tipo de entregable.</p>
+
+<h2>Flujo de trabajo de campo</h2>
+<p>Un proyecto típico arranca con la colocación de puntos de apoyo (GCP), planificación de la misión con solapamiento del 75%, vuelo automatizado y verificación de calidad de imágenes. Con RTK, los GCP funcionan como control de calidad más que como dato primario.</p>
+
+<h2>Procesamiento y entregables</h2>
+<p>El procesamiento se hace en plataformas como Pix4D, Agisoft Metashape o DroneDeploy. Los entregables incluyen ortomosaico georreferenciado, modelo digital de elevación (MDE), curvas de nivel, nube de puntos y reporte de precisión. Todos compatibles con AutoCAD, Civil 3D y QGIS.</p>
+
+<h2>Aplicaciones más comunes</h2>
+<p>En obra civil, se usan para avance de movimiento de suelos y volumetría de excavaciones. En agricultura, para nivelación y diseño de sistematización. En minería, para conciliación de stockpiles, como detallamos en la nota sobre <a href="/blog/drones-mineria-latinoamerica">drones en minería latinoamericana</a>. En loteos, para mensura preliminar y proyecto urbanístico.</p>
+
+<h2>Marco normativo</h2>
+<p>El operador debe cumplir con la <a href="/blog/normativa-anac-drones-comerciales-argentina">normativa ANAC</a> y, si el levantamiento se presenta ante un colegio profesional, contar con la firma de un agrimensor o ingeniero matriculado. La precisión declarada debe estar respaldada por puntos de control independientes.</p>
+
+<h2>Costos y rentabilidad</h2>
+<p>Frente a una cuadrilla tradicional, un equipo de drone RTK reduce el costo por hectárea entre 50% y 70% en superficies superiores a 50 ha, con un repago del equipo en 8 a 14 meses para empresas de servicio.</p>
+
+<h2>Próximos pasos</h2>
+<p>Si tu estudio o empresa evalúa incorporar drones RTK, podemos ayudarte a definir el equipo y el flujo de trabajo. Conocé nuestra <a href="/drones-topografia">categoría drones para topografía</a> o escribinos desde <a href="/contacto">contacto</a>.</p>
+`,
+  },
+  {
+    slug: "drones-inspeccion-oil-gas-argentina",
+    title: "Drones para inspección en oil & gas: casos y ROI en Argentina",
+    excerpt:
+      "Inspección termográfica de ductos, antorchas y tanques con drones: cómo reducen riesgo, paradas y costos en operaciones de oil & gas.",
+    category: "Oil & Gas",
+    date: "18 Abr 2025",
+    readTime: "8 min",
+    image: dronesOilGasInspeccion,
+    content: `
+<p class="lead">La industria del <strong>oil &amp; gas en Argentina</strong>, con Vaca Muerta como motor, encontró en los drones un aliado para reducir riesgo humano, evitar paradas no programadas y cumplir auditorías ambientales con datos verificables. Esta nota recorre los casos de uso más maduros y el retorno de inversión típico.</p>
+
+<h2>Inspección termográfica de antorchas y hornos</h2>
+<p>Las antorchas y hornos de proceso requieren inspección periódica de puntos calientes, integridad refractaria y condición de quemadores. Hacerlo con drone con cámara térmica evita andamios, reduce el tiempo de parada y permite repetir la medición con misma trayectoria mes a mes.</p>
+
+<h2>Inspección de líneas y ductos</h2>
+<p>Los gasoductos y oleoductos se inspeccionan tradicionalmente con cuadrillas o vehículos. Un drone equipado con sensor metanométrico u óptico recorre kilómetros por hora, detectando fugas, intrusiones y deterioros del derecho de vía. Modelos como el <a href="/drones/dji-mavic-3m">DJI Mavic 3M</a> y plataformas industriales se integran a flujos de inspección preventiva.</p>
+
+<h2>Tanques de almacenamiento</h2>
+<p>La inspección de techos flotantes, sellos y escaleras se resuelve con drones con cámara visual de alta resolución. Se capturan miles de imágenes, se generan modelos 3D y se identifica corrosión, deformaciones y faltantes de pintura. La frecuencia de inspección puede pasar de anual a trimestral sin sumar costo significativo.</p>
+
+<h2>Logística en yacimientos</h2>
+<p>Para el traslado de muestras, repuestos críticos e instrumental entre baterías y campamentos, drones cargueros como el <a href="/drones/dji-flycart-30">DJI FlyCart 30</a> y el <a href="/drones/dji-flycart-100">DJI FlyCart 100</a> reducen movimientos de camionetas y exposición vial del personal.</p>
+
+<h2>Cumplimiento ambiental</h2>
+<p>El monitoreo de derrames, control de revegetación y verificación de pasivos ambientales con drones genera evidencia auditable. Las imágenes con sello temporal y georreferencia son aceptadas por organismos de control y certificadoras internacionales.</p>
+
+<h2>Retorno de inversión</h2>
+<p>Operadoras que integraron drones reportan reducción de tiempos de inspección de 60% a 80%, baja en horas-hombre en altura, y detección temprana de eventos que evitan paradas. El repago del programa se da en 6 a 12 meses para midstream y upstream.</p>
+
+<h2>Marco regulatorio</h2>
+<p>Las operaciones en yacimientos requieren autorización del operador, además del cumplimiento de la <a href="/blog/normativa-anac-drones-comerciales-argentina">normativa ANAC</a>. Las distancias mínimas a infraestructura crítica y los procedimientos de evacuación deben estar documentados.</p>
+
+<h2>Próximos pasos</h2>
+<p>Si tu empresa evalúa un programa de drones para oil &amp; gas, podemos ayudarte a definir el alcance, los entregables y el equipo. Visitá la categoría <a href="/drones-oil-gas">drones para oil &amp; gas</a> o escribinos desde <a href="/contacto">contacto</a>.</p>
+`,
+  },
+  {
+    slug: "dji-flycart-30-vs-100-drones-carga",
+    title: "DJI FlyCart 30 vs FlyCart 100: qué drone de carga elegir",
+    excerpt:
+      "Comparativa entre el DJI FlyCart 30 y FlyCart 100 para logística aérea en minería, energía y agro: capacidad, autonomía y casos de uso.",
+    category: "Comparativas",
+    date: "16 Abr 2025",
+    readTime: "8 min",
+    image: dronesCargaFlycart,
+    content: `
+<p class="lead">La logística aérea con <strong>drones cargueros</strong> dejó de ser ciencia ficción. DJI lidera el segmento con dos plataformas de referencia: el <a href="/drones/dji-flycart-30">DJI FlyCart 30</a> y el <a href="/drones/dji-flycart-100">DJI FlyCart 100</a>. Apuntan a misiones distintas y entender la diferencia evita comprar la herramienta equivocada.</p>
+
+<h2>Capacidad de carga</h2>
+<p>El FlyCart 30 transporta hasta 30 kg en configuración estándar y 40 kg con cuerda. El FlyCart 100 escala hasta 65 kg en modo dual battery y 80 kg en single battery. Para muestras geológicas, repuestos o paquetes médicos, 30 kg suele alcanzar; para insumos de obra o equipamiento técnico, conviene el 100.</p>
+
+<h2>Autonomía y alcance</h2>
+<p>Ambos rondan los 16 a 20 km de alcance con carga máxima, pero la autonomía baja sensiblemente al subir el peso. El FlyCart 100 ofrece un sistema de baterías más robusto y modos de redundancia que permiten misiones más largas con margen de seguridad.</p>
+
+<h2>Sistema de entrega</h2>
+<p>Los dos modelos integran cabrestante con cuerda para entrega en puntos sin pista de aterrizaje, además de un cargo case removible para envíos protegidos. La diferencia está en la velocidad del cabrestante y en la capacidad de operar con vientos más altos en el FlyCart 100.</p>
+
+<h2>Sensórica y seguridad</h2>
+<p>Radar de fase activa, visión binocular omnidireccional y conexión doble (O3 + 4G) son comunes a ambos. El FlyCart 100 suma redundancia adicional en propulsión y un sistema de paracaídas opcional, clave para operación sobre infraestructura sensible.</p>
+
+<h2>Casos de uso por industria</h2>
+<p>En <a href="/drones-mineria">minería</a>, ambos se usan para muestras y repuestos; el 100 destaca en cordillera por su tolerancia al viento. En <a href="/drones-oil-gas">oil &amp; gas</a>, el 30 alcanza para inspecciones puntuales y el 100 para abastecimiento de baterías de pozos remotos. En <a href="/drones-agricultura">agricultura</a>, el 30 cubre la mayoría de necesidades logísticas en chacra. En construcción y energías renovables, el 100 abre la puerta a izaje liviano y reposición de materiales.</p>
+
+<h2>Costo total de propiedad</h2>
+<p>El FlyCart 30 tiene un costo de adquisición y operación significativamente menor. El FlyCart 100, además del precio mayor, requiere más infraestructura (estaciones de carga rápida, baterías adicionales, capacitación específica). Pero por kilo transportado, el 100 es más eficiente cuando se opera al límite de su capacidad.</p>
+
+<h2>Marco regulatorio</h2>
+<p>El uso comercial de drones cargueros debe cumplir con la <a href="/blog/normativa-anac-drones-comerciales-argentina">normativa ANAC</a> y obtener autorizaciones específicas para vuelos BVLOS (más allá de la línea de vista). La planificación de corredores aéreos y procedimientos de emergencia es obligatoria.</p>
+
+<h2>Veredicto</h2>
+<p>Si tu necesidad es logística liviana en yacimientos, chacras o sitios remotos, el <strong>FlyCart 30</strong> es la opción más equilibrada. Si la operación implica cargas pesadas, vientos cordilleranos o misiones largas, el <strong>FlyCart 100</strong> justifica la inversión. Para discutir tu caso, escribinos desde <a href="/contacto">contacto</a>.</p>
+`,
+  },
+  {
+    slug: "drones-seguridad-perimetral-industrial",
+    title: "Drones para seguridad perimetral industrial: guía 2025",
+    excerpt:
+      "Cómo armar un programa de vigilancia con drones en plantas, depósitos y campos: equipos, automatización y respuesta ante eventos.",
+    category: "Seguridad",
+    date: "12 Abr 2025",
+    readTime: "8 min",
+    image: dronesSeguridadPerimetral,
+    content: `
+<p class="lead">La <strong>seguridad perimetral</strong> en plantas industriales, depósitos logísticos y establecimientos rurales es uno de los casos de uso de mayor crecimiento para drones en Argentina. Frente al costo creciente de personal de vigilancia y la limitación de cámaras fijas, los UAV ofrecen una capa de respuesta rápida y disuasión eficaz.</p>
+
+<h2>Drones de patrullaje vs. respuesta ante alarma</h2>
+<p>Hay dos modelos operativos. El primero es patrullaje programado: el drone realiza recorridos automáticos cada cierto intervalo. El segundo es respuesta ante alarma: el drone despega al activarse un sensor (cerca eléctrica, cámara con analítica, sensor sísmico) y verifica el evento en segundos.</p>
+
+<h2>Equipos recomendados</h2>
+<p>Para vigilancia diurna y nocturna se utilizan plataformas con cámara visual de zoom y sensor térmico. La térmica es clave para detectar personas en oscuridad o vegetación densa. Un equipo como el <a href="/drones/dji-mavic-3m">DJI Mavic 3M</a> sirve para misiones combinadas de monitoreo y reconocimiento, mientras que plataformas industriales (Matrice) cubren operaciones 24/7 con base de aterrizaje automática.</p>
+
+<h2>Automatización con docks</h2>
+<p>El verdadero salto operativo viene con los docks o estaciones de aterrizaje automático. El drone vive dentro de la base, sale a misión programada o por alarma, vuelve y se carga solo. Permite operación remota sin piloto en sitio, supervisada desde un centro de control.</p>
+
+<h2>Integración con software de seguridad</h2>
+<p>Los drones se integran con plataformas VMS, sistemas SCADA y centros de monitoreo. La analítica de video con IA detecta intrusos, vehículos no autorizados y comportamientos anómalos, generando eventos prioritarios al operador.</p>
+
+<h2>Casos de uso típicos</h2>
+<p>En complejos petroquímicos y refinerías, los drones patrullan ductos y áreas restringidas, complementando la nota sobre <a href="/blog/drones-inspeccion-oil-gas-argentina">inspección en oil &amp; gas</a>. En depósitos logísticos, vigilan playas y perímetros nocturnos. En establecimientos rurales, controlan robo de hacienda, intrusión en cascos y monitoreo de aguadas. En minería y energía, suman a los flujos descritos en <a href="/blog/drones-mineria-latinoamerica">drones en minería</a>.</p>
+
+<h2>Marco regulatorio</h2>
+<p>El uso de drones para seguridad debe cumplir con la <a href="/blog/normativa-anac-drones-comerciales-argentina">normativa ANAC</a>, normas provinciales sobre vigilancia privada y, en algunos casos, con habilitaciones específicas. La operación BVLOS requiere autorización formal y procedimientos documentados.</p>
+
+<h2>Costos y modelo de servicio</h2>
+<p>Algunas empresas adquieren los equipos y operan internamente; otras contratan el servicio mensual con un proveedor. El segundo modelo baja la barrera de entrada y traslada el riesgo operativo, pero limita la personalización.</p>
+
+<h2>Próximos pasos</h2>
+<p>Si tu empresa o establecimiento evalúa incorporar drones para seguridad, podemos ayudarte a diseñar el programa. Visitá nuestra categoría <a href="/drones-seguridad">drones para seguridad</a> o escribinos desde <a href="/contacto">contacto</a>.</p>
+`,
+  },
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);

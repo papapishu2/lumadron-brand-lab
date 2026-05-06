@@ -229,7 +229,7 @@ export const blogPosts: BlogPost[] = [
 <p>Un drone como el <a href="/drones/dji-agras-t50">DJI Agras T50</a> consume baterías a un ritmo que muchos no anticipan. Sin un set adecuado, generador en campo y plan de rotación, la productividad cae a la mitad. Calculá el set mínimo según litros de aplicación por hora y tiempo de carga.</p>
 
 <h2>3. Ignorar la regulación</h2>
-<p>Volar sin matrícula, sin piloto certificado o sin seguro es un riesgo legal y operativo enorme. La <a href="/blog/normativa-anac-drones-comerciales-argentina">normativa ANAC</a> es clara y los controles aumentaron en 2024 y 2026. Cumplir desde el día uno evita multas y problemas con clientes.</p>
+<p>Volar sin matrícula, sin piloto certificado o sin seguro es un riesgo legal y operativo enorme. La <a href="/blog/normativa-anac-drones-comerciales-argentina">normativa ANAC</a> es clara y los controles aumentaron en 2025 y 2026. Cumplir desde el día uno evita multas y problemas con clientes.</p>
 
 <h2>4. No invertir en capacitación</h2>
 <p>Un buen drone con un mal operador es plata mal gastada. La curva de aprendizaje real toma semanas e incluye planificación de misiones, mantenimiento, lectura de mapas y resolución de fallas. Invertí en formación continua del piloto y del personal de apoyo.</p>

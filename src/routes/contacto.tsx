@@ -12,7 +12,9 @@ export const Route = createFileRoute("/contacto")({
       { name: "description", content: "Hablá con nuestros especialistas para elegir el drone ideal para tu operación agrícola, minera, energética o de seguridad en Argentina." },
       { property: "og:title", content: "Contacto Lumadron | Asesoramiento en Drones DJI, XAG e Hylio" },
       { property: "og:description", content: "Hablá con nuestros especialistas para elegir el drone ideal para tu operación agrícola, minera, energética o de seguridad en Argentina." },
+      { property: "og:url", content: "https://lumadron.com/contacto" },
     ],
+    links: [{ rel: "canonical", href: "https://lumadron.com/contacto" }],
   }),
 });
 

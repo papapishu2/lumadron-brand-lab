@@ -10,7 +10,9 @@ export const Route = createFileRoute("/blog/")({
       { name: "description", content: "Guías, comparativas y normativa ANAC sobre drones DJI, XAG e Hylio para agro, minería, oil & gas y topografía." },
       { property: "og:title", content: "Blog de Drones y Robótica | Lumadron Argentina" },
       { property: "og:description", content: "Guías, comparativas y normativa ANAC sobre drones DJI, XAG e Hylio para agro, minería, oil & gas y topografía." },
+      { property: "og:url", content: "https://lumadron.com/blog" },
     ],
+    links: [{ rel: "canonical", href: "https://lumadron.com/blog" }],
   }),
 });
 

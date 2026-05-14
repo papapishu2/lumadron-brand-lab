@@ -12,7 +12,9 @@ export const Route = createFileRoute("/marcas")({
       { name: "description", content: "Especialistas en DJI Agras, XAG y Hylio en Argentina. Drones agrícolas e industriales con respaldo, repuestos y soporte técnico." },
       { property: "og:title", content: "Marcas DJI, XAG e Hylio en Argentina | Lumadron" },
       { property: "og:description", content: "Especialistas en DJI Agras, XAG y Hylio en Argentina. Drones agrícolas e industriales con respaldo, repuestos y soporte técnico." },
+      { property: "og:url", content: "https://lumadron.com/marcas" },
     ],
+    links: [{ rel: "canonical", href: "https://lumadron.com/marcas" }],
   }),
 });
 

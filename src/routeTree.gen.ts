@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as NosotrosRouteImport } from './routes/nosotros'
 import { Route as MarcasRouteImport } from './routes/marcas'
 import { Route as DronesTopografiaRouteImport } from './routes/drones-topografia'
@@ -32,6 +33,11 @@ import { Route as LovableEmailTransactionalSendRouteImport } from './routes/lova
 import { Route as LovableEmailTransactionalPreviewRouteImport } from './routes/lovable/email/transactional/preview'
 import { Route as LovableEmailQueueProcessRouteImport } from './routes/lovable/email/queue/process'
 
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const NosotrosRoute = NosotrosRouteImport.update({
   id: '/nosotros',
   path: '/nosotros',
@@ -158,6 +164,7 @@ export interface FileRoutesByFullPath {
   '/drones-topografia': typeof DronesTopografiaRoute
   '/marcas': typeof MarcasRoute
   '/nosotros': typeof NosotrosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/drones/$slug': typeof DronesSlugRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
@@ -180,6 +187,7 @@ export interface FileRoutesByTo {
   '/drones-topografia': typeof DronesTopografiaRoute
   '/marcas': typeof MarcasRoute
   '/nosotros': typeof NosotrosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/drones/$slug': typeof DronesSlugRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
@@ -205,6 +213,7 @@ export interface FileRoutesById {
   '/drones-topografia': typeof DronesTopografiaRoute
   '/marcas': typeof MarcasRoute
   '/nosotros': typeof NosotrosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/drones/$slug': typeof DronesSlugRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
@@ -231,6 +240,7 @@ export interface FileRouteTypes {
     | '/drones-topografia'
     | '/marcas'
     | '/nosotros'
+    | '/sitemap.xml'
     | '/blog/$slug'
     | '/drones/$slug'
     | '/email/unsubscribe'
@@ -253,6 +263,7 @@ export interface FileRouteTypes {
     | '/drones-topografia'
     | '/marcas'
     | '/nosotros'
+    | '/sitemap.xml'
     | '/blog/$slug'
     | '/drones/$slug'
     | '/email/unsubscribe'
@@ -277,6 +288,7 @@ export interface FileRouteTypes {
     | '/drones-topografia'
     | '/marcas'
     | '/nosotros'
+    | '/sitemap.xml'
     | '/blog/$slug'
     | '/drones/$slug'
     | '/email/unsubscribe'
@@ -302,6 +314,7 @@ export interface RootRouteChildren {
   DronesTopografiaRoute: typeof DronesTopografiaRoute
   MarcasRoute: typeof MarcasRoute
   NosotrosRoute: typeof NosotrosRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   EmailUnsubscribeRoute: typeof EmailUnsubscribeRoute
   CategoriasIndexRoute: typeof CategoriasIndexRoute
   ApiPublicContactRoute: typeof ApiPublicContactRoute
@@ -313,6 +326,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/nosotros': {
       id: '/nosotros'
       path: '/nosotros'
@@ -507,6 +527,7 @@ const rootRouteChildren: RootRouteChildren = {
   DronesTopografiaRoute: DronesTopografiaRoute,
   MarcasRoute: MarcasRoute,
   NosotrosRoute: NosotrosRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   EmailUnsubscribeRoute: EmailUnsubscribeRoute,
   CategoriasIndexRoute: CategoriasIndexRoute,
   ApiPublicContactRoute: ApiPublicContactRoute,

@@ -43,14 +43,8 @@ export const Route = createRootRoute({
       { name: "author", content: "Lumadron" },
       { property: "og:site_name", content: "Lumadron" },
       { property: "og:locale", content: "es_AR" },
-      { property: "og:title", content: "Lumadron | Drones DJI, XAG e Hylio para Agro e Industria" },
-      { property: "og:description", content: "Especialistas en drones DJI, XAG e Hylio en Argentina. Soluciones para agricultura, oil & gas, minería, seguridad y topografía." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Lumadron | Drones DJI, XAG e Hylio para Agro e Industria" },
-      { name: "twitter:description", content: "Especialistas en drones DJI, XAG e Hylio en Argentina. Soluciones para agricultura, oil & gas, minería, seguridad y topografía." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/edf9a60c-9077-46f3-a5dd-e956b2a1d40c" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/edf9a60c-9077-46f3-a5dd-e956b2a1d40c" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -74,7 +68,7 @@ export const Route = createRootRoute({
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es">
+    <html lang="es-AR">
       <head>
         <HeadContent />
       </head>

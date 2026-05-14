@@ -19,6 +19,8 @@ export const Route = createFileRoute("/drones/$slug")({
     const description = product.description.length > 155
       ? product.description.slice(0, 152) + "..."
       : product.description;
+    const url = `https://lumadron.com/drones/${product.slug}`;
+    const image = product.image ? `https://lumadron.com${product.image}` : undefined;
     return {
       meta: [
         { title },
@@ -26,8 +28,37 @@ export const Route = createFileRoute("/drones/$slug")({
         { property: "og:title", content: title },
         { property: "og:description", content: description },
         { property: "og:type", content: "product" },
-        ...(product.image ? [{ property: "og:image", content: product.image }] : []),
-        ...(product.image ? [{ name: "twitter:image", content: product.image }] : []),
+        { property: "og:url", content: url },
+        ...(image ? [{ property: "og:image", content: image }] : []),
+        ...(image ? [{ name: "twitter:image", content: image }] : []),
+      ],
+      links: [{ rel: "canonical", href: url }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: product.name,
+            description: product.description,
+            brand: { "@type": "Brand", name: product.brand },
+            category: cats,
+            ...(image ? { image } : {}),
+            url,
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Inicio", item: "https://lumadron.com/" },
+              { "@type": "ListItem", position: 2, name: "Drones", item: "https://lumadron.com/drones" },
+              { "@type": "ListItem", position: 3, name: product.name, item: url },
+            ],
+          }),
+        },
       ],
     };
   },

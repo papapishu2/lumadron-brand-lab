@@ -15,6 +15,8 @@ export const Route = createFileRoute("/blog/$slug")({
       };
     }
     const title = `${post.title} | Blog Lumadron`;
+    const url = `https://lumadron.com/blog/${post.slug}`;
+    const image = `https://lumadron.com${post.image}`;
     return {
       meta: [
         { title },
@@ -22,10 +24,46 @@ export const Route = createFileRoute("/blog/$slug")({
         { property: "og:title", content: title },
         { property: "og:description", content: post.excerpt },
         { property: "og:type", content: "article" },
+        { property: "og:url", content: url },
         { property: "article:section", content: post.category },
         { property: "article:published_time", content: post.date },
-        { property: "og:image", content: post.image },
-        { name: "twitter:image", content: post.image },
+        { property: "article:author", content: "Lumadron" },
+        { property: "og:image", content: image },
+        { name: "twitter:image", content: image },
+      ],
+      links: [{ rel: "canonical", href: url }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: post.title,
+            description: post.excerpt,
+            image,
+            datePublished: post.date,
+            articleSection: post.category,
+            author: { "@type": "Organization", name: "Lumadron" },
+            publisher: {
+              "@type": "Organization",
+              name: "Lumadron",
+              logo: { "@type": "ImageObject", url: "https://lumadron.com/apple-touch-icon.png" },
+            },
+            mainEntityOfPage: url,
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Inicio", item: "https://lumadron.com/" },
+              { "@type": "ListItem", position: 2, name: "Blog", item: "https://lumadron.com/blog" },
+              { "@type": "ListItem", position: 3, name: post.title, item: url },
+            ],
+          }),
+        },
       ],
     };
   },

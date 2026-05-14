@@ -8,6 +8,28 @@ import logoHylio from "@/assets/brands/hylio-logo.png";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
+  head: () => ({
+    meta: [
+      { title: "Lumadron | Drones DJI, XAG e Hylio para Agro e Industria en Argentina" },
+      { name: "description", content: "Especialistas en drones DJI, XAG e Hylio en Argentina. Soluciones para agricultura, oil & gas, minería, seguridad y topografía." },
+      { property: "og:title", content: "Lumadron | Drones DJI, XAG e Hylio para Agro e Industria en Argentina" },
+      { property: "og:description", content: "Especialistas en drones DJI, XAG e Hylio en Argentina. Soluciones para agricultura, oil & gas, minería, seguridad y topografía." },
+      { property: "og:url", content: "https://lumadron.com/" },
+    ],
+    links: [{ rel: "canonical", href: "https://lumadron.com/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Lumadron",
+          url: "https://lumadron.com",
+          inLanguage: "es-AR",
+        }),
+      },
+    ],
+  }),
 });
 
 const categories = [
@@ -32,9 +54,9 @@ const featuredProducts = [
 ];
 
 const blogPosts = [
-  { slug: "guia-drones-agricolas-argentina-2025", title: "Guía completa de drones agrícolas en Argentina 2025", category: "Guías" },
+  { slug: "guia-drones-agricolas-argentina-2026", title: "Guía completa de drones agrícolas en Argentina 2026", category: "Guías" },
   { slug: "dji-agras-t50-vs-xag-p150-comparativa", title: "DJI Agras T50 vs XAG P150: comparativa definitiva", category: "Comparativas" },
-  { slug: "normativa-anac-drones-comerciales", title: "Normativa ANAC para uso de drones comerciales", category: "Normativa" },
+  { slug: "normativa-anac-drones-comerciales-argentina", title: "Normativa ANAC para uso de drones comerciales", category: "Normativa" },
 ];
 
 function HomePage() {

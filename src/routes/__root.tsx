@@ -59,6 +59,20 @@ export const Route = createRootRoute({
         children:
           "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-S7C6SSL47L');",
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Lumadron",
+          url: "https://lumadron.com",
+          logo: "https://lumadron.com/apple-touch-icon.png",
+          email: "drones@lumadron.com",
+          description: "Especialistas en drones DJI, XAG e Hylio en Argentina para agro, oil & gas, minería, seguridad y topografía.",
+          areaServed: { "@type": "Country", name: "Argentina" },
+          sameAs: [],
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,

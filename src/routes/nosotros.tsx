@@ -9,7 +9,9 @@ export const Route = createFileRoute("/nosotros")({
       { name: "description", content: "Somos un equipo argentino especializado en drones y robótica para agricultura, oil & gas, minería, seguridad y topografía." },
       { property: "og:title", content: "Nosotros | Lumadron, Drones para Agro e Industria en Argentina" },
       { property: "og:description", content: "Somos un equipo argentino especializado en drones y robótica para agricultura, oil & gas, minería, seguridad y topografía." },
+      { property: "og:url", content: "https://lumadron.com/nosotros" },
     ],
+    links: [{ rel: "canonical", href: "https://lumadron.com/nosotros" }],
   }),
 });
 

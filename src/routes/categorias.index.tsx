@@ -11,7 +11,9 @@ export const Route = createFileRoute("/categorias/")({
       { name: "description", content: "Drones para agricultura, oil & gas, minería, seguridad y topografía. Elegí la solución según tu industria." },
       { property: "og:title", content: "Soluciones con Drones por Industria | Lumadron Argentina" },
       { property: "og:description", content: "Drones para agricultura, oil & gas, minería, seguridad y topografía. Elegí la solución según tu industria." },
+      { property: "og:url", content: "https://lumadron.com/categorias" },
     ],
+    links: [{ rel: "canonical", href: "https://lumadron.com/categorias" }],
   }),
 });
 

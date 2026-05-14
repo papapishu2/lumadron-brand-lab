@@ -3,6 +3,8 @@ import { CategoryLandingView } from "@/components/CategoryLandingView";
 import { getCategoryBySlug } from "@/data/categories";
 
 const category = getCategoryBySlug("seguridad")!;
+const url = "https://lumadron.com/drones-seguridad";
+const ogImage = `https://lumadron.com${category.heroImage}`;
 
 export const Route = createFileRoute("/drones-seguridad")({
   head: () => ({
@@ -11,9 +13,11 @@ export const Route = createFileRoute("/drones-seguridad")({
       { name: "description", content: category.metaDescription },
       { property: "og:title", content: category.metaTitle },
       { property: "og:description", content: category.metaDescription },
-      { property: "og:image", content: category.heroImage },
-      { property: "twitter:image", content: category.heroImage },
+      { property: "og:url", content: url },
+      { property: "og:image", content: ogImage },
+      { property: "twitter:image", content: ogImage },
     ],
+    links: [{ rel: "canonical", href: url }],
   }),
   component: () => <CategoryLandingView category={category} />,
 });

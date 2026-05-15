@@ -22,7 +22,7 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 lg:px-8">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <img src={lumadronLogo} alt="Lumadron" className="h-[3.1rem] w-auto" />
+          <img src={lumadronLogo} alt="Lumadron - Drones y Robótica" className="h-[3.1rem] w-auto" />
         </Link>
 
         {/* Desktop nav */}
@@ -53,6 +53,8 @@ export function Header() {
         {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label={mobileOpen ? "Cerrar menú de navegación" : "Abrir menú de navegación"}
+          aria-expanded={mobileOpen}
           className="rounded-lg p-2 text-foreground lg:hidden"
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}

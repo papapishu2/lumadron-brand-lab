@@ -35,7 +35,7 @@ function CategoriasPage() {
             <div className="relative h-48 overflow-hidden">
               <img
                 src={cat.heroImage}
-                alt={cat.name}
+                alt={`Drones para ${cat.name}`}
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
               />

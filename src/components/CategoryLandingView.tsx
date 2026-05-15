@@ -22,7 +22,7 @@ export function CategoryLandingView({ category }: { category: CategoryLanding })
       <section className="relative overflow-hidden bg-primary">
         <img
           src={category.heroImage}
-          alt={category.name}
+          alt={`Drones para ${category.name}`}
           className="absolute inset-0 h-full w-full object-cover"
           width={1920}
           height={1080}

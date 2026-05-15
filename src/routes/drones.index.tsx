@@ -19,6 +19,28 @@ export const Route = createFileRoute("/drones/")({
       { property: "og:url", content: "https://lumadron.com/drones" },
     ],
     links: [{ rel: "canonical", href: "https://lumadron.com/drones" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Catálogo de Drones",
+          url: "https://lumadron.com/drones",
+          inLanguage: "es-AR",
+          isPartOf: { "@type": "WebSite", name: "Lumadron", url: "https://lumadron.com" },
+          mainEntity: {
+            "@type": "ItemList",
+            itemListElement: allProducts.map((p, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              url: `https://lumadron.com/drones/${p.slug}`,
+              name: p.name,
+            })),
+          },
+        }),
+      },
+    ],
   }),
 });
 

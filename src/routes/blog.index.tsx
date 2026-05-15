@@ -13,6 +13,28 @@ export const Route = createFileRoute("/blog/")({
       { property: "og:url", content: "https://lumadron.com/blog" },
     ],
     links: [{ rel: "canonical", href: "https://lumadron.com/blog" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Blog de Drones y Robótica",
+          url: "https://lumadron.com/blog",
+          inLanguage: "es-AR",
+          isPartOf: { "@type": "WebSite", name: "Lumadron", url: "https://lumadron.com" },
+          mainEntity: {
+            "@type": "ItemList",
+            itemListElement: blogPosts.map((p, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              url: `https://lumadron.com/blog/${p.slug}`,
+              name: p.title,
+            })),
+          },
+        }),
+      },
+    ],
   }),
 });
 

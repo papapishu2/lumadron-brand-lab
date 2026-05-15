@@ -20,7 +20,8 @@ export const Route = createFileRoute("/drones/$slug")({
       ? product.description.slice(0, 152) + "..."
       : product.description;
     const url = `https://lumadron.com/drones/${product.slug}`;
-    const image = product.image ? `https://lumadron.com${product.image}` : undefined;
+    const imgPath = productImages[product.slug];
+    const image = imgPath ? `https://lumadron.com${imgPath}` : undefined;
     return {
       meta: [
         { title },

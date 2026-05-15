@@ -35,7 +35,7 @@ function ContactoPage() {
                 <Mail size={20} className="text-accent" />
               </div>
               <div>
-                <h3 className="font-heading text-sm font-semibold text-foreground">Email</h3>
+                <h2 className="font-heading text-sm font-semibold text-foreground">Email</h2>
                 <p className="text-sm text-muted-foreground">drones@lumadron.com</p>
               </div>
             </div>
@@ -44,7 +44,7 @@ function ContactoPage() {
                 <MapPin size={20} className="text-accent" />
               </div>
               <div>
-                <h3 className="font-heading text-sm font-semibold text-foreground">Ubicación</h3>
+                <h2 className="font-heading text-sm font-semibold text-foreground">Ubicación</h2>
                 <p className="text-sm text-muted-foreground">Buenos Aires, Argentina</p>
               </div>
             </div>
@@ -124,8 +124,8 @@ function ContactForm() {
         <input name="phone" value={form.phone} onChange={handleChange} type="tel" placeholder="+54 11 0000-0000" className={inputCls} />
       </div>
       <div>
-        <label className="mb-1.5 block text-sm font-medium text-foreground">¿En qué industria trabajás?</label>
-        <select name="industry" value={form.industry} onChange={handleChange} className={inputCls}>
+        <label htmlFor="industry" className="mb-1.5 block text-sm font-medium text-foreground">¿En qué industria trabajás?</label>
+        <select id="industry" name="industry" value={form.industry} onChange={handleChange} className={inputCls}>
           <option value="">Seleccioná una opción</option>
           <option value="Agricultura">Agricultura</option>
           <option value="Oil & Gas">Oil & Gas</option>

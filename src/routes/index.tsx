@@ -10,10 +10,10 @@ export const Route = createFileRoute("/")({
   component: HomePage,
   head: () => ({
     meta: [
-      { title: "Lumadron | Drones DJI, XAG e Hylio para Agro e Industria en Argentina" },
-      { name: "description", content: "Especialistas en drones DJI, XAG e Hylio en Argentina. Soluciones para agricultura, oil & gas, minería, seguridad y topografía." },
-      { property: "og:title", content: "Lumadron | Drones DJI, XAG e Hylio para Agro e Industria en Argentina" },
-      { property: "og:description", content: "Especialistas en drones DJI, XAG e Hylio en Argentina. Soluciones para agricultura, oil & gas, minería, seguridad y topografía." },
+      { title: "Lumadron | Drones DJI, XAG e Hylio en Argentina" },
+      { name: "description", content: "Catálogo de drones DJI, XAG e Hylio con asesoramiento técnico en Argentina para agro, oil & gas, minería, seguridad y topografía." },
+      { property: "og:title", content: "Lumadron | Drones DJI, XAG e Hylio en Argentina" },
+      { property: "og:description", content: "Catálogo y asesoramiento técnico en drones DJI, XAG e Hylio para operaciones agrícolas, energéticas, mineras, de seguridad y topografía." },
       { property: "og:url", content: "https://lumadron.com/" },
     ],
     links: [{ rel: "canonical", href: "https://lumadron.com/" }],
@@ -134,7 +134,7 @@ function HomePage() {
                 className="group rounded-xl border border-border bg-card p-8 text-center transition-all hover:border-accent/30 hover:shadow-lg"
               >
                 <div className="mx-auto flex h-16 w-auto items-center justify-center px-4">
-                  <img src={brand.logo} alt={brand.name} className={`w-auto object-contain ${brand.logoClass}`} />
+                  <img src={brand.logo} alt={`Logo ${brand.name}`} className={`w-auto object-contain ${brand.logoClass}`} />
                 </div>
                 <p className="mt-5 text-sm text-muted-foreground">{brand.description}</p>
                 <p className="mt-3 text-xs font-medium text-accent">{brand.products} productos</p>

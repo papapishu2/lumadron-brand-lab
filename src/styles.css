@@ -180,3 +180,66 @@
   color: var(--foreground);
   font-weight: 600;
 }
+.blog-content h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--foreground);
+}
+.blog-content ul,
+.blog-content ol {
+  margin: 1rem 0;
+  padding-left: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  line-height: 1.7;
+}
+.blog-content ul {
+  list-style: disc;
+}
+.blog-content ol {
+  list-style: decimal;
+}
+.blog-content li::marker {
+  color: var(--accent);
+}
+.blog-content .table-wrap {
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  -webkit-overflow-scrolling: touch;
+}
+.blog-content table {
+  width: 100%;
+  min-width: 34rem;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.blog-content thead {
+  background: var(--secondary);
+}
+.blog-content th {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  color: var(--foreground);
+  white-space: nowrap;
+  border-bottom: 1px solid var(--border);
+}
+.blog-content td {
+  padding: 0.7rem 1rem;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border);
+  color: var(--foreground);
+}
+.blog-content tbody tr:last-child td {
+  border-bottom: none;
+}
+.blog-content tbody tr:nth-child(even) {
+  background: color-mix(in oklab, var(--secondary) 45%, transparent);
+}

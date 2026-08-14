@@ -1,4 +1,4 @@
-import guiaDronesAgricolas from "@/assets/blog/guia-drones-agricolas.jpg";
+import guiaDronesAgricolasAsset from "@/assets/blog/guia-drones-agricolas-2026.png.asset.json";
 import djiVsXag from "@/assets/blog/dji-vs-xag.jpg";
 import normativaAnac from "@/assets/blog/normativa-anac.jpg";
 import dronesMineria from "@/assets/blog/drones-mineria.jpg";

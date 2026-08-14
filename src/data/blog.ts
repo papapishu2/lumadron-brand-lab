@@ -24,39 +24,201 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: "guia-drones-agricolas-argentina-2026",
-    title: "Guía completa de drones agrícolas en Argentina 2026",
+    title: "Guía de drones agrícolas en Argentina 2026: cómo elegir según tu operación",
     excerpt:
-      "Todo lo que necesitás saber para elegir el drone agrícola ideal para tu operación: capacidad, autonomía, precisión y costo por hectárea.",
+      "Cómo elegir drones agrícolas en Argentina 2026: capacidad, marcas, uso propio vs servicio y ANAC. Guía para productor y contratista.",
     category: "Guías",
-    date: "15 Abr 2026",
-    readTime: "8 min",
-    image: guiaDronesAgricolas,
+    date: "14 Ago 2026",
+    readTime: "12 min",
+    image: guiaDronesAgricolasAsset.url,
     content: `
-<p class="lead">El uso de <strong>drones agrícolas en Argentina</strong> dejó de ser una promesa para convertirse en una herramienta concreta de producción. En 2026, productores de soja, maíz, trigo y economías regionales ya integran aeronaves no tripuladas para pulverizar, sembrar, fertilizar y monitorear cultivos con precisión centimétrica. Esta guía resume lo que necesitás saber antes de invertir.</p>
+<p class="lead">La pregunta ya no es si el drone sirve. En 2026 sirve. La pregunta es otra: para <em>tu</em> campaña, ¿conviene equipo propio, servicio, o una mezcla? ¿Pulverizar, esparcir o primero mapear? ¿Un Agras chico o un equipo de 70–100 kg de payload?</p>
 
-<h2>Por qué adoptar drones en el agro</h2>
-<p>Los <em>UAV agrícolas</em> permiten aplicar fitosanitarios en momentos críticos donde el suelo está demasiado húmedo para una pulverizadora autopropulsada, reducen la deriva, optimizan el uso de agua y bajan el costo por hectárea. Frente a una avioneta, ofrecen mayor precisión, menor riesgo operativo y posibilidad de trabajar en lotes chicos o de geometría irregular.</p>
+<p>En Expoagro 2026, La Nación citó alrededor de <strong>2,5 millones de hectáreas</strong> aplicadas con drone en el país. Otras jornadas técnicas de la misma feria hablaron de un salto desde ~50.000 ha en 2024 a más de 2 millones proyectadas al cierre de la gruesa. Los números no coinciden al peso: son estimaciones de mercado. Lo que sí coinciden es la dirección. Soja, maíz, trigo, girasol, arroz, caña y viñedos ya no son “casos piloto”. Son operaciones con ventana, dosis y logística.</p>
 
-<h2>Capacidad y caudal: la primera decisión</h2>
-<p>El parámetro clave es la capacidad del tanque y el caudal máximo. Un equipo como el <a href="/drones/dji-agras-t50">DJI Agras T50</a> entrega 40 L de tanque y caudales de hasta 16 L/min, ideal para operaciones medianas. Para escalas mayores conviene mirar el <a href="/drones/dji-agras-t100">DJI Agras T100</a> con 100 L o el <a href="/drones/xag-p150-max">XAG P150 Max</a>, líder en autonomía por carga.</p>
+<p>Esta guía está pensada para productor y contratista. No para explicarte qué es un drone.</p>
 
-<h2>Sensores y navegación</h2>
-<p>Los modelos premium incorporan radar de onda milimétrica, LiDAR y RTK integrado. Esto permite seguir el relieve, evitar obstáculos y mantener altura constante incluso en cultivos altos como maíz tardío o caña de azúcar. Si trabajás en zonas con árboles, líneas eléctricas o tendido de riego, no negocies en este punto.</p>
+<h2>Por qué el drone entra ahora (y no como reemplazo total del mosquito)</h2>
 
-<h2>Marcas disponibles en el país</h2>
-<p>El mercado argentino se concentra en tres jugadores con soporte local: <a href="/marcas">DJI, XAG y Hylio</a>. DJI domina por ecosistema y disponibilidad de repuestos; XAG se destaca en autonomía y aplicación variable; Hylio es la opción para quienes buscan equipos pensados para soja, maíz y trigo en escala extensiva, como el <a href="/drones/hylio-ares-hyl-150">Hylio AG-150 Ares</a>.</p>
+<p>El argumento fuerte en Argentina no es “más tecnología”. Es <strong>entrar al lote cuando el mosquito no entra</strong>.</p>
 
-<h2>Aplicaciones más allá de la pulverización</h2>
-<p>Un drone multiespectral como el <a href="/drones/dji-mavic-3m">DJI Mavic 3M</a> permite generar mapas NDVI para diagnóstico de cultivo, prescripciones variables y detección temprana de plagas. La sinergia entre un drone scout y un drone aplicador es la práctica recomendada para 2026.</p>
+<p>Después de una lluvia, con piso mojado o con un bajo anegado, la pulverizadora terrestre o se queda afuera o deja un rastro de rueda que después ves en el rendimiento. El drone no pisa. Eso importa en soja en R3–R5, en maíz tardío cuando el stand ya está cerrado, y en arroz o caña donde el tránsito es un problema estructural.</p>
 
-<h2>Costos y retorno</h2>
-<p>El costo por hectárea pulverizada con drone se ubica entre USD 6 y USD 12 según escala, autonomía de baterías y logística de carga. Para operaciones de servicio a terceros, el repago del equipo se da en 12 a 24 meses. Para productores, el ahorro proviene de ventanas operativas más amplias y menor pisado del lote.</p>
+<p>Otros motivos concretos:</p>
 
-<h2>Marco regulatorio</h2>
-<p>Operar comercialmente requiere cumplir con la normativa de ANAC, registrar el equipo y contar con piloto certificado. Cubrimos el detalle en nuestra nota sobre <a href="/blog/normativa-anac-drones-comerciales-argentina">normativa ANAC para drones comerciales</a>.</p>
+<ul>
+<li><strong>Deriva y bordes.</strong> Frente al avión, el drone vuela más bajo, con ancho de trabajo acotado (en catálogo, típico 4–13 m según modelo) y permite tratar puntuales, cabeceras, islas o lotes chicos de geometría rara.</li>
+<li><strong>Exposición del operario.</strong> El piloto está afuera de la nube. No es un detalle menor si aplicás varias pasadas por campaña.</li>
+<li><strong>Complemento, no sustituto.</strong> En lotes secos, grandes y planos, el mosquito suele seguir siendo más barato en tarifa por hectárea. El drone gana en la ventana de humedad, en el puntual y cuando el pisoteo pesa más que la diferencia de tarifa. El detalle de plata está en <a href="/blog/costo-pulverizar-drone-agricola-argentina-2026">cuánto cuesta pulverizar con drone en Argentina</a>.</li>
+</ul>
 
-<h2>Próximos pasos</h2>
-<p>Antes de comprar, definí tu escala anual en hectáreas, tipo de cultivo y modelo operativo (uso propio vs. servicio). Después elegí el equipo. En Lumadron asesoramos sin costo: explorá nuestras <a href="/categorias">categorías por industria</a> o contanos tu caso desde la sección de <a href="/contacto">contacto</a>.</p>
+<p>Si tu operación es 100% “esperar a que seque y pasar el mosquito”, el drone te va a parecer caro. Si perdés aplicaciones por piso, o aplicás tarde, la cuenta cambia.</p>
+
+<h2>Qué decidir primero: pulverizar, esparcir o scoutear</h2>
+
+<p>Comprar “un drone agrícola” sin definir el trabajo es el error más caro. Lo vimos una y otra vez: equipo sobrado para 400 ha propias, o equipo corto para un contratista que promete 80 ha/día. Hay una nota aparte sobre <a href="/blog/errores-comunes-drones-agricolas">errores comunes al implementar drones agrícolas</a>.</p>
+
+<p>Tres trabajos distintos, tres lógicas de equipo.</p>
+
+<h3>Pulverización (líquidos)</h3>
+
+<p>Tanque de aspersión, caudal en L/min, tamaño de gota y recargas. La dosis en L/ha manda cuántas veces volvés a la estación. Un tanque de 40 L a 10 L/ha no es lo mismo que a 20 L/ha. Antes de mirar la marca, anotá: litros por hectárea del tratamiento más frecuente, hectáreas por jornada que necesitás cubrir en pico, y si hay tendido eléctrico, montes o pivotes.</p>
+
+<h3>Esparcido (sólidos)</h3>
+
+<p>Fertilizante, semilla, carnada. El tanque de spread suele ser más grande que el de spray, pero el peso útil es otro. Un <a href="/drones/dji-agras-t50">DJI Agras T50</a> declara 40 L / 40 kg en aspersión y 75 L / 50 kg en esparcido. El <a href="/drones/dji-agras-t100">T100</a> sube a 100 L de aspersión y 150 L de esparcido, con 100 kg de carga máxima, y además admite levante de cargas. Si tu campaña mezcla fungicida + urea o siembra de cobertura, el kit de esparcido no es un accesorio: es mitad del caso de uso.</p>
+
+<h3>Scout (diagnóstico)</h3>
+
+<p>Acá no va un Agras. Va un mapeador. El <a href="/drones/dji-mavic-3m">DJI Mavic 3M</a> trae RGB 20 MP y cuatro cámaras multiespectrales (verde, rojo, red edge y NIR), con RTK y unos 43 minutos de autonomía sin viento. Sirve para NDVI, manchones, fallas de stand y para armar una prescripción <em>antes</em> de mandar el aplicador. El <a href="/drones/hylio-photon">Hylio PHOTON</a> apunta al mismo rol, con sensores EO/IR + RGB y más de 55 minutos de autonomía, pensado como scout de respuesta rápida.</p>
+
+<p>La práctica que más rinde en 2026: un scout chico + un aplicador. Pulverizar el lote entero “por las dudas” es caro, aunque el drone vuele bien.</p>
+
+<div class="table-wrap"><table>
+<thead><tr>
+<th>Trabajo</th>
+<th>Qué mirás</th>
+<th>Equipo típico en catálogo</th>
+</tr></thead><tbody>
+<tr><td>Pulverizar líquidos</td><td>Tanque (L), caudal (L/min), ancho, recargas</td><td>Agras T25 a T100, XAG P60 a P150 Max, Hylio PEGASUS / ARES / ATLAS</td></tr>
+<tr><td>Esparcir sólidos</td><td>Volumen (L) y kg útiles, tipo de granulometría</td><td>Agras con tanque spread; XAG RevoCast; Hylio tanque sólido</td></tr>
+<tr><td>Diagnosticar / prescribir</td><td>RGB + multiespectral, RTK, autonomía</td><td>Mavic 3M, Hylio PHOTON</td></tr>
+<tr><td>Puntuales / viñedo / lote chico</td><td>Tamaño, transporte, ancho estrecho</td><td>Agras T25 / T25P, XAG P60, Hylio PEGASUS</td></tr>
+<tr><td>Pico de campaña / contratista</td><td>ha/jornada, set de baterías, payload</td><td>T70P, T100, P150 / P150 Max, ARES o ATLAS</td></tr>
+</tbody></table></div>
+
+<p>El catálogo completo está en <a href="/drones-agricultura">drones para agricultura</a> y en el <a href="/drones">listado de equipos</a>.</p>
+
+<h2>Capacidad y caudal: el número que manda</h2>
+
+<p>El tanque impresiona en la foto. En el lote manda el <strong>caudal + las recargas + las baterías</strong>.</p>
+
+<p>Un ejemplo simple, sin vender un rendimiento mágico: si aplicás 10 L/ha, un tanque de 40 L te da ~4 ha por carga de caldo. A 20 L/ha, ~2 ha. El tiempo muerto no es el vuelo: es mezclar, cargar, cambiar batería y volver al renglón. Por eso un <a href="/drones/dji-agras-t70p">T70P</a> (75 L de aspersión, caudal hasta 30 L/min con 2 boquillas o 40 L/min con 4) o un <a href="/drones/xag-p150-max">XAG P150 Max</a> (80 L / 80 kg, caudal hasta 46 L/min con 4 boquillas) no “son más drone”. Son menos viajes a la estación cuando la dosis es alta o cuando el día se te achica por viento.</p>
+
+<p>Specs de catálogo Lumadron (no mezclar con fichas de otros sitios):</p>
+
+<div class="table-wrap"><table>
+<thead><tr>
+<th>Modelo</th>
+<th>Aspersión</th>
+<th>Esparcido / payload</th>
+<th>Caudal máx. (catálogo)</th>
+<th>Ancho de trabajo</th>
+</tr></thead><tbody>
+<tr><td><a href="/drones/dji-agras-t25">Agras T25</a></td><td>20 L</td><td>35 L / 25 kg</td><td>16 L/min (2) / 24 L/min (4)</td><td>4–7 m (a 3 m)</td></tr>
+<tr><td><a href="/drones/dji-agras-t25p">Agras T25P</a></td><td>25 L</td><td>30 L</td><td>16 / 24 L/min</td><td>4–7 m (a 3 m)</td></tr>
+<tr><td><a href="/drones/dji-agras-t50">Agras T50</a></td><td>40 L / 40 kg</td><td>75 L / 50 kg</td><td>16 / 24 L/min</td><td>4–11 m asp. / 8 m esp.</td></tr>
+<tr><td><a href="/drones/dji-agras-t70p">Agras T70P</a></td><td>75 L</td><td>100 L</td><td>30 / 40 L/min</td><td>4–11 m</td></tr>
+<tr><td><a href="/drones/dji-agras-t100">Agras T100</a></td><td>100 L</td><td>150 L / 100 kg</td><td>30 / 40 L/min</td><td>5–13 m</td></tr>
+<tr><td><a href="/drones/xag-p60">XAG P60</a></td><td>payload 30 kg</td><td>—</td><td>30 L/min</td><td>3–7 m</td></tr>
+<tr><td><a href="/drones/xag-p100-pro">XAG P100 Pro</a></td><td>tanque 50 L (contenedor 80 L)</td><td>payload 50 kg</td><td>22 L/min</td><td>5–10 m</td></tr>
+<tr><td><a href="/drones/xag-p150">XAG P150</a></td><td>payload 70 kg</td><td>—</td><td>30 L/min</td><td>4–7 m</td></tr>
+<tr><td><a href="/drones/xag-p150-max">XAG P150 Max</a></td><td>80 L / 80 kg</td><td>—</td><td>46 L/min</td><td>5–10 m</td></tr>
+<tr><td><a href="/drones/hylio-pegasus">Hylio PEGASUS</a></td><td>2,5 / 4 gal (~9,5 / 15 L)</td><td>—</td><td>n/d en ficha</td><td>puntual</td></tr>
+<tr><td><a href="/drones/hylio-ares-hyl-150">Hylio ARES HYL-150</a></td><td>13 gal (50 L)</td><td>20 gal (76 L) / 50 kg</td><td>n/d en ficha</td><td>hasta 12 m</td></tr>
+<tr><td><a href="/drones/hylio-atlas-hyl-300">Hylio ATLAS HYL-300</a></td><td>30 / 50 gal (~114 / 189 L)</td><td>—</td><td>n/d en ficha</td><td>gran escala</td></tr>
+</tbody></table></div>
+
+<p>El T50 sigue siendo el “punto medio” más citado en el país. Si estás entre T50 y P150, hay una <a href="/blog/dji-agras-t50-vs-xag-p150-comparativa">comparativa modelo a modelo</a>. Si ya te decidiste por DJI y la duda es de escala, andá a <a href="/blog/que-dji-agras-comprar-segun-hectareas">qué Agras comprar según hectáreas</a>.</p>
+
+<h2>Marcas con presencia en catálogo local: DJI, XAG e Hylio</h2>
+
+<p>En Argentina el mercado de aplicadores se concentra en tres nombres. Lumadron publica catálogo y asesoramiento de las tres; no es lo mismo que un canal que solo mueve una marca.</p>
+
+<ul>
+<li><strong>DJI (Agras + Mavic).</strong> La red de repuestos y de operarios que ya conocen el control es el activo real. Sensores fuertes (en T50, radar de arreglo en fase; en T70P/T100, Penta-Vision y LiDAR). Si tu prioridad es no quedar parado por una hélice o una bomba, DJI suele ser el camino más previsible.</li>
+<li><strong>XAG (serie P).</strong> Payload alto, mapeo 3D en tiempo real y una lógica de aplicación variable / autonomía que convence a quien quiere menos “piloto pegado a la palanca”. El P150 Max declara 80 kg y 46 L/min: es otro régimen de recargas.</li>
+<li><strong>Hylio.</strong> Fabricación en Texas. El ARES HYL-150 declara 50 L líquidos / 76 L sólidos y operación en enjambre (hasta 70 acres/h según ficha, ~28 ha/h: tomalo como techo de fabricante, no como tu jornada promedio). El ATLAS escala a 30/50 galones. La red local de service es más chica que la de DJI. Hay que decirlo de frente: si elegís Hylio, el criterio es capacidad y arquitectura, no “hay un local en cada pueblo”.</li>
+</ul>
+
+<p>La decisión de marca (no de un modelo contra otro) está armada en <a href="/blog/dji-vs-xag-vs-hylio-drones-agricolas-argentina">DJI vs XAG vs Hylio en Argentina</a>. El overview de las tres está en <a href="/marcas">marcas</a>.</p>
+
+<p>Sobre precios de equipos: La Nación, en marzo 2026, ubicó equipos grandes en un rango de mercado de <strong>USD 35.000–42.000</strong>. Eso es contexto de feria, no lista de Lumadron. El kit (baterías, generador, tanque extra, radar, capacitación) mueve el número tanto como el fuselaje. Pedí cotización del <em>sistema</em>, no del drone suelto.</p>
+
+<h2>Uso propio vs servicio: no es una cuestión de ego</h2>
+
+<p><strong>Servicio de contratista.</strong> Tiene sentido si aplicás pocas pasadas al año, si tus lotes están dispersos, o si todavía no tenés piloto ni ganas de meterte en ANAC, baterías y stock de repuestos. Pagás tarifa por hectárea y listo. El riesgo es la cola: en la semana que se abre la ventana, todo el partido quiere el mismo drone.</p>
+
+<p><strong>Equipo propio.</strong> Tiene sentido si las hectáreas por campaña (tuyas o de vecinos estables) justifican el set, si necesitás entrar el mismo día que llovió, o si vas a ofrecer servicio. El costo operativo propio —combustible del generador, ciclos de batería, mantenimiento, piloto— puede ubicarse por debajo de la tarifa de mercado cuando el equipo vuela seguido. Puede. No es automático. Depende de horas reales, no de horas de folleto.</p>
+
+<p><strong>Híbrido.</strong> Muy argentino: propio para el núcleo y para la ventana crítica; contratista para el pico o para el lote de 80 km.</p>
+
+<p>No elijas el equipo mirando el tamaño de <em>un</em> lote. Mirá hectáreas por campaña y hectáreas por jornada en la semana peor. Un campo de 1.200 ha con tres aplicaciones no es “un T100”. Puede ser un T50 bien logístico, o servicio. Un contratista que promete 2.000 ha en diez días húmedos no es un T25.</p>
+
+<h2>Cómo elegir según hectáreas y cultivo</h2>
+
+<p>Regla práctica, no dogma:</p>
+
+<div class="table-wrap"><table>
+<thead><tr>
+<th>Perfil</th>
+<th>ha/campaña (orden de magnitud)</th>
+<th>Pico de jornada</th>
+<th>Por dónde arrancar</th>
+</tr></thead><tbody>
+<tr><td>Productor chico / puntual / viñedo</td><td>cientos, no miles</td><td>15–40 ha/día</td><td>T25, T25P, P60, PEGASUS</td></tr>
+<tr><td>Productor mediano uso propio</td><td>~500–2.000 ha</td><td>40–80 ha/día</td><td>T50 o P100 Pro</td></tr>
+<tr><td>Contratista o propio grande</td><td>miles</td><td>80–150 ha/día con set completo</td><td>T70P, P150, ARES</td></tr>
+<tr><td>Gran escala / multirol (spray + spread + levante)</td><td>varios miles, varias cuadrillas</td><td>150 ha/día o más, o dos equipos</td><td>T100, P150 Max, ATLAS</td></tr>
+</tbody></table></div>
+
+<p>Los umbrales son orientativos. Un viñedo de 80 ha con muchos bordes puede saturar un T50. Un lote de soja de 200 ha plano, con dosis baja y viento calmo, lo cubre un T25P si no tenés apuro. La variable sucia es siempre la misma: <strong>ventana</strong>. Si tenés tres días de piso y después se te pasa el estadio, pagás capacidad.</p>
+
+<p>Por cultivo, el matiz:</p>
+
+<ul>
+<li><strong>Soja y maíz:</strong> el drone brilla en fungicida/insecticida cuando el mosquito no entra o cuando no querés ruedas sobre el surco. En maíz alto, sensores de relieve (radar / LiDAR) no son lujo.</li>
+<li><strong>Trigo y girasol:</strong> ventanas cortas, lotes a veces chicos o irregulares. Cabeza de lote y manchones.</li>
+<li><strong>Arroz y caña:</strong> tránsito terrestre caro o imposible. Payload y autonomía pesan más.</li>
+<li><strong>Viñedos y regionales (Mendoza, Tucumán, etc.):</strong> anchos menores, más obstáculos, más puntual. Equipo compacto + buen radar.</li>
+</ul>
+
+<h2>ANAC: lo mínimo para operar en comercial (un bloque, no un tratado)</h2>
+
+<p>Operar comercialmente en Argentina no es “tengo el drone y vuelo”. El marco vigente (RAAC Parte 100 / Resolución ANAC 550/2025) clasifica operaciones y, para equipos pesados de trabajo aéreo, apunta a <strong>aeronave registrada, piloto habilitado y seguro</strong>. Los aplicadores agrícolas del catálogo (T25 para arriba, serie P, ARES/ATLAS) no entran en la lógica de un drone recreativo de 250 g.</p>
+
+<p>No tomes esto como asesoramiento legal. La norma se actualiza y el trámite concreto (matrícula, CETA cuando corresponde, CMA, póliza) depende de categoría y uso. El detalle operativo está en la nota de <a href="/blog/normativa-anac-drones-comerciales-argentina">normativa ANAC para drones comerciales</a>. Sumá además receta agronómica y distancias provinciales a poblados y cursos de agua: ANAC no te reemplaza al SENASA ni a la ley provincial de fitosanitarios.</p>
+
+<p>Si vas a dar servicio, resolvé el papelerío <em>antes</em> de cotizar hectáreas. Un cliente grande te lo va a pedir.</p>
+
+<h2>Próximos pasos (en orden, no al revés)</h2>
+
+<ol>
+<li>Anotá hectáreas por campaña, número de pasadas, dosis en L/ha y si también esparcís.</li>
+<li>Decidí propio / servicio / híbrido. La plata de la tarifa vs el costo propio está desglosada en la <a href="/blog/costo-pulverizar-drone-agricola-argentina-2026">nota de costos 2026</a>.</li>
+<li>Recién ahí elegí marca y modelo. Si es DJI, usá el <a href="/blog/que-dji-agras-comprar-segun-hectareas">árbol Agras</a>. Si es marca, la <a href="/blog/dji-vs-xag-vs-hylio-drones-agricolas-argentina">comparativa DJI / XAG / Hylio</a>.</li>
+<li>Armá el set: baterías, generador, tanques, piloto, ANAC. El fuselaje solo no vuela una campaña.</li>
+</ol>
+
+<p>Lumadron publica <a href="/drones">catálogo</a> de DJI, XAG e Hylio y asesora según operación. No hace falta que llegues con el modelo decidido.</p>
+
+<p><strong><a href="/contacto">Solicitar asesoramiento</a></strong> — contá cultivo, hectáreas por campaña y si buscás equipo propio o servicio. Armamos el recorte con specs de catálogo, no con un pitch genérico.</p>
+
+<h2>Preguntas frecuentes</h2>
+
+<h3>¿El drone agrícola reemplaza a la pulverizadora terrestre?</h3>
+
+<p>No en la mayoría de los planteos extensivos. Reemplaza <em>aplicaciones que el mosquito no puede hacer bien</em>: piso mojado, puntuales, lotes irregulares, bordes, y casos donde el pisoteo sale más caro que la diferencia de tarifa. Muchos campos van a convivir con las dos herramientas.</p>
+
+<h3>¿Cuántas hectáreas cubre un drone por día?</h3>
+
+<p>Depende de dosis, viento, distancia a la estación, set de baterías y modelo. En feria se escuchan techos de fabricante de varias decenas de hectáreas por hora en equipos grandes. En lote real, con recargas y espera de batería, el número baja. Pedí una estimación para <em>tu</em> dosis y <em>tu</em> logística, no un promedio nacional.</p>
+
+<h3>¿Hace falta licencia ANAC para pulverizar con drone?</h3>
+
+<p>Para uso comercial, sí: hay registro de aeronave, habilitación de piloto y seguro, con matices según categoría. Mirá la <a href="/blog/normativa-anac-drones-comerciales-argentina">nota de normativa</a> y confirmá el trámite vigente en ANAC. Esto no es un dictamen legal.</p>
+
+<h3>¿Qué drone agrícola conviene para un productor de 800 hectáreas?</h3>
+
+<p>Casi nunca el más grande. Con 800 ha propias y 2–3 pasadas, un T50 o un P100 Pro suele ser el centro de la conversación; un T25P entra si los lotes son chicos o si el drone es complemento del mosquito. La variable es el pico de jornada, no el rótulo del campo.</p>
+
+<h3>¿Puedo usar el mismo equipo para pulverizar y fertilizar?</h3>
+
+<p>En la línea Agras, sí: tanque de aspersión y tanque de esparcido son modos distintos del mismo equipo (capacidades distintas). En XAG, RevoSpray / RevoCast cubren la misma idea. Confirmá el kit incluido: a veces el spread no viene en el paquete base.</p>
+
+<h3>¿Lumadron es dealer oficial de DJI, XAG o Hylio?</h3>
+
+<p>Lumadron publica catálogo de esas marcas y ofrece asesoramiento para armar la operación. Si necesitás disponibilidad, plazos y condiciones, <a href="/contacto">consultá</a>. No asumas “oficial” por el solo hecho de ver el modelo en la web.</p>
 `,
   },
   {

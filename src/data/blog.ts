@@ -1,3 +1,4 @@
+import costoPulverizarAsset from "@/assets/blog/costo-pulverizar-drone-2026.png.asset.json";
 import guiaDronesAgricolasAsset from "@/assets/blog/guia-drones-agricolas-2026.png.asset.json";
 import djiVsXag from "@/assets/blog/dji-vs-xag.jpg";
 import normativaAnac from "@/assets/blog/normativa-anac.jpg";
@@ -22,6 +23,176 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "costo-pulverizar-drone-agricola-argentina-2026",
+    title: "Cuánto cuesta pulverizar con drone en Argentina en 2026",
+    excerpt:
+      "Tarifas de pulverización con drone en Argentina 2026: servicio, costo propio y comparación con mosquito y avión. Rangos, no un número único.",
+    category: "Guías",
+    date: "14 Ago 2026",
+    readTime: "9 min",
+    image: costoPulverizarAsset.url,
+    content: `
+<p class="lead">Si buscás un número único —“el drone sale USD X por hectárea”— te van a mentir. En 2026 conviven tres cuentas distintas y la gente las mezcla:</p>
+
+<ol>
+<li><strong>Tarifa de contratista</strong> (lo que te cobran por aplicar).</li>
+<li><strong>Costo operativo de equipo propio</strong> (lo que te sale volar <em>tu</em> drone, sin contar la amortización o contándola).</li>
+<li><strong>Costo total versus mosquito o avión</strong>, metiendo pisoteo, deriva, ventana perdida y logística.</li>
+</ol>
+
+<p>Son números distintos. Abajo van rangos publicados 2025–2026, con matices. No es una cotización.</p>
+
+<h2>Los tres números, sin mezclarlos</h2>
+
+<h3>1) Tarifa de contratista</h3>
+
+<p>Un relevamiento de mercado 2026 ubica el servicio de pulverización con drone en <strong>USD 12–25/ha</strong>, con Buenos Aires en la parte baja y Mendoza o Tucumán en la alta. Contratistas e INTA de años anteriores citaban <strong>USD 16/ha</strong> o, en algunos planteos, <strong>USD 25–40/ha</strong>.</p>
+
+<p>¿Por qué tanto spread? Provincia, cultivo, dosis, movilidad, si el lote está anegado, si es un puntual de 8 ha o un módulo de 200, y si hay cola de demanda en la misma semana. En regionales (viñedo, caña, citrus) el “por hectárea” se parece más a un trabajo de precisión que a un renglón de soja.</p>
+
+<p>Tomá USD 12–25 como <strong>banda de servicio</strong> más citada en 2026, y USD 25–40 como cola de trabajos difíciles o de menor escala. Pedí siempre: qué incluye (producto no; agua y logística a veces sí), mínimo de hectáreas, recargo por distancia y qué pasa si el viento corta el día.</p>
+
+<h3>2) Costo operativo de equipo propio</h3>
+
+<p>Acá aparece el rango <strong>USD 6–12/ha</strong> que circula en notas técnicas —incluida una versión anterior de esta misma conversación en Lumadron—. No lo tires a la basura: es un <strong>costo propio optimista</strong> cuando el equipo vuela seguido, el set de baterías está bien dimensionado y no estás pagando flete de 200 km por cada 30 ha.</p>
+
+<p>Qué entra en esa cuenta, si la querés honesta:</p>
+
+<ul>
+<li>Combustible del generador (el drone no “gasta nafta”, el grupo sí).</li>
+<li>Ciclos de batería (la batería es insumo, no patrimonio eterno).</li>
+<li>Mantenimiento: hélices, bombas, filtros, brazos, calibración.</li>
+<li>Piloto y ayudante (aunque sea personal del campo: tiene costo de oportunidad).</li>
+<li>Seguro y trámite ANAC. Ver <a href="/blog/normativa-anac-drones-comerciales-argentina">normativa ANAC</a>.</li>
+</ul>
+
+<p>Qué <em>no</em> entra si cotizás USD 6–12 y después te sorprendés: amortización del kit, recambio de baterías a los 12–24 meses de uso intenso, días que el viento te deja en cero, y el camioneta + tanque de agua. Si amortizás un equipo grande (La Nación, marzo 2026, citó <strong>USD 35.000–42.000</strong> para equipos de mayor tamaño, rango de mercado, no lista Lumadron) en pocas hectáreas, el “costo propio” se parece más a la tarifa de un contratista.</p>
+
+<p>Regla de pulgar, no fórmula sagrada: el costo propio se parece a USD 6–12 cuando hay <strong>muchas hectáreas reales por año</strong> sobre el mismo set. Si vas a volar 400 ha/campaña, no uses ese piso para decidir la compra.</p>
+
+<h3>3) Costo total vs terrestre (mosquito) y vs avión</h3>
+
+<p>El mosquito suele cotizarse más barato en tarifa: rangos publicados en <strong>USD 6–18/ha</strong>, otra vez con mucha tela según zona y máquina. Ahí termina la comparación fácil y empieza la comparación útil.</p>
+
+<p>Al mosquito hay que sumarle:</p>
+
+<ul>
+<li><strong>Pisoteo.</strong> No figura en la factura. En soja o maíz en estadios reproductivos, el rastro de rueda no es teórico. El drone no pisa.</li>
+<li><strong>Piso mojado.</strong> Si el mosquito no entra, el costo no es la tarifa: es aplicar tarde o no aplicar.</li>
+<li><strong>Compactación y rastro en bajos.</strong></li>
+</ul>
+
+<p>El avión suele ser más barato por hectárea <em>en escala</em> (módulos grandes, dosis aérea). El trade-off es deriva, altura, dificultad de puntuales y geometría. El drone no gana al avión en un lote de 400 ha plano y seco si el único criterio es USD/ha de tarifa. Gana en borde, en manchón, en lote chico y cuando la deriva te complica un vecino o un curso de agua.</p>
+
+<div class="table-wrap"><table>
+<thead><tr>
+<th>Concepto</th>
+<th>Rango publicado 2025–2026</th>
+<th>Qué es (y qué no)</th>
+</tr></thead><tbody>
+<tr><td>Servicio drone (contratista)</td><td>USD 12–25/ha (cola 25–40)</td><td>Tarifa. Varía por provincia, cultivo y dificultad.</td></tr>
+<tr><td>Costo propio drone</td><td>USD 6–12/ha (optimista)</td><td>Operativo con buen uso. Amortización aparte.</td></tr>
+<tr><td>Mosquito (terrestre)</td><td>USD 6–18/ha</td><td>Tarifa. Falta pisoteo y riesgo de no entrar.</td></tr>
+<tr><td>Avión</td><td>suele ser menor USD/ha a escala</td><td>Tarifa. Más deriva, peor en puntuales.</td></tr>
+<tr><td>Equipos grandes (contexto feria)</td><td>USD 35.000–42.000</td><td>Rango de mercado Expoagro/La Nación 2026. No es precio de lista.</td></tr>
+</tbody></table></div>
+
+<p>Ninguna fila es “el” precio de tu lote. Son bandas para sentarte a hacer la cuenta.</p>
+
+<h2>Qué mueve el número (más que la marca del drone)</h2>
+
+<h3>Provincia y logística</h3>
+
+<p>PBA, con más equipos volando y lotes más cerca, empuja la tarifa para abajo. Mendoza, Tucumán, norte de Santa Fe o lotes de monte: menos oferta, más flete, más obstáculos, tarifa más alta. El USD/ha del drone incluye, aunque no lo veas, la camioneta, el agua y las horas de armado.</p>
+
+<h3>Dosis en L/ha</h3>
+
+<p>Es el factor técnico que más gente ignora. A 8–10 L/ha un tanque de 40 L rinde ~4–5 ha por carga de caldo. A 20 L/ha, la mitad. Más recargas = menos hectáreas por jornada = tarifa o costo propio más alto. Preguntale al contratista a qué volumen trabaja. Preguntate vos qué dice la receta.</p>
+
+<p>Un <a href="/drones/dji-agras-t50">Agras T50</a> (40 L, 16 L/min con 2 aspersores o 24 L/min con 4) y un <a href="/drones/xag-p150">XAG P150</a> (payload 70 kg, 30 L/min) no tienen el mismo ritmo de estación. El head-to-head está en la <a href="/blog/dji-agras-t50-vs-xag-p150-comparativa">comparativa T50 vs P150</a>. Para escala, el <a href="/drones/dji-agras-t100">T100</a> (100 L, caudal 30/40 L/min) recorta viajes cuando la dosis es alta.</p>
+
+<h3>Recargas, baterías y viento</h3>
+
+<p>El cuello de botella casi nunca es “el drone es lento”. Es el caldo, la batería caliente y el viento de la siesta. Un set corto de baterías te deja a mitad de lote. Un generador chico también. Eso infla el costo propio y, en servicio, infla la tarifa o te deja para mañana.</p>
+
+<h3>Cultivo</h3>
+
+<p>Soja y maíz extensivo: más competencia de tarifas, más sentido de comparar contra mosquito. Viñedo, arroz, caña, citrus: el drone compite menos contra una tarifa barata y más contra la imposibilidad de entrar. Ahí USD 20–25/ha puede ser ganga si la alternativa es no aplicar o destrozar el lote.</p>
+
+<h2>Cuándo el drone gana aunque la tarifa sea más alta</h2>
+
+<p>Esta es la parte que el Excel de tarifa no muestra.</p>
+
+<p><strong>Lote mojado o piso que no para un mosquito.</strong> Si la ventana es de 48 horas y el terrestre no entra, el costo de <em>no</em> aplicar (o aplicar fuera de estadio) suele comerse la diferencia de USD 5–10/ha. En años Niña o con lluvias pegadas a R3, esto no es anecdotario.</p>
+
+<p><strong>Pisoteo en reproductivo.</strong> Especialmente soja y maíz. No hace falta inventar un porcentaje de rinde: si ves el rastro de la campaña pasada, ya tenés el dato. El drone no deja rueda.</p>
+
+<p><strong>Puntuales y cabeceras.</strong> Tratar 12 ha de manchón con mosquito a veces implica pasar medio lote. El drone cobra (o cuesta) esas 12.</p>
+
+<p><strong>Lotes chicos, irregulares, con cables o monte.</strong> El avión se complica. El mosquito también. El drone está pensado para eso.</p>
+
+<p><strong>Aplicación variable.</strong> Si scouteás (por ejemplo con un mapeador) y no tirás el mismo caldo en las 200 ha, el ahorro está en producto, no en la tarifa de aplicación. Mezclar las dos cuentas es otro error clásico; hay más en <a href="/blog/errores-comunes-drones-agricolas">errores comunes</a>.</p>
+
+<p>Si el lote está seco, es grande, es plano y el mosquito está disponible mañana, la tarifa terrestre gana casi siempre. No hay que pelearse con eso.</p>
+
+<h2>Propio vs servicio: la cuenta que sí hay que hacer</h2>
+
+<p>No es “¿me compro un drone?”. Es “¿cuántas hectáreas reales por año le voy a cargar, a qué dosis, con qué pico de jornada?”.</p>
+
+<ul>
+<li><strong>Pocas pasadas, lotes dispersos, sin piloto:</strong> servicio. Pagás la banda de USD 12–25 y no te comés ANAC, stock ni baterías paradas.</li>
+<li><strong>Núcleo propio + ventana crítica + hectáreas repetidas:</strong> propio. El piso de USD 6–12 empieza a ser creíble <em>después</em> de sumar amortización y un set en serio.</li>
+<li><strong>Contratista que arranca:</strong> el equipo se paga con hectáreas de terceros. La tarifa que cobrés tiene que cubrir días de viento, flete y el recambio de baterías. Si cotizás USD 12 “para entrar al mercado”, hacé el Excel con días malos, no con el día perfecto.</li>
+</ul>
+
+<p>La guía de decisión de equipo (no de tarifa) está en la <a href="/blog/guia-drones-agricolas-argentina-2026">guía de drones agrícolas 2026</a>. Si ya vas por DJI, <a href="/blog/que-dji-agras-comprar-segun-hectareas">qué Agras según hectáreas</a>. Si la duda es de marca, <a href="/blog/dji-vs-xag-vs-hylio-drones-agricolas-argentina">DJI vs XAG vs Hylio</a>. El catálogo está en <a href="/drones">drones</a>, <a href="/drones-agricultura">drones agricultura</a> y <a href="/marcas">marcas</a>.</p>
+
+<h2>Cómo armar el número de <em>tu</em> operación (sin un promedio nacional)</h2>
+
+<p>Anotá, en una hoja:</p>
+
+<ol>
+<li>Hectáreas y pasadas de la campaña (las reales, no las del planteo ideal).</li>
+<li>Dosis en L/ha del tratamiento más frecuente y del más exigente.</li>
+<li>Distancia promedio a la estación de carga y si hay agua en el lote.</li>
+<li>Cuántos días de ventana típicos tenés (y cuántos se te caen por piso o viento).</li>
+<li>Qué harías si no hay drone: mosquito, avión, o no aplicar.</li>
+</ol>
+
+<p>Con eso se puede estimar tarifa de servicio <em>o</em> costo propio de un set concreto. Sin eso, cualquier USD/ha es marketing.</p>
+
+<p>Lumadron no publica lista de precios de aplicación ni de equipos en esta nota. Publica catálogo y asesora. Si querés el número de <em>esa</em> operación —cultivo, provincia, dosis, propio o servicio— el canal es contacto.</p>
+
+<p><strong><a href="/contacto">Solicitar asesoramiento</a></strong> — llevá hectáreas, dosis y si buscás tarifa de servicio o costo de equipo propio. Armamos la cuenta con rangos de mercado y specs de catálogo.</p>
+
+<h2>Preguntas frecuentes</h2>
+
+<h3>¿Cuánto cobra un contratista por pulverizar con drone en 2026?</h3>
+
+<p>La banda más citada está en USD 12–25/ha, más baja en PBA y más alta en regionales. Hay trabajos cotizados a USD 25–40/ha. Pedí mínimo de hectáreas, qué incluye y recargo por distancia. No existe “la” tarifa nacional.</p>
+
+<h3>¿Es más barato el drone que el mosquito?</h3>
+
+<p>En tarifa, casi nunca. El mosquito suele cotizar USD 6–18/ha. El drone puede ganar en costo <em>total</em> cuando hay pisoteo, piso mojado o puntuales. Si el terrestre entra fácil, suele ser más barato.</p>
+
+<h3>¿El rango de USD 6–12/ha es lo que voy a pagar?</h3>
+
+<p>Ese rango describe un <strong>costo operativo propio optimista</strong>, no una tarifa de mercado. Sirve como piso si el equipo vuela muchas hectáreas al año. No lo uses como cotización de un contratista ni como costo de las primeras 300 ha.</p>
+
+<h3>¿Cuánto sale el equipo? ¿En cuánto se paga?</h3>
+
+<p>La Nación (Expoagro, mar. 2026) ubicó equipos grandes en USD 35.000–42.000, rango de mercado. El kit completo (baterías, generador, tanques) mueve el número. El repago depende de hectáreas reales y de si das servicio. No hay un “se paga en un año” universal.</p>
+
+<h3>¿La dosis cambia el costo por hectárea?</h3>
+
+<p>Sí, y bastante. Más litros por hectárea = más recargas = menos ha/hora. Un T50 de 40 L no rinde lo mismo a 8 L/ha que a 20 L/ha. Pedí (o calculá) el costo a <em>tu</em> volumen de caldo.</p>
+
+<h3>¿Puedo comparar solo USD/ha entre drone, mosquito y avión?</h3>
+
+<p>No. Sumá pisoteo, deriva, posibilidad de entrar y calidad de la aplicación. El USD/ha de tarifa es el renglón más fácil y el menos completo.</p>
+`,
+  },
   {
     slug: "guia-drones-agricolas-argentina-2026",
     title: "Guía de drones agrícolas en Argentina 2026: cómo elegir según tu operación",

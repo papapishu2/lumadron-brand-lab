@@ -54,10 +54,11 @@ const featuredProducts = [
 ];
 
 const blogPosts = [
-  { slug: "guia-drones-agricolas-argentina-2026", title: "Guía completa de drones agrícolas en Argentina 2026", category: "Guías" },
+  { slug: "costo-pulverizar-drone-agricola-argentina-2026", title: "Cuánto cuesta pulverizar con drone en Argentina en 2026", category: "Guías" },
+  { slug: "guia-drones-agricolas-argentina-2026", title: "Guía de drones agrícolas en Argentina 2026: cómo elegir según tu operación", category: "Guías" },
   { slug: "dji-agras-t50-vs-xag-p150-comparativa", title: "DJI Agras T50 vs XAG P150: comparativa definitiva", category: "Comparativas" },
-  { slug: "normativa-anac-drones-comerciales-argentina", title: "Normativa ANAC para uso de drones comerciales", category: "Normativa" },
 ];
+
 
 function HomePage() {
   return (

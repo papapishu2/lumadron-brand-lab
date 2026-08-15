@@ -54,10 +54,11 @@ const featuredProducts = [
 ];
 
 const blogPosts = [
-  { slug: "costo-pulverizar-drone-agricola-argentina-2026", title: "Cuánto cuesta pulverizar con drone en Argentina en 2026", category: "Guías" },
-  { slug: "guia-drones-agricolas-argentina-2026", title: "Guía de drones agrícolas en Argentina 2026: cómo elegir según tu operación", category: "Guías" },
-  { slug: "dji-agras-t50-vs-xag-p150-comparativa", title: "DJI Agras T50 vs XAG P150: comparativa definitiva", category: "Comparativas" },
+  { slug: "drones-agricolas-argentina-usos-beneficios", title: "Drones agrícolas en Argentina: usos, beneficios y oportunidades para el campo", category: "Agricultura" },
+  { slug: "dji-agras-t50-pulverizacion-agricola", title: "DJI Agras T50: qué ofrece para pulverización agrícola", category: "Agricultura" },
+  { slug: "drones-topografia-mineria-obras-relevamiento", title: "Drones para topografía, minería y obras: cómo reducen tiempos de relevamiento", category: "Topografía / Minería" },
 ];
+
 
 
 function HomePage() {

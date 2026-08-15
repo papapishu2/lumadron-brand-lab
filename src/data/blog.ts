@@ -1,3 +1,7 @@
+import heroDronesAgricolasAr from "@/assets/blog/hero-drones-agricolas-argentina.jpg";
+import heroAgrasT50Pulverizacion from "@/assets/blog/hero-dji-agras-t50-pulverizacion.jpg";
+import heroXagP150Autonomo from "@/assets/blog/hero-xag-p150-drone-agricola.jpg";
+import heroTopografiaMineriaObras from "@/assets/blog/hero-drones-topografia-mineria-obras.jpg";
 import costoPulverizarAsset from "@/assets/blog/costo-pulverizar-drone-2026.png.asset.json";
 import guiaDronesAgricolasAsset from "@/assets/blog/guia-drones-agricolas-2026.png.asset.json";
 import djiVsXag from "@/assets/blog/dji-vs-xag.jpg";
@@ -23,6 +27,274 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "drones-agricolas-argentina-usos-beneficios",
+    title: "Drones agrícolas en Argentina: usos, beneficios y oportunidades para el campo",
+    excerpt:
+      "Cómo se usan los drones agrícolas en Argentina para monitoreo, pulverización, mapas de cultivo y decisiones de agricultura de precisión.",
+    category: "Agricultura",
+    date: "10 Ago 2026",
+    readTime: "8 min",
+    image: heroDronesAgricolasAr,
+    content: `
+<p class="lead">Los drones agrícolas dejaron de ser una novedad para convertirse en una herramienta concreta dentro de la agricultura de precisión. En Argentina, su adopción crece porque resuelven un problema muy simple: permiten mirar, medir y actuar sobre el lote con más velocidad, más detalle y menos dependencia de recorridas manuales.</p>
+
+<p>Para productores, contratistas y empresas agroindustriales, el punto no es comprar un drone por moda. El verdadero valor está en entender qué tarea puede mejorar, qué información puede generar y cómo se integra a la operación diaria. Un drone puede servir para monitorear cultivos, detectar diferencias dentro del lote, aplicar insumos en zonas puntuales, relevar ambientes de difícil acceso o generar mapas que ayuden a tomar decisiones agronómicas.</p>
+
+<h2>Monitoreo de cultivos: ver antes para decidir mejor</h2>
+
+<p>Uno de los usos más claros de los drones en el agro es el monitoreo. Una recorrida aérea permite observar en minutos superficies que a pie o en camioneta llevarían mucho más tiempo. Esto ayuda a detectar fallas de implantación, diferencias de vigor, sectores con estrés hídrico, problemas de drenaje, malezas, plagas o enfermedades.</p>
+
+<p>El monitoreo no reemplaza la recorrida técnica ni el criterio del agrónomo. Lo potencia. En lugar de revisar el lote a ciegas, el equipo puede identificar zonas prioritarias y enfocar el trabajo en los lugares donde realmente hay variabilidad.</p>
+
+<p>Cuando el drone incorpora sensores adecuados, como cámaras multiespectrales o térmicas, la información puede transformarse en índices de vegetación, mapas de vigor y capas de análisis. Esa información permite comparar ambientes, planificar recorridas, ajustar decisiones y documentar la evolución del cultivo a lo largo del tiempo.</p>
+
+<h2>Pulverización localizada y aplicaciones de precisión</h2>
+
+<p>La pulverización con drones es una de las aplicaciones que más interés genera. Los drones aplicadores permiten trabajar en sectores específicos del lote, intervenir zonas donde el ingreso de maquinaria terrestre es difícil y reducir el impacto de la compactación del suelo.</p>
+
+<p>No todos los casos justifican el uso de un drone aplicador. En lotes extensos y uniformes, la maquinaria tradicional puede seguir siendo la solución principal. Pero en aplicaciones localizadas, bordes, manchones, cultivos de difícil acceso, suelos con humedad o ambientes donde conviene evitar pisoteo, el drone puede sumar flexibilidad operativa.</p>
+
+<p>La clave está en definir bien el objetivo. No es lo mismo usar un drone para cubrir hectáreas completas que para tratamientos por ambiente o intervenciones quirúrgicas. En aplicaciones de precisión, la tecnología tiene más sentido cuando se combina con mapas, diagnóstico agronómico y una estrategia de manejo. Si querés dimensionar la cuenta, mirá <a href="/blog/costo-pulverizar-drone-agricola-argentina-2026">cuánto cuesta pulverizar con drone</a>.</p>
+
+<h2>Datos, mapas y agricultura de precisión</h2>
+
+<p>El drone no es solo una cámara voladora. Bien usado, es una herramienta de captura de datos. A partir de imágenes aéreas se pueden generar ortomosaicos, modelos digitales, mapas de vigor y reportes comparativos. Esto permite pasar de la observación general a decisiones más específicas.</p>
+
+<p>En agricultura de precisión, la diferencia entre un dato útil y una imagen bonita está en el proceso: plan de vuelo, calidad de captura, procesamiento, interpretación y acción. Por eso, al evaluar drones agrícolas, conviene pensar también en software, soporte técnico, capacitación y flujo de trabajo.</p>
+
+<p>Un productor puede necesitar imágenes simples para seguimiento visual. Un contratista puede necesitar eficiencia operativa, repetibilidad y reportes para clientes. Una empresa agroindustrial puede buscar trazabilidad, integración con sistemas internos y mediciones comparables entre campañas.</p>
+
+<h2>Beneficios principales para el campo argentino</h2>
+
+<p>Los beneficios más relevantes de los drones agrícolas suelen agruparse en cinco áreas.</p>
+
+<ul>
+<li><strong>Velocidad de relevamiento.</strong> Un drone permite obtener información de grandes superficies en menos tiempo, especialmente cuando se busca una visión general del lote.</li>
+<li><strong>Mayor detalle.</strong> Las imágenes a baja altura pueden mostrar variaciones que no siempre se perciben desde el camino o desde una recorrida parcial.</li>
+<li><strong>Flexibilidad.</strong> Un drone puede operar en situaciones donde el ingreso de maquinaria terrestre resulta poco conveniente o directamente imposible.</li>
+<li><strong>Eficiencia en insumos.</strong> Cuando se trabaja con mapas y aplicaciones localizadas, existe la posibilidad de intervenir donde hace falta y evitar tratamientos innecesarios.</li>
+<li><strong>Documentación.</strong> Las imágenes, mapas y reportes permiten comparar decisiones, registrar eventos y construir información histórica para la gestión del campo.</li>
+</ul>
+
+<h2>Cómo elegir por dónde empezar</h2>
+
+<p>Para empezar con drones agrícolas, conviene evitar una decisión basada solo en el modelo del equipo. La primera pregunta debería ser operativa: qué problema se quiere resolver.</p>
+
+<p>Si el objetivo es monitorear cultivos, puede tener sentido comenzar con un drone de captura visual o multiespectral. Si el objetivo es aplicar insumos, se necesita evaluar capacidad de tanque, autonomía, ancho de trabajo, facilidad de carga, soporte y mantenimiento. Si el objetivo es generar mapas o datos técnicos, el software y el procesamiento pasan a ser tan importantes como el hardware.</p>
+
+<p>También importa la escala. Un productor mediano, un contratista de servicios y una empresa con múltiples campos no van a necesitar exactamente el mismo esquema. En algunos casos conviene comprar equipo propio. En otros, puede ser más razonable contratar servicios hasta validar el retorno. La <a href="/blog/guia-drones-agricolas-argentina-2026">guía de drones agrícolas 2026</a> ordena esa decisión, y el trámite está en <a href="/blog/normativa-anac-drones-comerciales-argentina">normativa ANAC</a>.</p>
+
+<h2>Una tecnología para complementar, no para reemplazar todo</h2>
+
+<p>El futuro de los drones agrícolas en Argentina no depende de una promesa exagerada. Depende de usos concretos, medibles y bien integrados al sistema productivo. La maquinaria terrestre, los satélites, los sensores, los asesores agronómicos y los drones pueden convivir dentro de una misma estrategia.</p>
+
+<p>El drone suma valor cuando permite llegar antes, mirar mejor o intervenir con más precisión. Esa es la oportunidad: incorporar robótica y automatización donde realmente mejoran la decisión y la eficiencia.</p>
+
+<p>En Lumadron seguimos la evolución de drones, robótica y automatización para el agro y la industria en Argentina. Si estás evaluando incorporar drones agrícolas a tu operación, <a href="/contacto">solicitá asesoramiento</a> y vemos qué tipo de equipo y flujo de trabajo tiene más sentido para tu caso. También podés recorrer el catálogo de <a href="/drones-agricultura">drones para agricultura</a>.</p>
+`,
+  },
+  {
+    slug: "dji-agras-t50-pulverizacion-agricola",
+    title: "DJI Agras T50: qué ofrece para pulverización agrícola",
+    excerpt:
+      "Análisis del DJI Agras T50 para pulverización agrícola: capacidad, usos, ventajas operativas y criterios para evaluarlo en el campo argentino.",
+    category: "Agricultura",
+    date: "11 Ago 2026",
+    readTime: "7 min",
+    image: heroAgrasT50Pulverizacion,
+    content: `
+<p class="lead">El DJI Agras T50 es uno de los drones agrícolas de mayor visibilidad dentro del segmento de pulverización de alta capacidad. Para productores, contratistas y empresas agroindustriales, representa una categoría de equipo pensada para trabajos exigentes, donde la aplicación ya no es experimental sino parte de una operación planificada.</p>
+
+<p>En Argentina, el interés por drones aplicadores crece por una combinación de factores: necesidad de mejorar la eficiencia, búsqueda de aplicaciones más precisas, dificultad para ingresar con maquinaria terrestre en ciertas condiciones y mayor disponibilidad de tecnología agrícola especializada.</p>
+
+<p>El punto importante es evaluar el <a href="/drones/dji-agras-t50">DJI Agras T50</a> no solo como un drone, sino como una plataforma de trabajo. Su utilidad depende del tipo de cultivo, la escala operativa, la logística de carga, el entrenamiento del operador y la capacidad de integrarlo a un esquema agronómico.</p>
+
+<h2>Un drone pensado para aplicaciones de alta demanda</h2>
+
+<p>El Agras T50 se ubica dentro de la familia de drones agrícolas DJI orientados a pulverización y dispersión. Su propuesta apunta a cubrir trabajos donde se necesita buena capacidad, estabilidad de vuelo, automatización y control preciso de la aplicación.</p>
+
+<p>Para operaciones agrícolas, la capacidad del tanque suele ser uno de los primeros datos que se miran. Pero no debería ser el único. En campo, también importan el tiempo de recarga, la autonomía real, el ritmo de trabajo por hora, el soporte de baterías, la facilidad de limpieza, la resistencia del equipo y el software de planificación.</p>
+
+<p>Un drone agrícola puede tener muy buena ficha técnica, pero si la logística en el lote no está bien organizada, el rendimiento baja. Por eso, al analizar un equipo como el Agras T50, conviene pensar en el sistema completo: drone, baterías, cargadores, generador o fuente de energía, vehículo de apoyo, mezcla, agua, operador y protocolo de trabajo.</p>
+
+<h2>Dónde puede aportar más valor</h2>
+
+<p>El DJI Agras T50 puede resultar especialmente interesante en aplicaciones localizadas o trabajos donde la maquinaria terrestre tiene restricciones. Algunos ejemplos frecuentes son sectores con humedad, lotes con riesgo de compactación, bordes, manchones, ambientes irregulares o zonas donde se busca intervenir con mayor precisión.</p>
+
+<p>También puede ser una herramienta para contratistas que necesitan ofrecer servicios diferenciados. En ese caso, el equipo no se evalúa solo por su tecnología, sino por la capacidad de generar una unidad de negocio: hectáreas por jornada, costos operativos, mantenimiento, reposición de piezas, capacitación y demanda local.</p>
+
+<p>En cultivos intensivos, producciones regionales o escenarios con acceso complejo, un drone aplicador puede sumar flexibilidad. En agricultura extensiva, su rol puede variar según la escala y el tipo de aplicación. A veces será una solución principal para tareas específicas; otras veces, un complemento de la pulverizadora terrestre o aérea.</p>
+
+<h2>Precisión, automatización y datos</h2>
+
+<p>Uno de los diferenciales de los drones agrícolas modernos es la posibilidad de trabajar con vuelos planificados, rutas automatizadas y aplicaciones más consistentes. Esto reduce la dependencia de la improvisación y permite repetir procesos con mayor control.</p>
+
+<p>La precisión no depende solo del drone. Depende de la calibración, las condiciones ambientales, el tipo de gota, la altura de vuelo, la velocidad, el producto aplicado, el objetivo agronómico y el criterio técnico del operador. Por eso, ningún equipo debería evaluarse separado de la capacitación y las buenas prácticas. Los desvíos más comunes están listados en <a href="/blog/errores-comunes-drones-agricolas">errores comunes con drones agrícolas</a>.</p>
+
+<p>Cuando se integra con mapas o prescripciones, el drone puede pasar de una aplicación general a una intervención más dirigida. Ahí aparece una de las oportunidades más interesantes: aplicar donde hace falta y adaptar la estrategia a la variabilidad del lote.</p>
+
+<h2>Qué tener en cuenta antes de elegirlo</h2>
+
+<p>Antes de avanzar con un DJI Agras T50, conviene responder algunas preguntas concretas.</p>
+
+<ul>
+<li><strong>Qué tipo de aplicación se quiere realizar.</strong> No es lo mismo trabajar en barbecho, cultivos implantados, bordes, frutales, zonas periurbanas o ambientes con acceso limitado.</li>
+<li><strong>Cuántas hectáreas se buscan cubrir por semana.</strong> La escala define si el equipo será usado de forma intensiva, ocasional o como parte de un servicio a terceros.</li>
+<li><strong>Cómo será la logística de campo.</strong> Baterías, carga, agua, mezcla, transporte, limpieza y mantenimiento son tan importantes como el vuelo.</li>
+<li><strong>Quién va a operar el equipo.</strong> Un drone agrícola de alta capacidad requiere formación, criterio y protocolos.</li>
+<li><strong>Qué soporte técnico hay disponible.</strong> Para una herramienta de trabajo, el respaldo posventa, repuestos y mantenimiento pueden pesar tanto como el precio inicial.</li>
+</ul>
+
+<h2>Para qué perfil de usuario tiene sentido</h2>
+
+<p>El DJI Agras T50 puede tener sentido para productores con necesidad recurrente de aplicaciones específicas, contratistas que quieran sumar servicios de pulverización con drones, empresas agroindustriales que busquen tecnología propia o equipos técnicos que necesiten una plataforma robusta para trabajos de precisión.</p>
+
+<p>No necesariamente es la primera opción para quien solo quiere experimentar con drones. Es un equipo para pensar con criterio operativo. Antes de comprar, conviene estimar costos, frecuencia de uso, disponibilidad de personal capacitado y oportunidades reales de trabajo.</p>
+
+<h2>Una decisión técnica y comercial</h2>
+
+<p>Elegir un drone agrícola como el DJI Agras T50 no es solo una decisión de hardware. Es una decisión técnica, operativa y comercial. El equipo puede aportar eficiencia y flexibilidad, pero el resultado final depende de la implementación.</p>
+
+<p>Para Lumadron, este tipo de plataforma marca una dirección clara: el agro argentino está incorporando robótica no como accesorio, sino como parte de un nuevo esquema de producción basado en datos, automatización y precisión. Si querés el head-to-head, está en la <a href="/blog/dji-agras-t50-vs-xag-p150-comparativa">comparativa T50 vs P150</a>.</p>
+
+<p>Si estás evaluando drones DJI para pulverización agrícola, <a href="/contacto">consultanos</a>: comparamos alternativas, capacidades reales y qué configuración se adapta mejor a tu operación.</p>
+`,
+  },
+  {
+    slug: "xag-p150-drone-agricola-autonomo",
+    title: "XAG P150: drone agrícola autónomo para aplicaciones de precisión",
+    excerpt:
+      "Conocé el XAG P150, una plataforma agrícola autónoma para pulverización y tareas de precisión. Usos, ventajas y criterios de evaluación.",
+    category: "Agricultura",
+    date: "13 Ago 2026",
+    readTime: "7 min",
+    image: heroXagP150Autonomo,
+    content: `
+<p class="lead">El XAG P150 forma parte de una nueva generación de plataformas agrícolas autónomas pensadas para aplicaciones de precisión. En un mercado donde los drones ya no se miran solo como herramientas de monitoreo, equipos como este aparecen en conversaciones sobre pulverización, automatización y eficiencia operativa.</p>
+
+<p>Para el agro argentino, el interés es claro: cubrir tareas específicas con más flexibilidad, reducir ingresos innecesarios al lote y generar una forma de trabajo más conectada con datos. Pero como ocurre con cualquier tecnología agrícola, la pregunta no debería ser si el equipo es avanzado, sino si resuelve un problema real de la operación.</p>
+
+<h2>Una plataforma orientada al trabajo agrícola</h2>
+
+<p>XAG es una marca enfocada en agricultura inteligente y robótica aplicada al campo. El <a href="/drones/xag-p150">P150</a> se presenta como una plataforma de alta capacidad para aplicaciones agrícolas, con foco en autonomía, precisión y trabajo sistemático.</p>
+
+<p>En este tipo de equipos, la capacidad de carga suele ser un atractivo evidente. Sin embargo, la productividad final depende de varios factores: autonomía efectiva, tiempos de recarga, facilidad de abastecimiento, configuración del sistema de aplicación, condiciones ambientales, planificación del lote y experiencia del operador.</p>
+
+<p>Un drone agrícola no trabaja aislado. Necesita una logística que acompañe el ritmo de vuelo. Si el equipo tiene buena capacidad pero el abastecimiento es lento, el rendimiento real se resiente. Por eso, al evaluar un XAG P150, conviene pensar en toda la operación alrededor del drone.</p>
+
+<h2>Aplicaciones donde puede destacarse</h2>
+
+<p>El XAG P150 puede ser atractivo para pulverización localizada, tratamientos por ambiente, aplicaciones en cultivos donde el ingreso de maquinaria terrestre es complejo y trabajos donde la autonomía operativa sea una prioridad.</p>
+
+<p>También puede interesar a contratistas que buscan diferenciarse con servicios de aplicación con drones. En ese caso, el análisis debe incluir no solo la compra del equipo, sino el modelo de negocio: qué demanda existe en la zona, qué cultivos se atienden, cuánto se puede cobrar por hectárea, qué mantenimiento requiere el equipo y cómo se garantiza continuidad de trabajo en campaña.</p>
+
+<p>Para productores, el equipo puede evaluarse cuando hay necesidades recurrentes y una escala que justifique incorporar tecnología propia. Para empresas agroindustriales, puede formar parte de una estrategia más amplia de automatización, trazabilidad y gestión de datos.</p>
+
+<h2>Autonomía no significa ausencia de criterio</h2>
+
+<p>Cuando se habla de drones autónomos, es importante aclarar un punto: autonomía no significa operar sin criterio técnico. La automatización ayuda a ejecutar vuelos planificados, sostener rutas, controlar parámetros y mejorar la repetibilidad. Pero las decisiones agronómicas siguen siendo humanas.</p>
+
+<p>El operador y el asesor técnico deben definir qué aplicar, dónde, en qué condiciones, con qué objetivo y bajo qué parámetros. El drone ejecuta mejor cuando la estrategia previa está bien pensada.</p>
+
+<p>Esa combinación entre automatización y criterio técnico es uno de los caminos más interesantes para el agro. Permite pasar de tareas generales a intervenciones más precisas, con mayor control sobre el proceso y mejor registro de lo realizado.</p>
+
+<h2>XAG P150 vs otras alternativas</h2>
+
+<p>La comparación natural será con otros drones agrícolas de alta capacidad, como modelos de DJI Agras. Pero la comparativa no debería limitarse al tamaño del tanque o a la autonomía declarada. El detalle está en la <a href="/blog/dji-agras-t50-vs-xag-p150-comparativa">comparativa T50 vs P150</a> y en <a href="/blog/dji-vs-xag-vs-hylio-drones-agricolas-argentina">DJI vs XAG vs Hylio</a>.</p>
+
+<p>Hay que mirar ecosistema de software, soporte técnico, disponibilidad de repuestos, experiencia de usuarios, facilidad de operación, curva de aprendizaje, compatibilidad con mapas, calidad del sistema de aplicación y costos de mantenimiento.</p>
+
+<p>También pesa la confianza del operador. En tecnología agrícola, el mejor equipo no siempre es el más grande o el más nuevo. Es el que se integra mejor al trabajo real y puede sostenerse durante la campaña.</p>
+
+<h2>Preguntas antes de avanzar</h2>
+
+<ul>
+<li><strong>Qué cultivos se van a atender y en qué momentos del año.</strong> La demanda operativa cambia mucho entre agricultura extensiva, cultivos regionales, frutales, horticultura o servicios a terceros.</li>
+<li><strong>Qué superficie se busca cubrir.</strong> La escala define si el equipo será central para la operación o un complemento.</li>
+<li><strong>Qué infraestructura de apoyo existe.</strong> Energía, agua, transporte, espacio de carga, personal y mantenimiento influyen en la productividad.</li>
+<li><strong>Qué nivel de datos se necesita.</strong> Si el objetivo incluye mapas, prescripciones o trazabilidad, el software y el flujo de información cobran más importancia.</li>
+<li><strong>Qué soporte hay disponible.</strong> Para cualquier drone agrícola de trabajo, el posventa es una variable crítica.</li>
+</ul>
+
+<h2>Una oportunidad para productores y contratistas</h2>
+
+<p>El XAG P150 representa una oportunidad para quienes buscan incorporar robótica agrícola con una mirada profesional. Puede servir para aplicaciones más precisas, operaciones en ambientes complejos y servicios diferenciados.</p>
+
+<p>Pero su adopción debería partir de un diagnóstico. La tecnología funciona mejor cuando se la compra para resolver un caso de uso claro, no solo por capacidad técnica.</p>
+
+<p>En Lumadron seguimos de cerca la evolución de drones XAG, DJI e Hylio para el agro y la industria. Si estás evaluando una plataforma agrícola autónoma, <a href="/contacto">consultá por drones XAG</a> y comparamos opciones según tu operación.</p>
+`,
+  },
+  {
+    slug: "drones-topografia-mineria-obras-relevamiento",
+    title: "Drones para topografía, minería y obras: cómo reducen tiempos de relevamiento",
+    excerpt:
+      "Los drones industriales permiten acelerar relevamientos, generar modelos 3D, medir volúmenes y mejorar el seguimiento de obras, minería y topografía.",
+    category: "Topografía / Minería",
+    date: "14 Ago 2026",
+    readTime: "8 min",
+    image: heroTopografiaMineriaObras,
+    content: `
+<p class="lead">Los drones industriales están cambiando la forma en que se capturan datos en topografía, minería y obras. Su mayor aporte no es solamente volar sobre un terreno: es reducir tiempos de relevamiento, mejorar la frecuencia de medición y generar información visual que ayuda a tomar decisiones operativas.</p>
+
+<p>En sectores donde cada visita al campo implica tiempo, traslado, seguridad y coordinación, un drone puede aportar una ventaja concreta. Permite relevar áreas amplias, acceder a zonas complejas y documentar cambios con una velocidad difícil de igualar mediante métodos tradicionales.</p>
+
+<h2>De la imagen al dato técnico</h2>
+
+<p>Un drone industrial puede capturar imágenes aéreas de alta resolución que luego se procesan para generar ortomosaicos, modelos digitales de terreno, modelos 3D, curvas de nivel, nubes de puntos y mediciones volumétricas. Esto convierte una recorrida aérea en información técnica útil para ingenieros, topógrafos, equipos de obra y responsables de operación.</p>
+
+<p>La diferencia entre una foto aérea y un relevamiento profesional está en el flujo de trabajo. Se necesita planificación de vuelo, control de calidad, puntos de apoyo cuando corresponda, procesamiento adecuado e interpretación técnica. El drone acelera la captura, pero el valor final aparece cuando los datos son confiables y accionables. Sobre precisión y RTK, ver <a href="/blog/drones-rtk-topografia-precision-argentina">drones RTK para topografía</a>.</p>
+
+<h2>Topografía: más velocidad y frecuencia</h2>
+
+<p>En topografía, los drones permiten relevar superficies extensas en menos tiempo. Esto puede ser útil para obras viales, loteos, proyectos hidráulicos, campos, canteras, parques industriales y grandes superficies.</p>
+
+<p>Una ventaja importante es la posibilidad de repetir vuelos en diferentes momentos y comparar la evolución del terreno. En una obra, por ejemplo, se puede documentar avance, detectar desfasajes y mantener un registro visual. En una cantera o mina, se pueden medir cambios de volumen y planificar movimientos de material con mayor información.</p>
+
+<p>Esto no elimina el trabajo del topógrafo. Al contrario, le da más herramientas. El criterio técnico sigue siendo fundamental para definir precisión requerida, metodología, puntos de control y validación de resultados.</p>
+
+<h2>Minería y canteras: volúmenes, seguridad y control</h2>
+
+<p>En minería y canteras, los drones ofrecen una combinación atractiva: relevamiento rápido, menor exposición del personal y mediciones frecuentes. Pueden utilizarse para calcular volúmenes de acopios, controlar frentes de explotación, revisar caminos internos, monitorear taludes y documentar cambios en zonas operativas.</p>
+
+<p>La seguridad es un punto central. Algunas áreas pueden ser difíciles, inestables o riesgosas para recorridas presenciales. Un drone permite observar y relevar sin exponer al equipo técnico de la misma manera.</p>
+
+<p>Además, la frecuencia de medición puede mejorar. En lugar de realizar relevamientos espaciados, una operación puede generar información más regular para seguimiento, planificación y control de stock. Más contexto en <a href="/blog/drones-mineria-latinoamerica">drones en minería</a>.</p>
+
+<h2>Obras e infraestructura: seguimiento visual y medición</h2>
+
+<p>En obras civiles e infraestructura, los drones ayudan a documentar avance, generar reportes visuales, comparar etapas y mejorar la comunicación entre equipos. Una imagen aérea actualizada puede aclarar rápidamente el estado de un proyecto.</p>
+
+<p>Para constructoras, desarrolladoras o equipos de ingeniería, esto puede traducirse en mejores reuniones de seguimiento, evidencia visual para clientes o inversores, y detección temprana de desvíos. Cuando se combina con modelos y mediciones, el drone pasa de ser una herramienta de comunicación a una herramienta de gestión.</p>
+
+<h2>Qué tipo de drone se necesita</h2>
+
+<p>No todos los drones industriales sirven para lo mismo. Para inspecciones visuales simples puede alcanzar un equipo con buena cámara, estabilidad y autonomía. Para topografía o fotogrametría profesional, entran en juego sensores, calidad de imagen, obturador, precisión, compatibilidad con RTK/PPK, software y metodología de procesamiento.</p>
+
+<p>En algunos casos, un multirrotor será suficiente por su maniobrabilidad y facilidad de operación. En áreas muy extensas, puede convenir evaluar otras plataformas o planificar vuelos por etapas. Para trabajos con alta precisión, el equipo debe integrarse con una metodología seria de control y procesamiento.</p>
+
+<p>También hay que considerar el entorno. Viento, polvo, relieve, interferencias, accesos y seguridad operativa pueden influir en la elección del equipo y en el plan de vuelo.</p>
+
+<h2>Beneficios para empresas</h2>
+
+<ul>
+<li><strong>Menos tiempo de relevamiento.</strong> Se puede capturar información de áreas amplias con mayor rapidez.</li>
+<li><strong>Mejor documentación.</strong> Las imágenes y modelos permiten comparar avances y dejar registro.</li>
+<li><strong>Mayor seguridad.</strong> El drone reduce la necesidad de exponer personas en zonas complejas.</li>
+<li><strong>Información más frecuente.</strong> Al bajar el costo y el tiempo de captura, se pueden realizar mediciones con mayor continuidad.</li>
+<li><strong>Mejores decisiones.</strong> Los equipos operativos pueden trabajar con información visual y medible, no solo con reportes aislados.</li>
+</ul>
+
+<h2>Drones industriales como herramienta de gestión</h2>
+
+<p>El futuro de los drones industriales no está solo en la captura de imágenes. Está en su integración con procesos de gestión, mantenimiento, control, planificación y análisis. Una empresa que vuela periódicamente puede construir historiales, comparar cambios y tomar decisiones con más evidencia.</p>
+
+<p>Para Lumadron, este es uno de los verticales con mayor potencial después del agro. <a href="/drones-topografia">Topografía</a>, <a href="/drones-mineria">minería</a> y obras comparten una necesidad común: medir mejor, más rápido y con menor fricción operativa.</p>
+
+<p>Si tu empresa está evaluando drones para relevamiento, medición de volúmenes, seguimiento de obra o inspección industrial, <a href="/contacto">consultá por drones industriales</a> y definimos qué plataforma, sensores y flujo de trabajo conviene analizar.</p>
+`,
+  },
   {
     slug: "costo-pulverizar-drone-agricola-argentina-2026",
     title: "Cuánto cuesta pulverizar con drone en Argentina en 2026",

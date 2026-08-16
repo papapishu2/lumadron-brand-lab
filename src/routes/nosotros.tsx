@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
+import argentinaSatellite from "@/assets/nosotros-argentina-satellite.jpg";
 
 export const Route = createFileRoute("/nosotros")({
   component: NosotrosPage,

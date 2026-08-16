@@ -91,7 +91,7 @@ function MarcasPage() {
 
       <div className="mt-12 space-y-10">
         {brands.map((brand) => (
-          <div key={brand.name} className="overflow-hidden rounded-xl border border-border bg-card">
+          <div key={brand.name} id={brand.name.toLowerCase()} className="overflow-hidden rounded-xl border border-border bg-card">
             <div className="bg-primary/5 p-8">
               <div className="flex items-center gap-5">
                 <div className="flex h-20 w-28 items-center justify-center rounded-2xl bg-background border border-border px-4">

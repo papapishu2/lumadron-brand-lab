@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { ArrowLeft, ChevronRight, CheckCircle2, Send } from "lucide-react"; // v2
+import { ArrowLeft, ChevronRight, CheckCircle2, Send, MapPin } from "lucide-react"; // v2
 import { getProductBySlug, allProducts, productImages } from "@/data/products";
 
 export const Route = createFileRoute("/drones/$slug")({

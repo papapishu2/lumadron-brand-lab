@@ -18,6 +18,7 @@ export const distributors: Distributor[] = [
     website: "https://dji.bidcomagro.com.ar",
     location: "Ciudad de Buenos Aires",
     phone: "0810-112-1102",
+    instagram: "https://www.instagram.com/bidcomagro/",
     notes:
       "Master Dealer DJI en Argentina, Uruguay y Bolivia. Centro oficial DJI Academy.",
   },
@@ -27,6 +28,7 @@ export const distributors: Distributor[] = [
     role: "Distribuidor Oficial",
     website: "https://agriculture.rconline.com.ar",
     location: "Ciudad de Buenos Aires",
+    instagram: "https://www.instagram.com/agricultura.rconline/",
     notes:
       "Distribuidor oficial y único service DJI certificado. Parte del grupo RC Online / DJI Store AR.",
   },
@@ -36,6 +38,7 @@ export const distributors: Distributor[] = [
     role: "Distribuidor Oficial",
     website: "https://dji.akron.com.ar",
     location: "San Francisco, Córdoba",
+    instagram: "https://www.instagram.com/akron_maquinaria/",
     notes:
       "Distribuidor oficial DJI Agriculture. También cubre Pergamino y Tres Arroyos. Venta directa de fábrica.",
   },
@@ -46,6 +49,7 @@ export const distributors: Distributor[] = [
     website: "https://agro.tododrones.com.ar",
     location: "Ciudad de Buenos Aires",
     phone: "+54 9 11 5263-0498",
+    instagram: "https://www.instagram.com/tododronesagro/",
     notes: "Reseller autorizado con capacitaciones a campo. Atención personalizada.",
   },
   {
@@ -54,6 +58,7 @@ export const distributors: Distributor[] = [
     role: "Distribuidor Oficial",
     website: "https://summit-agro.com",
     location: "Red de distribuidores",
+    instagram: "https://www.instagram.com/summitagroar/",
     notes:
       "Lanzó su línea AgTech en 2024. Distribuye DJI Agras T100 y Mavic 3 Multiespectral a través de su red agroquímica.",
   },
@@ -63,9 +68,9 @@ export const distributors: Distributor[] = [
     role: "Distribuidor Oficial (AR, UY, PY)",
     website: "https://campoaereo.com",
     location: "Red de distribuidores",
-    instagram: "https://www.instagram.com/xagmercosur/",
+    instagram: "https://www.instagram.com/campoaereo.agro/",
     notes:
-      "Distribuidor oficial XAG para Argentina, Uruguay y Paraguay. Instagram: @xagmercosur",
+      "Distribuidor oficial XAG para Argentina, Uruguay y Paraguay.",
   },
   {
     company: "XAG Atlas",
@@ -73,6 +78,7 @@ export const distributors: Distributor[] = [
     role: "Importador y Distribuidor Oficial",
     website: "https://xagatlas.com",
     location: "Red de distribuidores",
+    instagram: "https://www.instagram.com/xag.atlas/",
     notes:
       "Importador y distribuidor. Responsable: Matías Oitana. Comercializa los modelos P100 y P150.",
   },
@@ -82,6 +88,7 @@ export const distributors: Distributor[] = [
     role: "Representante Oficial XAG Latam",
     website: "https://www.dronap.tech",
     location: "Las Varillas, Córdoba",
+    instagram: "https://www.instagram.com/dronap.lv/",
     notes:
       "Empresa especializada en soluciones agro. Representante oficial de XAG Latam. Responsable: Diego Ferrari.",
   },
@@ -92,6 +99,7 @@ export const distributors: Distributor[] = [
     website: "https://praetoriansgrupoargentina.com",
     location: "Argentina",
     phone: "+54 9 11 5834-8468",
+    instagram: "https://www.instagram.com/praetorians.grupo.argentina/",
     notes:
       "Distribuidor oficial de Hylio en Argentina. Comercializa el drone ARES (AG-272), NDAA compliant. También opera como Praetorians EEUU.",
   },
@@ -102,6 +110,7 @@ export const distributors: Distributor[] = [
     website: "https://topxgun.com.ar",
     location: "Argentina",
     phone: "+54 9 11 2872 2878",
+    instagram: "https://www.instagram.com/geosistemasagro/",
     notes:
       "Proveedora de soluciones de geoposicionamiento, tecnología geoespacial y sistemas GNSS para ingeniería, construcción y agricultura de precisión, certificada bajo normas ISO-9001 y TÜV.",
   },

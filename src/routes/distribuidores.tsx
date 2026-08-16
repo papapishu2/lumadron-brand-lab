@@ -1,6 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Globe, MapPin, Phone } from "lucide-react";
 import { distributorBrands, distributors } from "@/data/distributors";
+import djiLogo from "@/assets/brands/dji-logo.png";
+import xagLogo from "@/assets/brands/xag-logo.webp";
+import hylioLogo from "@/assets/brands/hylio-logo.png";
+import topxgunLogo from "@/assets/brands/topxgun-logo.png";
+
+const brandLogos: Record<string, { src: string; className: string }> = {
+  DJI: { src: djiLogo, className: "h-7 w-auto" },
+  XAG: { src: xagLogo, className: "h-6 w-auto" },
+  Hylio: { src: hylioLogo, className: "h-5 w-auto" },
+  TopXGun: { src: topxgunLogo, className: "h-5 w-auto" },
+};
 
 const TITLE = "Distribuidores de drones en Argentina | DJI, XAG, Hylio, TopXGun";
 const DESCRIPTION =

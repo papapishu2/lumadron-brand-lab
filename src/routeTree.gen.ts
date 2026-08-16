@@ -16,6 +16,7 @@ import { Route as DronesTopografiaRouteImport } from './routes/drones-topografia
 import { Route as DronesSeguridadRouteImport } from './routes/drones-seguridad'
 import { Route as DronesOilGasRouteImport } from './routes/drones-oil-gas'
 import { Route as DronesMineriaRouteImport } from './routes/drones-mineria'
+import { Route as DronesLogisticaRouteImport } from './routes/drones-logistica'
 import { Route as DronesAgriculturaRouteImport } from './routes/drones-agricultura'
 import { Route as DronesRouteImport } from './routes/drones'
 import { Route as ContactoRouteImport } from './routes/contacto'
@@ -66,6 +67,11 @@ const DronesOilGasRoute = DronesOilGasRouteImport.update({
 const DronesMineriaRoute = DronesMineriaRouteImport.update({
   id: '/drones-mineria',
   path: '/drones-mineria',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DronesLogisticaRoute = DronesLogisticaRouteImport.update({
+  id: '/drones-logistica',
+  path: '/drones-logistica',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DronesAgriculturaRoute = DronesAgriculturaRouteImport.update({
@@ -158,6 +164,7 @@ export interface FileRoutesByFullPath {
   '/contacto': typeof ContactoRoute
   '/drones': typeof DronesRouteWithChildren
   '/drones-agricultura': typeof DronesAgriculturaRoute
+  '/drones-logistica': typeof DronesLogisticaRoute
   '/drones-mineria': typeof DronesMineriaRoute
   '/drones-oil-gas': typeof DronesOilGasRoute
   '/drones-seguridad': typeof DronesSeguridadRoute
@@ -181,6 +188,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contacto': typeof ContactoRoute
   '/drones-agricultura': typeof DronesAgriculturaRoute
+  '/drones-logistica': typeof DronesLogisticaRoute
   '/drones-mineria': typeof DronesMineriaRoute
   '/drones-oil-gas': typeof DronesOilGasRoute
   '/drones-seguridad': typeof DronesSeguridadRoute
@@ -207,6 +215,7 @@ export interface FileRoutesById {
   '/contacto': typeof ContactoRoute
   '/drones': typeof DronesRouteWithChildren
   '/drones-agricultura': typeof DronesAgriculturaRoute
+  '/drones-logistica': typeof DronesLogisticaRoute
   '/drones-mineria': typeof DronesMineriaRoute
   '/drones-oil-gas': typeof DronesOilGasRoute
   '/drones-seguridad': typeof DronesSeguridadRoute
@@ -234,6 +243,7 @@ export interface FileRouteTypes {
     | '/contacto'
     | '/drones'
     | '/drones-agricultura'
+    | '/drones-logistica'
     | '/drones-mineria'
     | '/drones-oil-gas'
     | '/drones-seguridad'
@@ -257,6 +267,7 @@ export interface FileRouteTypes {
     | '/'
     | '/contacto'
     | '/drones-agricultura'
+    | '/drones-logistica'
     | '/drones-mineria'
     | '/drones-oil-gas'
     | '/drones-seguridad'
@@ -282,6 +293,7 @@ export interface FileRouteTypes {
     | '/contacto'
     | '/drones'
     | '/drones-agricultura'
+    | '/drones-logistica'
     | '/drones-mineria'
     | '/drones-oil-gas'
     | '/drones-seguridad'
@@ -308,6 +320,7 @@ export interface RootRouteChildren {
   ContactoRoute: typeof ContactoRoute
   DronesRoute: typeof DronesRouteWithChildren
   DronesAgriculturaRoute: typeof DronesAgriculturaRoute
+  DronesLogisticaRoute: typeof DronesLogisticaRoute
   DronesMineriaRoute: typeof DronesMineriaRoute
   DronesOilGasRoute: typeof DronesOilGasRoute
   DronesSeguridadRoute: typeof DronesSeguridadRoute
@@ -373,6 +386,13 @@ declare module '@tanstack/react-router' {
       path: '/drones-mineria'
       fullPath: '/drones-mineria'
       preLoaderRoute: typeof DronesMineriaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/drones-logistica': {
+      id: '/drones-logistica'
+      path: '/drones-logistica'
+      fullPath: '/drones-logistica'
+      preLoaderRoute: typeof DronesLogisticaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/drones-agricultura': {
@@ -521,6 +541,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactoRoute: ContactoRoute,
   DronesRoute: DronesRouteWithChildren,
   DronesAgriculturaRoute: DronesAgriculturaRoute,
+  DronesLogisticaRoute: DronesLogisticaRoute,
   DronesMineriaRoute: DronesMineriaRoute,
   DronesOilGasRoute: DronesOilGasRoute,
   DronesSeguridadRoute: DronesSeguridadRoute,

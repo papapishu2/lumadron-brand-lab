@@ -3,6 +3,7 @@ import oilGasHero from "@/assets/categories/oil-gas-hero.jpg";
 import mineriaHero from "@/assets/categories/mineria-hero.jpg";
 import seguridadHero from "@/assets/categories/seguridad-hero.jpg";
 import topografiaHero from "@/assets/categories/topografia-hero.jpg";
+import logisticaHero from "@/assets/categories/logistica-hero.jpg";
 
 export interface CategoryLanding {
   slug: string;
@@ -51,11 +52,14 @@ export const categoryLandings: CategoryLanding[] = [
       "xag-p150",
       "xag-p100-pro",
       "hylio-ares-hyl-150",
+      "topxgun-fp800",
+      "topxgun-fp700",
+      "topxgun-fp300e",
       "dji-mavic-3m",
     ],
     metaTitle: "Drones Agrícolas en Argentina | DJI Agras, XAG e Hylio",
     metaDescription:
-      "Drones para pulverización, esparcido y mapeo NDVI. Modelos DJI Agras, XAG P150 e Hylio para agricultura de precisión en Argentina.",
+      "Drones para pulverización, esparcido y mapeo NDVI. Modelos DJI Agras, XAG P150, TopXGun FP e Hylio para agricultura de precisión en Argentina.",
   },
   {
     slug: "oil-gas",
@@ -78,7 +82,7 @@ export const categoryLandings: CategoryLanding[] = [
         "Reducción de riesgos para personal en altura",
       ],
     },
-    productSlugs: ["hylio-photon", "dji-mavic-3m", "dji-flycart-100", "dji-flycart-30"],
+    productSlugs: ["hylio-photon", "dji-mavic-3m", "topxgun-c15", "topxgun-y160", "dji-flycart-100", "dji-flycart-30"],
     metaTitle: "Drones para Oil & Gas | Inspección y Logística Aérea",
     metaDescription:
       "Inspección térmica de ductos y plantas, detección de fugas y logística remota con drones DJI FlyCart e Hylio Photon en yacimientos.",
@@ -160,6 +164,38 @@ export const categoryLandings: CategoryLanding[] = [
     metaTitle: "Drones para Topografía | Fotogrametría RTK y Modelos 3D",
     metaDescription:
       "Mapeo aéreo, ortomosaicos y modelos 3D con precisión centimétrica usando drones RTK/PPK para obras, agro y energía en Argentina.",
+  },
+  {
+    slug: "logistica",
+    name: "Logística",
+    heroTitle: "Drones de carga para logística aérea",
+    heroSubtitle:
+      "Transporte de insumos, repuestos y muestras a locaciones remotas con drones de carga de hasta 165 kg.",
+    heroImage: logisticaHero,
+    intro: {
+      heading: "Logística aérea: menos tiempos muertos, más disponibilidad",
+      paragraphs: [
+        "Los drones de carga resuelven el traslado de insumos críticos donde el camino es el cuello de botella: campos anegados, cordillera, yacimientos aislados, islas y frentes de obra sin acceso vehicular. Un vuelo de minutos reemplaza horas de logística terrestre.",
+        "Con capacidades que van de 40 a 165 kg, permiten mover repuestos, combustible, agroquímicos, herramientas, muestras y ayuda humanitaria de forma programada y trazable, con pesaje en tiempo real, liberación automática de carga y navegación RTK.",
+      ],
+      bullets: [
+        "Cargas útiles de 40 a 165 kg según modelo",
+        "Abastecimiento de locaciones sin acceso vehicular",
+        "Pesaje en tiempo real y liberación automática de carga",
+        "Rutas programadas con navegación RTK y LiDAR 360°",
+        "Respuesta rápida en emergencias y ayuda humanitaria",
+      ],
+    },
+    productSlugs: [
+      "topxgun-y160",
+      "topxgun-sl80",
+      "topxgun-yp800",
+      "dji-flycart-100",
+      "dji-flycart-30",
+    ],
+    metaTitle: "Drones de Carga y Logística Aérea | Lumadron Argentina",
+    metaDescription:
+      "Drones de carga de 40 a 165 kg para logística aérea en zonas remotas: TopXGun Y160, SL80, YP800 y DJI FlyCart. Asesoramiento en Argentina.",
   },
 ];
 

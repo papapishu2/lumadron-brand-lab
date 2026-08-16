@@ -3,6 +3,7 @@ import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { Toaster } from "../components/ui/sonner";
 import drone404 from "../assets/404-drone.png";
+import ogImage from "../assets/lumadron-og.jpg";
 
 import appCss from "../styles.css?url";
 
@@ -44,7 +45,11 @@ export const Route = createRootRoute({
       { property: "og:site_name", content: "Lumadron" },
       { property: "og:locale", content: "es_AR" },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: ogImage },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: ogImage },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

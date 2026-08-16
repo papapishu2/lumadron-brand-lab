@@ -8,6 +8,7 @@ const navItems = [
   { label: "Drones", to: "/drones" },
   { label: "Categorías", to: "/categorias" },
   { label: "Marcas", to: "/marcas" },
+  { label: "Distribuidores", to: "/distribuidores" },
   { label: "Blog", to: "/blog" },
   { label: "Nosotros", to: "/nosotros" },
   { label: "Contacto", to: "/contacto" },

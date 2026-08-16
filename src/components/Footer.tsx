@@ -1,8 +1,29 @@
 import { Link } from "@tanstack/react-router";
+import { Instagram, Linkedin, X } from "lucide-react";
+
+const socialLinks = [
+  { href: "https://www.instagram.com/lumadronarg/", label: "Instagram", icon: Instagram },
+  { href: "https://www.linkedin.com/company/lumadron/", label: "LinkedIn", icon: Linkedin },
+  { href: "https://x.com/Lumadron", label: "X", icon: X },
+];
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-primary text-primary-foreground">
+    <footer className="bg-primary text-primary-foreground">
+      <div className="flex h-5 w-full items-center justify-center gap-6 bg-[#fa4301]">
+        {socialLinks.map(({ href, label, icon: Icon }) => (
+          <a
+            key={label}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={label}
+            className="text-white transition-opacity hover:opacity-80"
+          >
+            <Icon className="h-4 w-4" />
+          </a>
+        ))}
+      </div>
       <div className="mx-auto max-w-7xl px-4 py-12 lg:px-8">
         <div className="grid gap-8 md:grid-cols-4">
           <div>
@@ -47,3 +68,4 @@ export function Footer() {
     </footer>
   );
 }
+

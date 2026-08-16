@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Fuel, Plane, Shield, Mountain, Droplets, MapPin, Package, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
+import { categoryLandings } from "@/data/categories";
+import { categoryRoutes } from "@/components/CategoryLandingView";
 import heroBg from "@/assets/dji-hero.jpg";
 import { productImages } from "@/data/products";
 import { blogPosts } from "@/data/blog";
@@ -34,14 +36,6 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const categories = [
-  { to: "/drones-agricultura", name: "Agricultura", description: "Pulverización, monitoreo y análisis de cultivos con drones autónomos.", icon: Droplets, color: "bg-green-500/10 text-green-600" },
-  { to: "/drones-oil-gas", name: "Oil & Gas", description: "Inspección de infraestructura, monitoreo de ductos y detección de fugas.", icon: Fuel, color: "bg-blue-500/10 text-blue-600" },
-  { to: "/drones-mineria", name: "Minería", description: "Relevamiento topográfico, volumetría y control de operaciones mineras.", icon: Mountain, color: "bg-amber-500/10 text-amber-600" },
-  { to: "/drones-seguridad", name: "Seguridad", description: "Vigilancia perimetral, respuesta ante emergencias y monitoreo en tiempo real.", icon: Shield, color: "bg-red-500/10 text-red-600" },
-  { to: "/drones-logistica", name: "Logística", description: "Transporte de insumos y repuestos a locaciones remotas con drones de carga.", icon: Package, color: "bg-orange-500/10 text-orange-600" },
-  { to: "/drones-topografia", name: "Topografía", description: "Mapeo aéreo, fotogrametría y generación de modelos 3D de alta precisión.", icon: MapPin, color: "bg-violet-500/10 text-violet-600" },
-] as const;
 
 const brands = [
   { name: "DJI", description: "Líder mundial en drones comerciales e industriales.", products: 8, logo: logoDJI, logoClass: "h-12" },
@@ -115,24 +109,35 @@ function HomePage() {
           <h2 className="font-heading text-3xl font-bold text-foreground">Categorías de uso</h2>
           <p className="mt-2 text-muted-foreground">Soluciones para cada industria</p>
         </div>
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {categories.map((cat) => (
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {categoryLandings.map((cat) => (
             <Link
-              key={cat.name}
-              to={cat.to}
-              className="group rounded-xl border border-border bg-card p-6 transition-all hover:border-accent/30 hover:shadow-lg"
+              key={cat.slug}
+              to={categoryRoutes[cat.slug]}
+              className="group overflow-hidden rounded-xl border border-border bg-card transition-all hover:border-accent/30 hover:shadow-lg"
             >
-              <div className={`inline-flex rounded-lg p-2.5 ${cat.color}`}>
-                <cat.icon size={22} />
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={cat.heroImage}
+                  alt={`Drones para ${cat.name}`}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent" />
+                <h3 className="absolute bottom-4 left-5 font-heading text-2xl font-bold text-primary-foreground">
+                  {cat.name}
+                </h3>
               </div>
-              <h3 className="mt-4 font-heading text-lg font-semibold text-card-foreground">{cat.name}</h3>
-              <p className="mt-1.5 text-sm text-muted-foreground">{cat.description}</p>
-              <span className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-accent opacity-0 transition-opacity group-hover:opacity-100">
-                Ver más <ChevronRight size={14} />
-              </span>
+              <div className="p-6">
+                <p className="text-sm text-muted-foreground line-clamp-3">{cat.heroSubtitle}</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-accent">
+                  Ver soluciones <ChevronRight size={14} />
+                </span>
+              </div>
             </Link>
           ))}
         </div>
+
       </section>
 
       {/* Brands */}

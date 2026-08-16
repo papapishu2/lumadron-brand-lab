@@ -52,11 +52,14 @@ export const categoryLandings: CategoryLanding[] = [
       "xag-p150",
       "xag-p100-pro",
       "hylio-ares-hyl-150",
+      "topxgun-fp800",
+      "topxgun-fp700",
+      "topxgun-fp300e",
       "dji-mavic-3m",
     ],
     metaTitle: "Drones Agrícolas en Argentina | DJI Agras, XAG e Hylio",
     metaDescription:
-      "Drones para pulverización, esparcido y mapeo NDVI. Modelos DJI Agras, XAG P150 e Hylio para agricultura de precisión en Argentina.",
+      "Drones para pulverización, esparcido y mapeo NDVI. Modelos DJI Agras, XAG P150, TopXGun FP e Hylio para agricultura de precisión en Argentina.",
   },
   {
     slug: "oil-gas",
@@ -79,7 +82,7 @@ export const categoryLandings: CategoryLanding[] = [
         "Reducción de riesgos para personal en altura",
       ],
     },
-    productSlugs: ["hylio-photon", "dji-mavic-3m", "dji-flycart-100", "dji-flycart-30"],
+    productSlugs: ["hylio-photon", "dji-mavic-3m", "topxgun-c15", "topxgun-y160", "dji-flycart-100", "dji-flycart-30"],
     metaTitle: "Drones para Oil & Gas | Inspección y Logística Aérea",
     metaDescription:
       "Inspección térmica de ductos y plantas, detección de fugas y logística remota con drones DJI FlyCart e Hylio Photon en yacimientos.",

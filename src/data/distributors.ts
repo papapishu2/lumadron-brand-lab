@@ -98,12 +98,32 @@ export const distributors: Distributor[] = [
   {
     company: "Geosistemas",
     brands: ["TopXGun"],
-    role: "Distribuidor Oficial TopXGun",
+    role: "Distribuidor Oficial TopxGun",
     website: "https://topxgun.com.ar",
     location: "Argentina",
     phone: "+54 9 11 2872 2878",
     notes:
       "Proveedora de soluciones de geoposicionamiento, tecnología geoespacial y sistemas GNSS para ingeniería, construcción y agricultura de precisión, certificada bajo normas ISO-9001 y TÜV.",
+  },
+  {
+    company: "D&E Agtech",
+    brands: ["DJI"],
+    role: "Distribuidor Oficial",
+    website: "https://www.dyesa.com",
+    location: "Marcos Juárez, Córdoba",
+    phone: "+54 11 2660-3601",
+    notes:
+      "Empresa de agricultura de precisión. Figura en el listado oficial de DJI Agriculture y declara ser distribuidor oficial DJI Agriculture, PTx Trimble y Precision Planting.",
+  },
+  {
+    company: "Agronorte Drones",
+    brands: ["DJI"],
+    role: "Dealer Oficial",
+    website: "https://www.agronortedrones.com.ar",
+    location: "NEA / Litoral",
+    phone: "+54 3498 441048",
+    notes:
+      "Dealer oficial DJI Agriculture con red de sucursales y subdealers en Santa Fe, Entre Ríos, Corrientes, Misiones y Córdoba. Comercializa Agras T100, T70P y Mavic 3M.",
   },
 ];
 

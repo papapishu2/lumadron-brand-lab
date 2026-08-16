@@ -210,15 +210,26 @@ function HomePage() {
             </Link>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {blogPosts.map((post) => (
+            {latestPosts.map((post) => (
               <Link
                 key={post.slug}
                 to="/blog/$slug"
                 params={{ slug: post.slug }}
-                className="group rounded-xl border border-border bg-card p-6 transition-all hover:border-accent/30 hover:shadow-lg"
+                className="group overflow-hidden rounded-xl border border-border bg-card transition-all hover:border-accent/30 hover:shadow-lg"
               >
-                <span className="text-xs font-medium text-accent">{post.category}</span>
-                <h3 className="mt-2 font-heading text-lg font-semibold text-card-foreground group-hover:text-accent transition-colors">{post.title}</h3>
+                <div className="aspect-[16/9] overflow-hidden bg-secondary">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-6">
+                  <span className="text-xs font-medium text-accent">{post.category}</span>
+                  <h3 className="mt-2 font-heading text-lg font-semibold text-card-foreground transition-colors group-hover:text-accent">{post.title}</h3>
+                  <p className="mt-2 text-xs text-muted-foreground">{post.date}</p>
+                </div>
               </Link>
             ))}
           </div>

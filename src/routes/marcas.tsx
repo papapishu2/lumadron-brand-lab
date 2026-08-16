@@ -3,15 +3,16 @@ import { ArrowRight } from "lucide-react";
 import djiLogo from "@/assets/brands/dji-logo.png";
 import xagLogo from "@/assets/brands/xag-logo.webp";
 import hylioLogo from "@/assets/brands/hylio-logo.png";
+import topxgunLogo from "@/assets/brands/topxgun-logo.png";
 
 export const Route = createFileRoute("/marcas")({
   component: MarcasPage,
   head: () => ({
     meta: [
-      { title: "Marcas DJI, XAG e Hylio en Argentina | Lumadron" },
-      { name: "description", content: "Especialistas en DJI Agras, XAG y Hylio en Argentina. Drones agrícolas e industriales con respaldo, repuestos y soporte técnico." },
-      { property: "og:title", content: "Marcas DJI, XAG e Hylio en Argentina | Lumadron" },
-      { property: "og:description", content: "Especialistas en DJI Agras, XAG y Hylio en Argentina. Drones agrícolas e industriales con respaldo, repuestos y soporte técnico." },
+      { title: "Marcas DJI, XAG, Hylio y TopXGun | Lumadron Argentina" },
+      { name: "description", content: "Especialistas en DJI Agras, XAG, Hylio y TopXGun en Argentina. Drones agrícolas e industriales con respaldo, repuestos y soporte técnico." },
+      { property: "og:title", content: "Marcas DJI, XAG, Hylio y TopXGun | Lumadron Argentina" },
+      { property: "og:description", content: "Especialistas en DJI Agras, XAG, Hylio y TopXGun en Argentina. Drones agrícolas e industriales con respaldo, repuestos y soporte técnico." },
       { property: "og:url", content: "https://lumadron.com/marcas" },
     ],
     links: [{ rel: "canonical", href: "https://lumadron.com/marcas" }],
@@ -60,6 +61,22 @@ const brands = [
       { name: "ARES HYL-150", slug: "hylio-ares-hyl-150" },
       { name: "ATLAS HYL-300", slug: "hylio-atlas-hyl-300" },
       { name: "PHOTON", slug: "hylio-photon" },
+    ],
+  },
+  {
+    name: "TopXGun",
+    logo: topxgunLogo,
+    logoClass: "h-8 w-auto",
+    tagline: "Drones agrícolas y de carga para logística aérea",
+    description: "TopXGun Robotics desarrolla plataformas UAV para agricultura de precisión, logística aérea de carga pesada y limpieza industrial, con control de vuelo propio, LiDAR y radar phased array.",
+    products: [
+      { name: "FP800", slug: "topxgun-fp800" },
+      { name: "FP700", slug: "topxgun-fp700" },
+      { name: "FP300E", slug: "topxgun-fp300e" },
+      { name: "Y160", slug: "topxgun-y160" },
+      { name: "SL80", slug: "topxgun-sl80" },
+      { name: "YP800", slug: "topxgun-yp800" },
+      { name: "C15", slug: "topxgun-c15" },
     ],
   },
 ];

@@ -5,15 +5,16 @@ import { productImages } from "@/data/products";
 import logoDJI from "@/assets/brands/dji-logo.png";
 import logoXAG from "@/assets/brands/xag-logo.webp";
 import logoHylio from "@/assets/brands/hylio-logo.png";
+import logoTopXGun from "@/assets/brands/topxgun-logo.png";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
   head: () => ({
     meta: [
       { title: "Lumadron | Drones DJI, XAG e Hylio en Argentina" },
-      { name: "description", content: "Catálogo de drones DJI, XAG e Hylio con asesoramiento técnico en Argentina para agro, oil & gas, minería, seguridad y topografía." },
+      { name: "description", content: "Catálogo de drones DJI, XAG, Hylio y TopXGun con asesoramiento técnico en Argentina para agro, oil & gas, minería, seguridad y topografía." },
       { property: "og:title", content: "Lumadron | Drones DJI, XAG e Hylio en Argentina" },
-      { property: "og:description", content: "Catálogo y asesoramiento técnico en drones DJI, XAG e Hylio para operaciones agrícolas, energéticas, mineras, de seguridad y topografía." },
+      { property: "og:description", content: "Catálogo y asesoramiento técnico en drones DJI, XAG, Hylio y TopXGun para operaciones agrícolas, energéticas, mineras, de seguridad y topografía." },
       { property: "og:url", content: "https://lumadron.com/" },
     ],
     links: [{ rel: "canonical", href: "https://lumadron.com/" }],
@@ -44,6 +45,7 @@ const brands = [
   { name: "DJI", description: "Líder mundial en drones comerciales e industriales.", products: 8, logo: logoDJI, logoClass: "h-12" },
   { name: "XAG", description: "Especialista en drones agrícolas y smart farming.", products: 8, logo: logoXAG, logoClass: "h-10" },
   { name: "Hylio", description: "Drones de pulverización de alta capacidad.", products: 6, logo: logoHylio, logoClass: "h-8" },
+  { name: "TopXGun", description: "Drones agrícolas y de carga para logística aérea.", products: 7, logo: logoTopXGun, logoClass: "h-8" },
 ];
 
 const featuredProducts = [

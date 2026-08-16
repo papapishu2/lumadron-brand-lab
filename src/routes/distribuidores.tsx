@@ -100,8 +100,7 @@ function DistribuidoresPage() {
           </h1>
           <p className="mt-6 max-w-3xl text-lg text-primary-foreground/85">
             Distribuidores, importadores y representantes oficiales de drones
-            para agricultura e industria en Argentina, con las marcas que
-            comercializa cada empresa y sus datos de contacto.
+            para agricultura, industria y logística en Argentina.
           </p>
           <div className="mt-8 flex flex-wrap gap-2">
             {distributorBrands.map((brandName) => {

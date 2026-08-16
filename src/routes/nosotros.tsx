@@ -6,9 +6,9 @@ export const Route = createFileRoute("/nosotros")({
   head: () => ({
     meta: [
       { title: "Nosotros | Lumadron, Drones para Agro e Industria en Argentina" },
-      { name: "description", content: "Somos un equipo argentino especializado en drones y robótica para agricultura, oil & gas, minería, seguridad y topografía." },
+      { name: "description", content: "Lumadron es un sitio web dedicado a recopilar información sobre drones para agro, industria y logística en Argentina: modelos, marcas, distribuidores y notas técnicas." },
       { property: "og:title", content: "Nosotros | Lumadron, Drones para Agro e Industria en Argentina" },
-      { property: "og:description", content: "Somos un equipo argentino especializado en drones y robótica para agricultura, oil & gas, minería, seguridad y topografía." },
+      { property: "og:description", content: "Lumadron es un sitio web dedicado a recopilar información sobre drones para agro, industria y logística en Argentina: modelos, marcas, distribuidores y notas técnicas." },
       { property: "og:url", content: "https://lumadron.com/nosotros" },
     ],
     links: [{ rel: "canonical", href: "https://lumadron.com/nosotros" }],
@@ -21,24 +21,22 @@ function NosotrosPage() {
       <div className="max-w-3xl">
         <h1 className="font-heading text-4xl font-bold text-foreground">Nosotros</h1>
         <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-          Lumadron nace con la misión de potenciar la tecnología de drones y robótica a las industrias
-          argentinas. Somos especialistas en DJI, XAG y Hylio, y brindamos asesoramiento
-          técnico especializado para que cada operación encuentre la solución ideal.
+          Lumadron es un sitio web dedicado a recopilar, organizar y brindar información sobre drones para el agro, la industria y la logística en Argentina. Nuestro objetivo es que productores, empresas y profesionales puedan conocer, comparar y elegir equipos, tecnologías y aplicaciones con datos claros, actualizados y de fácil acceso.
         </p>
         <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-          Trabajamos con productores agrícolas, empresas de oil & gas, operaciones mineras,
-          fuerzas de seguridad y empresas de topografía en todo el país, ofreciendo no solo
-          equipamiento de primer nivel sino también capacitación y soporte técnico continuo.
+          Encontrarás un catálogo de modelos de DJI, XAG, Hylio y TopXGun, categorías de uso como agricultura, oil & gas, minería, seguridad, topografía y logística, notas técnicas y del blog, y un directorio de distribuidores, importadores y representantes del país. No comercializamos directamente: facilitamos el contacto con quienes venden y brindan soporte técnico.
+        </p>
+        <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+          Si estás buscando una solución con drones, querés comparar características o necesitás orientación para contactar a un distribuidor, Lumadron es tu punto de partida.
         </p>
       </div>
 
-
       <div className="mt-16 rounded-2xl bg-primary p-10 text-center md:p-14">
         <h2 className="font-heading text-2xl font-bold text-primary-foreground md:text-3xl">
-          ¿Querés conocer más sobre nosotros?
+          ¿Tenés dudas sobre un modelo o una aplicación?
         </h2>
         <p className="mt-3 text-primary-foreground/80">
-          Contactanos y te contamos cómo podemos ayudarte.
+          Contactanos y te ayudamos a encontrar la información que necesitás.
         </p>
         <Link
           to="/contacto"

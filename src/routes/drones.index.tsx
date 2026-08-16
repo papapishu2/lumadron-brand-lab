@@ -98,7 +98,11 @@ function DronesPage() {
             key={product.slug}
             className="group overflow-hidden rounded-xl border border-border bg-card transition-all hover:border-accent/30 hover:shadow-lg"
           >
-            <div className="flex h-44 items-center justify-center overflow-hidden bg-secondary/50">
+            <Link
+              to="/drones/$slug"
+              params={{ slug: product.slug }}
+              className="flex h-44 items-center justify-center overflow-hidden bg-secondary/50"
+            >
               {productImages[product.slug] ? (
                 <img
                   src={productImages[product.slug]}
@@ -109,7 +113,7 @@ function DronesPage() {
               ) : (
                 <Plane size={40} className="text-muted-foreground/20" />
               )}
-            </div>
+            </Link>
             <div className="p-5">
               <div className="flex items-center gap-2">
                 <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">

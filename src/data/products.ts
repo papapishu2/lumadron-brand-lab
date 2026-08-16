@@ -14,6 +14,13 @@ import hylioPegasus from "@/assets/products/hylio-pegasus-1.png";
 import hylioAres from "@/assets/products/hylio-ares-1.png";
 import hylioAtlas from "@/assets/products/hylio-atlas-1.png";
 import hylioPhoton from "@/assets/products/hylio-photon-1.png";
+import txFP800 from "@/assets/products/topxgun-fp800-1.png";
+import txFP700 from "@/assets/products/topxgun-fp700-1.png";
+import txFP300E from "@/assets/products/topxgun-fp300e-1.png";
+import txY160 from "@/assets/products/topxgun-y160-1.png";
+import txSL80 from "@/assets/products/topxgun-sl80-1.jpg";
+import txYP800 from "@/assets/products/topxgun-yp800-1.png";
+import txC15 from "@/assets/products/topxgun-c15-1.png";
 
 export interface Product {
   slug: string;
@@ -44,6 +51,13 @@ export const productImages: Record<string, string> = {
   "hylio-ares-hyl-150": hylioAres,
   "hylio-atlas-hyl-300": hylioAtlas,
   "hylio-photon": hylioPhoton,
+  "topxgun-fp800": txFP800,
+  "topxgun-fp700": txFP700,
+  "topxgun-fp300e": txFP300E,
+  "topxgun-y160": txY160,
+  "topxgun-sl80": txSL80,
+  "topxgun-yp800": txYP800,
+  "topxgun-c15": txC15,
 };
 
 export const allProducts: Product[] = [
@@ -210,7 +224,7 @@ export const allProducts: Product[] = [
     slug: "dji-flycart-100",
     name: "DJI FlyCart 100",
     brand: "DJI",
-    categories: ["Oil & Gas", "Minería"],
+    categories: ["Logística", "Oil & Gas", "Minería"],
     description:
       "Drone de transporte de carga pesada. Soporta hasta 170 kg de peso total de despegue.",
     features: [
@@ -234,7 +248,7 @@ export const allProducts: Product[] = [
     slug: "dji-flycart-30",
     name: "DJI FlyCart 30",
     brand: "DJI",
-    categories: ["Oil & Gas", "Minería"],
+    categories: ["Logística", "Oil & Gas", "Minería"],
     description:
       "Drone de entrega con capacidad de hasta 40 kg de carga y alcance de 28 km.",
     features: [
@@ -453,6 +467,184 @@ export const allProducts: Product[] = [
       "Navegación": "GPS",
     },
     officialUrl: "https://www.hyl.io/photon",
+  },
+  // ============ TopXGun ============
+  {
+    slug: "topxgun-fp800",
+    name: "TopXGun FP800",
+    brand: "TopXGun",
+    categories: ["Agricultura"],
+    description:
+      "Drone agrícola de alta capacidad con tanque de pulverización de 80 L, tanque de esparcido de 120 L y 85 kg de carga útil.",
+    features: [
+      "Tanque de pulverización de 80 L y de esparcido de 120 L",
+      "Carga útil máxima de 85 kg",
+      "Caudal de pulverización de hasta 40 L/min",
+      "Esparcidor con alimentación por tornillo sinfín (auger)",
+      "Sistema de radar LiDAR + radar phased array mmWave",
+    ],
+    specs: {
+      "Capacidad aspersión": "80 L",
+      "Capacidad esparcido": "120 L",
+      "Carga útil máx.": "85 kg",
+      "Caudal máx.": "40 L/min",
+      "Tamaño de gota": "30 – 500 µm",
+      "Descarga máx.": "400 L/min",
+      "Esparcidor": "Alimentación por auger",
+      "Sensores": "LiDAR + radar phased array mmWave",
+    },
+    officialUrl: "https://es.topxgunag.com/topxgun-fp800-agricultural-drone",
+  },
+  {
+    slug: "topxgun-fp700",
+    name: "TopXGun FP700",
+    brand: "TopXGun",
+    categories: ["Agricultura"],
+    description:
+      "Drone agrícola con tanque de pulverización de 60 L y esparcido de 80 L, pensado para grandes superficies y fruticultura.",
+    features: [
+      "Tanque de pulverización de 60 L y de esparcido de 80 L",
+      "Carga útil máxima de 70 kg",
+      "Boquillas centrífugas con partícula regulable de 30 a 500 µm",
+      "Esparcidor centrífugo SP6 con rango de 5 a 10 m",
+      "Estructura de aluminio aeronáutico con protección IP67",
+    ],
+    specs: {
+      "Capacidad aspersión": "60 L",
+      "Capacidad esparcido": "80 L",
+      "Carga útil máx.": "70 kg",
+      "Caudal máx.": "10 L/min por boquilla",
+      "Boquillas": "Centrífugas",
+      "Esparcidor": "Centrífugo SP6 (5 – 10 m)",
+      "Baterías": "2 x 20.000 mAh",
+      "Evitación de obstáculos": "Detección frontal y desvío autónomo",
+    },
+    officialUrl: "https://es.topxgunag.com/topxgun-fp700-agriculture-drone",
+  },
+  {
+    slug: "topxgun-fp300e",
+    name: "TopXGun FP300E",
+    brand: "TopXGun",
+    categories: ["Agricultura"],
+    description:
+      "Drone agrícola compacto y plegable con 30 L de pulverización, 45 L de esparcido y hasta 10,67 ha/hora de rendimiento.",
+    features: [
+      "Tanque de pulverización de 30 L y de esparcido de 45 L",
+      "Carga útil máxima de 30 kg",
+      "Rendimiento de hasta 10,67 ha/hora en pulverización",
+      "Esparcido de hasta 1,5 t/hora",
+      "Diseño plegable transportable por una sola persona",
+    ],
+    specs: {
+      "Capacidad aspersión": "30 L",
+      "Capacidad esparcido": "45 L",
+      "Carga útil máx.": "30 kg",
+      "Tamaño de gota": "30 – 500 µm",
+      "Eficiencia pulverización": "hasta 10,67 ha/h",
+      "Eficiencia esparcido": "hasta 1,5 t/h",
+      "Alimentación esparcido": "100 kg/min (fertilizante compuesto)",
+      "Batería": "20.000 mAh",
+    },
+    officialUrl: "https://es.topxgunag.com/topxgun-fp300e-agricultural-drone",
+  },
+  {
+    slug: "topxgun-y160",
+    name: "TopXGun Y160",
+    brand: "TopXGun",
+    categories: ["Logística", "Oil & Gas"],
+    description:
+      "Drone de carga de rotores coaxiales con 165 kg de carga útil máxima para logística aérea y abastecimiento de locaciones remotas.",
+    features: [
+      "Carga útil máxima de 165 kg",
+      "Diseño de doble rotor coaxial para mayor estabilidad",
+      "Empuje máximo por eje de hasta 150 kg",
+      "LiDAR 360° + radar phased array mmWave",
+      "Pesaje en tiempo real y sistema antivibración inteligente",
+    ],
+    specs: {
+      "Carga útil máx.": "165 kg",
+      "Configuración": "Doble rotor coaxial",
+      "Sensores": "LiDAR + radar phased array mmWave",
+      "Energía": "Doble batería (estándar) / triple o cuádruple (opcional)",
+      "Pesaje en tiempo real": "Sí",
+      "Lanzamiento terrestre": "Soportado",
+    },
+    officialUrl: "https://es.topxgunag.com/y160-delivery-drone",
+  },
+  {
+    slug: "topxgun-sl80",
+    name: "TopXGun SL80",
+    brand: "TopXGun",
+    categories: ["Logística"],
+    description:
+      "Drone de reparto con 80 kg de carga útil máxima y cuatro baterías semisólidas, ideal para transporte en zonas montañosas y emergencias.",
+    features: [
+      "Carga útil máxima de 80 kg (50 kg con 30 min de autonomía)",
+      "Cuatro baterías semisólidas 18S de 56 Ah",
+      "LiDAR de 360° y radar phased array mmWave",
+      "Sistema de paracaídas automático",
+      "Control por dos operadores y liberación automática del gancho",
+    ],
+    specs: {
+      "Carga útil máx.": "80 kg",
+      "Autonomía": "hasta 30 min con 50 kg",
+      "Baterías": "4 x 56 Ah 18S semisólidas",
+      "Cargador": "12 kW inteligente refrigerado por aire",
+      "Sensores": "LiDAR + radar phased array mmWave",
+      "Seguridad": "Paracaídas automático",
+    },
+    officialUrl: "https://es.topxgunag.com/sl80-delivery-drone",
+  },
+  {
+    slug: "topxgun-yp800",
+    name: "TopXGun YP800",
+    brand: "TopXGun",
+    categories: ["Logística"],
+    description:
+      "Drone de reparto de baja altitud con 62 kg de carga útil, 6 km de alcance y múltiples configuraciones de transporte.",
+    features: [
+      "Carga útil máxima de 62 kg",
+      "Alcance máximo de vuelo de 6.000 m",
+      "Autonomía de 10 min a plena carga y 30 min sin carga",
+      "Múltiples opciones de alimentación y configuraciones de carga",
+      "Sistema de paracaídas de seguridad",
+    ],
+    specs: {
+      "Carga útil máx.": "62 kg",
+      "Autonomía": "10 min plena carga / 30 min sin carga",
+      "Alcance máx.": "6.000 m",
+      "Velocidad horizontal máx.": "10 m/s",
+      "Velocidad de ascenso": "5 m/s",
+      "Baterías": "2 x 34 Ah 18S litio",
+      "Seguridad": "Sistema de paracaídas",
+    },
+    officialUrl: "https://es.topxgunag.com/yp800-delivery-drone",
+  },
+  {
+    slug: "topxgun-c15",
+    name: "TopXGun C15",
+    brand: "TopXGun",
+    categories: ["Oil & Gas"],
+    description:
+      "Drone de limpieza aérea de alta presión para fachadas industriales, tanques y aerogeneradores, con protección IP67.",
+    features: [
+      "Limpieza a alta presión de 16 MPa y caudal de 20 L/min",
+      "Manguera de alta presión de 120 m y altura de trabajo de 100 m",
+      "Protección IP67 y cuerpo de aluminio resistente a la corrosión",
+      "Radar mmWave para distancia precisa a la estructura",
+      "RTK de alta precisión y FPV en tiempo real",
+    ],
+    specs: {
+      "Peso (con batería)": "21 kg",
+      "Barra de pulverización": "1,6 m",
+      "Velocidad máx.": "10 m/s",
+      "Manguera": "120 m",
+      "Altura máx. de trabajo": "100 m",
+      "Presión nominal": "16 MPa",
+      "Caudal nominal": "20 L/min",
+      "Batería": "20 Ah",
+    },
+    officialUrl: "https://es.topxgunag.com/topxgun-c15-cleaning-drone",
   },
 ];
 

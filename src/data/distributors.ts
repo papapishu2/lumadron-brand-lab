@@ -121,6 +121,7 @@ export const distributors: Distributor[] = [
     website: "https://www.dyesa.com",
     location: "Marcos Juárez, Córdoba",
     phone: "+54 11 2660-3601",
+    instagram: "https://www.instagram.com/dyeagtech/",
     notes:
       "Empresa de agricultura de precisión. Figura en el listado oficial de DJI Agriculture y declara ser distribuidor oficial DJI Agriculture, PTx Trimble y Precision Planting.",
   },
@@ -131,6 +132,7 @@ export const distributors: Distributor[] = [
     website: "https://www.agronortedrones.com.ar",
     location: "NEA / Litoral",
     phone: "+54 3498 441048",
+    instagram: "https://www.instagram.com/agronortedronesagricolas/",
     notes:
       "Dealer oficial DJI Agriculture con red de sucursales y subdealers en Santa Fe, Entre Ríos, Corrientes, Misiones y Córdoba. Comercializa Agras T100, T70P y Mavic 3M.",
   },

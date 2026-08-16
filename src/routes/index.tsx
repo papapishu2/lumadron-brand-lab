@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Fuel, Plane, Shield, Mountain, Droplets, MapPin, Package, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
+import { categoryLandings } from "@/data/categories";
+import { categoryRoutes } from "@/components/CategoryLandingView";
 import heroBg from "@/assets/dji-hero.jpg";
 import { productImages } from "@/data/products";
 import { blogPosts } from "@/data/blog";

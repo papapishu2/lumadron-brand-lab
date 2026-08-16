@@ -93,12 +93,6 @@ function HomePage() {
             >
               Ver productos <ArrowRight size={16} />
             </Link>
-            <Link
-              to="/contacto"
-              className="inline-flex items-center justify-center gap-2 rounded-lg border border-primary-foreground/30 bg-primary-foreground/10 px-6 py-3 font-heading text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/20"
-            >
-              Solicitar asesoramiento
-            </Link>
           </div>
         </div>
       </section>

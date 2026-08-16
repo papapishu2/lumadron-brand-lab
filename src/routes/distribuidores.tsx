@@ -94,19 +94,32 @@ function DistribuidoresPage() {
             Distribuidores de drones en Argentina
           </h1>
           <p className="mt-6 max-w-3xl text-lg text-primary-foreground/85">
-            Relevamiento de distribuidores, importadores y representantes oficiales de
-            drones para agricultura e industria en Argentina, con las marcas que
+            Distribuidores, importadores y representantes oficiales de drones
+            para agricultura e industria en Argentina, con las marcas que
             comercializa cada empresa y sus datos de contacto.
           </p>
           <div className="mt-8 flex flex-wrap gap-2">
-            {distributorBrands.map((brand) => (
-              <span
-                key={brand}
-                className="rounded-full border border-primary-foreground/25 bg-primary-foreground/10 px-4 py-1.5 text-sm font-medium text-primary-foreground"
-              >
-                {brand} · {distributors.filter((d) => d.brands.includes(brand)).length}
-              </span>
-            ))}
+            {distributorBrands.map((brandName) => {
+              const isActive = brand === brandName;
+              const count = distributors.filter((d) =>
+                d.brands.includes(brandName)
+              ).length;
+              return (
+                <Link
+                  key={brandName}
+                  to="/distribuidores"
+                  search={(prev) => ({ ...prev, brand: isActive ? "" : brandName })}
+                  className={[
+                    "rounded-full border px-4 py-1.5 text-sm font-medium transition-colors",
+                    isActive
+                      ? "border-accent bg-accent text-accent-foreground"
+                      : "border-primary-foreground/25 bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20",
+                  ].join(" ")}
+                >
+                  {brandName} · {count}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>

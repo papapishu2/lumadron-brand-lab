@@ -1,4 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { zodValidator, fallback } from "@tanstack/zod-adapter";
+import { z } from "zod";
 import { ArrowRight, Globe, MapPin, Phone } from "lucide-react";
 import { distributorBrands, distributors } from "@/data/distributors";
 import djiLogo from "@/assets/brands/dji-logo.png";
@@ -17,7 +19,12 @@ const TITLE = "Distribuidores de drones en Argentina | DJI, XAG, Hylio, TopXGun"
 const DESCRIPTION =
   "Listado de distribuidores oficiales de drones para agricultura e industria en Argentina: marcas que representan, sitio web, redes y teléfono de contacto.";
 
+const searchSchema = z.object({
+  brand: fallback(z.string(), "").default(""),
+});
+
 export const Route = createFileRoute("/distribuidores")({
+  validateSearch: zodValidator(searchSchema),
   component: DistribuidoresPage,
   head: () => ({
     meta: [

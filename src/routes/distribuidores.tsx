@@ -189,17 +189,6 @@ function DistribuidoresPage() {
                             {hostOf(d.website)}
                           </a>
                         </div>
-                        {d.phone && (
-                          <div className="flex items-center gap-2">
-                            <Phone size={15} className="flex-shrink-0 text-accent" />
-                            <a
-                              href={`tel:${d.phone.replace(/[^+\d]/g, "")}`}
-                              className="text-foreground hover:text-accent"
-                            >
-                              {d.phone}
-                            </a>
-                          </div>
-                        )}
                         {d.instagram && (
                           <div className="flex items-center gap-2">
                             <InstagramIcon />
@@ -210,6 +199,17 @@ function DistribuidoresPage() {
                               className="text-foreground hover:text-accent"
                             >
                               Instagram
+                            </a>
+                          </div>
+                        )}
+                        {d.phone && (
+                          <div className="flex items-center gap-2">
+                            <Phone size={15} className="flex-shrink-0 text-accent" />
+                            <a
+                              href={`tel:${d.phone.replace(/[^+\d]/g, "")}`}
+                              className="text-foreground hover:text-accent"
+                            >
+                              {d.phone}
                             </a>
                           </div>
                         )}

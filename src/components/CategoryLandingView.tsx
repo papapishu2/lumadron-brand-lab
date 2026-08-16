@@ -2,6 +2,8 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight, Check, ChevronRight } from "lucide-react";
 import { type CategoryLanding, categoryLandings } from "@/data/categories";
 import { allProducts, productImages } from "@/data/products";
+import { blogPosts } from "@/data/blog";
+
 
 const categoryRoutes: Record<string, string> = {
   agricultura: "/drones-agricultura",

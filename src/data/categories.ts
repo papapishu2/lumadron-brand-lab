@@ -17,6 +17,7 @@ export interface CategoryLanding {
     bullets: string[];
   };
   productSlugs: string[];
+  relatedPostSlugs: string[];
   metaTitle: string;
   metaDescription: string;
 }
@@ -57,6 +58,7 @@ export const categoryLandings: CategoryLanding[] = [
       "topxgun-fp300e",
       "dji-mavic-3m",
     ],
+    relatedPostSlugs: ["drones-agricolas-argentina-usos-beneficios", "costo-pulverizar-drone-agricola-argentina-2026", "dji-agras-t50-vs-xag-p150-comparativa"],
     metaTitle: "Drones Agrícolas en Argentina | DJI Agras, XAG e Hylio",
     metaDescription:
       "Drones para pulverización, esparcido y mapeo NDVI. Modelos DJI Agras, XAG P150, TopXGun FP e Hylio para agricultura de precisión en Argentina.",
@@ -83,6 +85,7 @@ export const categoryLandings: CategoryLanding[] = [
       ],
     },
     productSlugs: ["hylio-photon", "dji-mavic-3m", "topxgun-c15", "topxgun-y160", "dji-flycart-100", "dji-flycart-30"],
+    relatedPostSlugs: ["drones-inspeccion-oil-gas-argentina", "dji-flycart-30-vs-100-drones-carga", "normativa-anac-drones-comerciales-argentina"],
     metaTitle: "Drones para Oil & Gas | Inspección y Logística Aérea",
     metaDescription:
       "Inspección térmica de ductos y plantas, detección de fugas y logística remota con drones DJI FlyCart e Hylio Photon en yacimientos.",
@@ -109,6 +112,7 @@ export const categoryLandings: CategoryLanding[] = [
       ],
     },
     productSlugs: ["dji-mavic-3m", "hylio-photon", "dji-flycart-100"],
+    relatedPostSlugs: ["drones-mineria-latinoamerica", "drones-topografia-mineria-obras-relevamiento", "drones-rtk-topografia-precision-argentina"],
     metaTitle: "Drones para Minería | Volumetría y Mapeo RTK",
     metaDescription:
       "Volumetría de stockpiles, mapeo topográfico RTK y monitoreo de taludes con drones DJI Mavic 3M e Hylio Photon para minería en Argentina.",
@@ -135,6 +139,7 @@ export const categoryLandings: CategoryLanding[] = [
       ],
     },
     productSlugs: ["hylio-photon", "dji-mavic-3m"],
+    relatedPostSlugs: ["drones-seguridad-perimetral-industrial", "normativa-anac-drones-comerciales-argentina", "drones-inspeccion-oil-gas-argentina"],
     metaTitle: "Drones para Seguridad | Vigilancia y Respuesta Rápida",
     metaDescription:
       "Vigilancia perimetral, cámaras térmicas y soporte a fuerzas de seguridad y emergencias con drones profesionales en Argentina.",
@@ -161,6 +166,7 @@ export const categoryLandings: CategoryLanding[] = [
       ],
     },
     productSlugs: ["dji-mavic-3m", "hylio-photon"],
+    relatedPostSlugs: ["drones-rtk-topografia-precision-argentina", "drones-topografia-mineria-obras-relevamiento", "drones-mineria-latinoamerica"],
     metaTitle: "Drones para Topografía | Fotogrametría RTK y Modelos 3D",
     metaDescription:
       "Mapeo aéreo, ortomosaicos y modelos 3D con precisión centimétrica usando drones RTK/PPK para obras, agro y energía en Argentina.",
@@ -193,6 +199,7 @@ export const categoryLandings: CategoryLanding[] = [
       "dji-flycart-100",
       "dji-flycart-30",
     ],
+    relatedPostSlugs: ["dji-flycart-30-vs-100-drones-carga", "drones-inspeccion-oil-gas-argentina", "normativa-anac-drones-comerciales-argentina"],
     metaTitle: "Drones de Carga y Logística Aérea | Lumadron Argentina",
     metaDescription:
       "Drones de carga de 40 a 165 kg para logística aérea en zonas remotas: TopXGun Y160, SL80, YP800 y DJI FlyCart. Asesoramiento en Argentina.",

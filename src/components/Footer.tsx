@@ -79,6 +79,7 @@ export function Footer() {
               <li><Link to="/marcas" className="hover:opacity-100">XAG</Link></li>
               <li><Link to="/marcas" className="hover:opacity-100">Hylio</Link></li>
               <li><Link to="/marcas" className="hover:opacity-100">TopXGun</Link></li>
+              <li><Link to="/distribuidores" className="hover:opacity-100">Distribuidores</Link></li>
             </ul>
           </div>
           <div>

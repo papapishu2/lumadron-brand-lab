@@ -17,6 +17,11 @@ export function CategoryLandingView({ category }: { category: CategoryLanding })
     .map((slug) => allProducts.find((p) => p.slug === slug))
     .filter((p): p is NonNullable<typeof p> => Boolean(p));
 
+  const relatedPosts = category.relatedPostSlugs
+    .map((slug) => blogPosts.find((p) => p.slug === slug))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p));
+
+
   return (
     <>
       {/* Hero */}

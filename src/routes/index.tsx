@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Fuel, Plane, Shield, Mountain, Droplets, MapPin, ChevronRight } from "lucide-react";
+import { ArrowRight, Fuel, Plane, Shield, Mountain, Droplets, MapPin, Package, ChevronRight } from "lucide-react";
 import heroBg from "@/assets/dji-hero.jpg";
 import { productImages } from "@/data/products";
 import logoDJI from "@/assets/brands/dji-logo.png";
@@ -11,9 +11,9 @@ export const Route = createFileRoute("/")({
   component: HomePage,
   head: () => ({
     meta: [
-      { title: "Lumadron | Drones DJI, XAG e Hylio en Argentina" },
+      { title: "Lumadron | Drones DJI, XAG, Hylio y TopXGun en Argentina" },
       { name: "description", content: "Catálogo de drones DJI, XAG, Hylio y TopXGun con asesoramiento técnico en Argentina para agro, oil & gas, minería, seguridad y topografía." },
-      { property: "og:title", content: "Lumadron | Drones DJI, XAG e Hylio en Argentina" },
+      { property: "og:title", content: "Lumadron | Drones DJI, XAG, Hylio y TopXGun en Argentina" },
       { property: "og:description", content: "Catálogo y asesoramiento técnico en drones DJI, XAG, Hylio y TopXGun para operaciones agrícolas, energéticas, mineras, de seguridad y topografía." },
       { property: "og:url", content: "https://lumadron.com/" },
     ],
@@ -38,6 +38,7 @@ const categories = [
   { to: "/drones-oil-gas", name: "Oil & Gas", description: "Inspección de infraestructura, monitoreo de ductos y detección de fugas.", icon: Fuel, color: "bg-blue-500/10 text-blue-600" },
   { to: "/drones-mineria", name: "Minería", description: "Relevamiento topográfico, volumetría y control de operaciones mineras.", icon: Mountain, color: "bg-amber-500/10 text-amber-600" },
   { to: "/drones-seguridad", name: "Seguridad", description: "Vigilancia perimetral, respuesta ante emergencias y monitoreo en tiempo real.", icon: Shield, color: "bg-red-500/10 text-red-600" },
+  { to: "/drones-logistica", name: "Logística", description: "Transporte de insumos y repuestos a locaciones remotas con drones de carga.", icon: Package, color: "bg-orange-500/10 text-orange-600" },
   { to: "/drones-topografia", name: "Topografía", description: "Mapeo aéreo, fotogrametría y generación de modelos 3D de alta precisión.", icon: MapPin, color: "bg-violet-500/10 text-violet-600" },
 ] as const;
 
@@ -51,8 +52,8 @@ const brands = [
 const featuredProducts = [
   { slug: "dji-agras-t50", name: "DJI Agras T50", brand: "DJI", categories: ["Agricultura"], description: "Drone de pulverización de última generación con tanque de 40L.", image: productImages["dji-agras-t50"] },
   { slug: "xag-p150", name: "XAG P150", brand: "XAG", categories: ["Agricultura"], description: "Drone agrícola autónomo con capacidad de 50L y IA avanzada.", image: productImages["xag-p150"] },
-  { slug: "dji-flycart-100", name: "DJI FlyCart 100", brand: "DJI", categories: ["Oil & Gas", "Minería"], description: "Drone de carga industrial de gran capacidad para zonas remotas.", image: productImages["dji-flycart-100"] },
-  { slug: "dji-flycart-30", name: "DJI FlyCart 30", brand: "DJI", categories: ["Oil & Gas"], description: "Drone de carga para entrega en zonas remotas, hasta 30kg.", image: productImages["dji-flycart-30"] },
+  { slug: "dji-flycart-100", name: "DJI FlyCart 100", brand: "DJI", categories: ["Logística", "Oil & Gas"], description: "Drone de carga industrial de gran capacidad para zonas remotas.", image: productImages["dji-flycart-100"] },
+  { slug: "topxgun-y160", name: "TopXGun Y160", brand: "TopXGun", categories: ["Logística"], description: "Drone de carga coaxial con 165 kg de carga útil para logística aérea.", image: productImages["topxgun-y160"] },
 ];
 
 const blogPosts = [
@@ -103,7 +104,7 @@ function HomePage() {
           <h2 className="font-heading text-3xl font-bold text-foreground">Categorías de uso</h2>
           <p className="mt-2 text-muted-foreground">Soluciones para cada industria</p>
         </div>
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {categories.map((cat) => (
             <Link
               key={cat.name}
@@ -130,7 +131,7 @@ function HomePage() {
             <h2 className="font-heading text-3xl font-bold text-foreground">Principales marcas de drones para el agro y la industria</h2>
             <p className="mt-2 text-muted-foreground">Especialistas en Argentina</p>
           </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {brands.map((brand) => (
               <Link
                 key={brand.name}

@@ -3,6 +3,7 @@ import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { Toaster } from "../components/ui/sonner";
 import drone404 from "../assets/404-drone.png";
+import ogImage from "../assets/lumadron-og.jpg";
 
 import appCss from "../styles.css?url";
 

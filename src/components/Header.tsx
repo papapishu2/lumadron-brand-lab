@@ -10,8 +10,6 @@ const navItems = [
   { label: "Marcas", to: "/marcas" },
   { label: "Distribuidores", to: "/distribuidores" },
   { label: "Blog", to: "/blog" },
-  { label: "Nosotros", to: "/nosotros" },
-  { label: "Contacto", to: "/contacto" },
 ];
 
 export function Header() {

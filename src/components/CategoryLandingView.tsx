@@ -149,6 +149,43 @@ export function CategoryLandingView({ category }: { category: CategoryLanding })
         </div>
       </section>
 
+      {/* Related blog posts */}
+      {relatedPosts.length > 0 && (
+        <section className="bg-secondary/40">
+          <div className="mx-auto max-w-7xl px-4 py-16 lg:px-8">
+            <h2 className="font-heading text-2xl font-bold text-foreground">
+              Notas del blog relacionadas
+            </h2>
+            <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {relatedPosts.map((post) => (
+                <Link
+                  key={post.slug}
+                  to="/blog/$slug"
+                  params={{ slug: post.slug }}
+                  className="group overflow-hidden rounded-xl border border-border bg-card transition-all hover:border-accent/30 hover:shadow-lg"
+                >
+                  <div className="h-40 overflow-hidden">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <span className="text-xs font-medium text-accent">{post.category}</span>
+                    <h3 className="mt-1.5 font-heading text-base font-semibold text-card-foreground group-hover:text-accent">
+                      {post.title}
+                    </h3>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+
       {/* CTA */}
       <section className="mx-auto max-w-7xl px-4 pb-20 lg:px-8">
         <div className="rounded-2xl bg-primary p-10 text-center md:p-14">

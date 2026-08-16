@@ -81,6 +81,11 @@ function hostOf(url: string) {
 }
 
 function DistribuidoresPage() {
+  const { brand } = Route.useSearch();
+  const visibleBrands = brand
+    ? distributorBrands.filter((b) => b === brand)
+    : distributorBrands;
+
   return (
     <>
       <section className="bg-primary">
@@ -134,7 +139,7 @@ function DistribuidoresPage() {
         </p>
 
         <div className="mt-10 space-y-12">
-          {distributorBrands.map((brand) => {
+          {visibleBrands.map((brand) => {
             const items = distributors.filter((d) => d.brands.includes(brand));
             if (items.length === 0) return null;
             return (

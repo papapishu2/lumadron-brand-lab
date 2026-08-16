@@ -56,11 +56,21 @@ const featuredProducts = [
   { slug: "topxgun-y160", name: "TopXGun Y160", brand: "TopXGun", categories: ["Logística"], description: "Drone de carga coaxial con 165 kg de carga útil para logística aérea.", image: productImages["topxgun-y160"] },
 ];
 
-const blogPosts = [
-  { slug: "drones-agricolas-argentina-usos-beneficios", title: "Drones agrícolas en Argentina: usos, beneficios y oportunidades para el campo", category: "Agricultura" },
-  { slug: "dji-agras-t50-pulverizacion-agricola", title: "DJI Agras T50: qué ofrece para pulverización agrícola", category: "Agricultura" },
-  { slug: "drones-topografia-mineria-obras-relevamiento", title: "Drones para topografía, minería y obras: cómo reducen tiempos de relevamiento", category: "Topografía / Minería" },
-];
+const MONTHS: Record<string, number> = {
+  ene: 0, feb: 1, mar: 2, abr: 3, may: 4, jun: 5,
+  jul: 6, ago: 7, sep: 8, oct: 9, nov: 10, dic: 11,
+};
+
+function parseDate(date: string) {
+  const [day, month, year] = date.split(" ");
+  return new Date(Number(year), MONTHS[month.toLowerCase().slice(0, 3)] ?? 0, Number(day)).getTime();
+}
+
+const latestPosts = [...blogPosts]
+  .sort((a, b) => parseDate(b.date) - parseDate(a.date))
+  .slice(0, 3);
+
+
 
 
 

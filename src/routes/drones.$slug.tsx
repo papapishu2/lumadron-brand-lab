@@ -179,11 +179,12 @@ function ProductDetailPage() {
               </div>
 
               <Link
-                to="/contacto"
+                to="/distribuidores"
+                search={{ brand: product.brand }}
                 className="mt-8 inline-flex w-fit items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3 font-heading text-sm font-semibold text-accent-foreground shadow-md transition-all hover:opacity-90 hover:shadow-lg"
               >
-                <Send size={14} />
-                Solicitar cotización
+                <MapPin size={14} />
+                Ver distribuidores
               </Link>
             </div>
           </div>

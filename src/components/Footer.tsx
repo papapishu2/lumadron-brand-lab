@@ -37,7 +37,7 @@ const socialLinks = [
 export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground">
-      <div className="flex h-5 w-full items-center justify-center gap-6 bg-[#fa4301]">
+      <div className="flex h-10 w-full items-center justify-center gap-6 bg-[#fa4301]">
         {socialLinks.map(({ href, label, svg }) => (
           <a
             key={label}

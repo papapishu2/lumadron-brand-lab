@@ -1,6 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Globe, MapPin, Phone } from "lucide-react";
 import { distributorBrands, distributors } from "@/data/distributors";
+import djiLogo from "@/assets/brands/dji-logo.png";
+import xagLogo from "@/assets/brands/xag-logo.webp";
+import hylioLogo from "@/assets/brands/hylio-logo.png";
+import topxgunLogo from "@/assets/brands/topxgun-logo.png";
+
+const brandLogos: Record<string, { src: string; className: string }> = {
+  DJI: { src: djiLogo, className: "h-7 w-auto" },
+  XAG: { src: xagLogo, className: "h-6 w-auto" },
+  Hylio: { src: hylioLogo, className: "h-5 w-auto" },
+  TopXGun: { src: topxgunLogo, className: "h-5 w-auto" },
+};
 
 const TITLE = "Distribuidores de drones en Argentina | DJI, XAG, Hylio, TopXGun";
 const DESCRIPTION =
@@ -108,9 +119,19 @@ function DistribuidoresPage() {
             if (items.length === 0) return null;
             return (
               <div key={brand}>
-                <h3 className="font-heading text-xl font-semibold text-foreground">
-                  Distribuidores {brand}
-                </h3>
+                <div className="flex items-center gap-3">
+                  {brandLogos[brand] && (
+                    <img
+                      src={brandLogos[brand].src}
+                      alt={`Logo ${brand}`}
+                      className={`${brandLogos[brand].className} object-contain`}
+                      loading="lazy"
+                    />
+                  )}
+                  <h3 className="font-heading text-xl font-semibold text-foreground">
+                    Distribuidores {brand}
+                  </h3>
+                </div>
                 <div className="mt-5 grid gap-5 md:grid-cols-2">
                   {items.map((d) => (
                     <article

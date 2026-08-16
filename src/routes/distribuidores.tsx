@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Globe, Instagram, Linkedin, MapPin, Phone } from "lucide-react";
+import { ArrowRight, Globe, MapPin, Phone } from "lucide-react";
 import { distributorBrands, distributors } from "@/data/distributors";
 
 const TITLE = "Distribuidores de drones en Argentina | DJI, XAG, Hylio, TopXGun";
@@ -41,6 +41,22 @@ export const Route = createFileRoute("/distribuidores")({
     ],
   }),
 });
+
+function InstagramIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className="h-[15px] w-[15px] flex-shrink-0 text-accent" aria-hidden="true">
+      <path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.96.24 2.65.51.71.28 1.31.65 1.9 1.24.6.6.97 1.2 1.25 1.91.27.69.46 1.48.51 2.65.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.96-.51 2.65-.28.71-.65 1.31-1.25 1.9-.59.6-1.19.97-1.9 1.25-.69.27-1.48.46-2.65.51-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.96-.24-2.65-.51a5.26 5.26 0 0 1-1.9-1.25 5.26 5.26 0 0 1-1.25-1.9c-.27-.69-.46-1.48-.51-2.65C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.24-1.96.51-2.65.28-.71.65-1.31 1.25-1.91.59-.59 1.19-.96 1.9-1.24.69-.27 1.48-.46 2.65-.51C8.42 2.17 8.8 2.16 12 2.16Zm0 1.98c-3.14 0-3.5.01-4.73.07-.95.04-1.47.2-1.81.34-.46.18-.79.39-1.13.74-.35.34-.56.67-.74 1.13-.14.34-.3.86-.34 1.81-.06 1.23-.07 1.59-.07 4.73s.01 3.5.07 4.73c.04.95.2 1.47.34 1.81.18.46.39.79.74 1.13.34.35.67.56 1.13.74.34.14.86.3 1.81.34 1.23.06 1.59.07 4.73.07s3.5-.01 4.73-.07c.95-.04 1.47-.2 1.81-.34.46-.18.79-.39 1.13-.74.35-.34.56-.67.74-1.13.14-.34.3-.86.34-1.81.06-1.23.07-1.59.07-4.73s-.01-3.5-.07-4.73c-.04-.95-.2-1.47-.34-1.81a3.28 3.28 0 0 0-.74-1.13 3.28 3.28 0 0 0-1.13-.74c-.34-.14-.86-.3-1.81-.34-1.23-.06-1.59-.07-4.73-.07Zm0 3.37a5.06 5.06 0 1 1 0 10.12 5.06 5.06 0 0 1 0-10.12Zm0 8.34a3.28 3.28 0 1 0 0-6.56 3.28 3.28 0 0 0 0 6.56Zm6.44-8.56a1.18 1.18 0 1 1-2.36 0 1.18 1.18 0 0 1 2.36 0Z" />
+    </svg>
+  );
+}
+
+function LinkedinIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className="h-[15px] w-[15px] flex-shrink-0 text-accent" aria-hidden="true">
+      <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.05a4.2 4.2 0 0 1 3.77-2.07c4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.35c0-1.28-.02-2.92-1.78-2.92-1.78 0-2.05 1.39-2.05 2.82V21H9V9Z" />
+    </svg>
+  );
+}
 
 function hostOf(url: string) {
   return url.replace(/^https?:\/\//, "").replace(/\/$/, "");
@@ -141,7 +157,7 @@ function DistribuidoresPage() {
                         )}
                         {d.instagram && (
                           <div className="flex items-center gap-2">
-                            <Instagram size={15} className="flex-shrink-0 text-accent" />
+                            <InstagramIcon />
                             <a
                               href={d.instagram}
                               target="_blank"
@@ -154,7 +170,7 @@ function DistribuidoresPage() {
                         )}
                         {d.linkedin && (
                           <div className="flex items-center gap-2">
-                            <Linkedin size={15} className="flex-shrink-0 text-accent" />
+                            <LinkedinIcon />
                             <a
                               href={d.linkedin}
                               target="_blank"

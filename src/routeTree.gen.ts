@@ -19,6 +19,7 @@ import { Route as DronesMineriaRouteImport } from './routes/drones-mineria'
 import { Route as DronesLogisticaRouteImport } from './routes/drones-logistica'
 import { Route as DronesAgriculturaRouteImport } from './routes/drones-agricultura'
 import { Route as DronesRouteImport } from './routes/drones'
+import { Route as DistribuidoresRouteImport } from './routes/distribuidores'
 import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
@@ -82,6 +83,11 @@ const DronesAgriculturaRoute = DronesAgriculturaRouteImport.update({
 const DronesRoute = DronesRouteImport.update({
   id: '/drones',
   path: '/drones',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DistribuidoresRoute = DistribuidoresRouteImport.update({
+  id: '/distribuidores',
+  path: '/distribuidores',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactoRoute = ContactoRouteImport.update({
@@ -162,6 +168,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/blog': typeof BlogRouteWithChildren
   '/contacto': typeof ContactoRoute
+  '/distribuidores': typeof DistribuidoresRoute
   '/drones': typeof DronesRouteWithChildren
   '/drones-agricultura': typeof DronesAgriculturaRoute
   '/drones-logistica': typeof DronesLogisticaRoute
@@ -187,6 +194,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contacto': typeof ContactoRoute
+  '/distribuidores': typeof DistribuidoresRoute
   '/drones-agricultura': typeof DronesAgriculturaRoute
   '/drones-logistica': typeof DronesLogisticaRoute
   '/drones-mineria': typeof DronesMineriaRoute
@@ -213,6 +221,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/blog': typeof BlogRouteWithChildren
   '/contacto': typeof ContactoRoute
+  '/distribuidores': typeof DistribuidoresRoute
   '/drones': typeof DronesRouteWithChildren
   '/drones-agricultura': typeof DronesAgriculturaRoute
   '/drones-logistica': typeof DronesLogisticaRoute
@@ -241,6 +250,7 @@ export interface FileRouteTypes {
     | '/'
     | '/blog'
     | '/contacto'
+    | '/distribuidores'
     | '/drones'
     | '/drones-agricultura'
     | '/drones-logistica'
@@ -266,6 +276,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/contacto'
+    | '/distribuidores'
     | '/drones-agricultura'
     | '/drones-logistica'
     | '/drones-mineria'
@@ -291,6 +302,7 @@ export interface FileRouteTypes {
     | '/'
     | '/blog'
     | '/contacto'
+    | '/distribuidores'
     | '/drones'
     | '/drones-agricultura'
     | '/drones-logistica'
@@ -318,6 +330,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BlogRoute: typeof BlogRouteWithChildren
   ContactoRoute: typeof ContactoRoute
+  DistribuidoresRoute: typeof DistribuidoresRoute
   DronesRoute: typeof DronesRouteWithChildren
   DronesAgriculturaRoute: typeof DronesAgriculturaRoute
   DronesLogisticaRoute: typeof DronesLogisticaRoute
@@ -407,6 +420,13 @@ declare module '@tanstack/react-router' {
       path: '/drones'
       fullPath: '/drones'
       preLoaderRoute: typeof DronesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/distribuidores': {
+      id: '/distribuidores'
+      path: '/distribuidores'
+      fullPath: '/distribuidores'
+      preLoaderRoute: typeof DistribuidoresRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contacto': {
@@ -539,6 +559,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BlogRoute: BlogRouteWithChildren,
   ContactoRoute: ContactoRoute,
+  DistribuidoresRoute: DistribuidoresRoute,
   DronesRoute: DronesRouteWithChildren,
   DronesAgriculturaRoute: DronesAgriculturaRoute,
   DronesLogisticaRoute: DronesLogisticaRoute,

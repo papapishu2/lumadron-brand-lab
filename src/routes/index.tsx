@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Fuel, Plane, Shield, Mountain, Droplets, MapPin, Package, ChevronRight } from "lucide-react";
 import heroBg from "@/assets/dji-hero.jpg";
 import { productImages } from "@/data/products";
+import { blogPosts } from "@/data/blog";
 import logoDJI from "@/assets/brands/dji-logo.png";
 import logoXAG from "@/assets/brands/xag-logo.webp";
 import logoHylio from "@/assets/brands/hylio-logo.png";
@@ -56,11 +57,21 @@ const featuredProducts = [
   { slug: "topxgun-y160", name: "TopXGun Y160", brand: "TopXGun", categories: ["Logística"], description: "Drone de carga coaxial con 165 kg de carga útil para logística aérea.", image: productImages["topxgun-y160"] },
 ];
 
-const blogPosts = [
-  { slug: "drones-agricolas-argentina-usos-beneficios", title: "Drones agrícolas en Argentina: usos, beneficios y oportunidades para el campo", category: "Agricultura" },
-  { slug: "dji-agras-t50-pulverizacion-agricola", title: "DJI Agras T50: qué ofrece para pulverización agrícola", category: "Agricultura" },
-  { slug: "drones-topografia-mineria-obras-relevamiento", title: "Drones para topografía, minería y obras: cómo reducen tiempos de relevamiento", category: "Topografía / Minería" },
-];
+const MONTHS: Record<string, number> = {
+  ene: 0, feb: 1, mar: 2, abr: 3, may: 4, jun: 5,
+  jul: 6, ago: 7, sep: 8, oct: 9, nov: 10, dic: 11,
+};
+
+function parseDate(date: string) {
+  const [day, month, year] = date.split(" ");
+  return new Date(Number(year), MONTHS[month.toLowerCase().slice(0, 3)] ?? 0, Number(day)).getTime();
+}
+
+const latestPosts = [...blogPosts]
+  .sort((a, b) => parseDate(b.date) - parseDate(a.date))
+  .slice(0, 3);
+
+
 
 
 
@@ -199,15 +210,26 @@ function HomePage() {
             </Link>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {blogPosts.map((post) => (
+            {latestPosts.map((post) => (
               <Link
                 key={post.slug}
                 to="/blog/$slug"
                 params={{ slug: post.slug }}
-                className="group rounded-xl border border-border bg-card p-6 transition-all hover:border-accent/30 hover:shadow-lg"
+                className="group overflow-hidden rounded-xl border border-border bg-card transition-all hover:border-accent/30 hover:shadow-lg"
               >
-                <span className="text-xs font-medium text-accent">{post.category}</span>
-                <h3 className="mt-2 font-heading text-lg font-semibold text-card-foreground group-hover:text-accent transition-colors">{post.title}</h3>
+                <div className="aspect-[16/9] overflow-hidden bg-secondary">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-6">
+                  <span className="text-xs font-medium text-accent">{post.category}</span>
+                  <h3 className="mt-2 font-heading text-lg font-semibold text-card-foreground transition-colors group-hover:text-accent">{post.title}</h3>
+                  <p className="mt-2 text-xs text-muted-foreground">{post.date}</p>
+                </div>
               </Link>
             ))}
           </div>

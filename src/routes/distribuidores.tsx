@@ -1,4 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { zodValidator, fallback } from "@tanstack/zod-adapter";
+import { z } from "zod";
 import { ArrowRight, Globe, MapPin, Phone } from "lucide-react";
 import { distributorBrands, distributors } from "@/data/distributors";
 import djiLogo from "@/assets/brands/dji-logo.png";
@@ -17,7 +19,12 @@ const TITLE = "Distribuidores de drones en Argentina | DJI, XAG, Hylio, TopXGun"
 const DESCRIPTION =
   "Listado de distribuidores oficiales de drones para agricultura e industria en Argentina: marcas que representan, sitio web, redes y teléfono de contacto.";
 
+const searchSchema = z.object({
+  brand: fallback(z.string(), "").default(""),
+});
+
 export const Route = createFileRoute("/distribuidores")({
+  validateSearch: zodValidator(searchSchema),
   component: DistribuidoresPage,
   head: () => ({
     meta: [
@@ -74,6 +81,11 @@ function hostOf(url: string) {
 }
 
 function DistribuidoresPage() {
+  const { brand } = Route.useSearch();
+  const visibleBrands = brand
+    ? distributorBrands.filter((b) => b === brand)
+    : distributorBrands;
+
   return (
     <>
       <section className="bg-primary">
@@ -87,19 +99,32 @@ function DistribuidoresPage() {
             Distribuidores de drones en Argentina
           </h1>
           <p className="mt-6 max-w-3xl text-lg text-primary-foreground/85">
-            Relevamiento de distribuidores, importadores y representantes oficiales de
-            drones para agricultura e industria en Argentina, con las marcas que
+            Distribuidores, importadores y representantes oficiales de drones
+            para agricultura e industria en Argentina, con las marcas que
             comercializa cada empresa y sus datos de contacto.
           </p>
           <div className="mt-8 flex flex-wrap gap-2">
-            {distributorBrands.map((brand) => (
-              <span
-                key={brand}
-                className="rounded-full border border-primary-foreground/25 bg-primary-foreground/10 px-4 py-1.5 text-sm font-medium text-primary-foreground"
-              >
-                {brand} · {distributors.filter((d) => d.brands.includes(brand)).length}
-              </span>
-            ))}
+            {distributorBrands.map((brandName) => {
+              const isActive = brand === brandName;
+              const count = distributors.filter((d) =>
+                d.brands.includes(brandName)
+              ).length;
+              return (
+                <Link
+                  key={brandName}
+                  to="/distribuidores"
+                  search={(prev) => ({ ...prev, brand: isActive ? "" : brandName })}
+                  className={[
+                    "rounded-full border px-4 py-1.5 text-sm font-medium transition-colors",
+                    isActive
+                      ? "border-accent bg-accent text-accent-foreground"
+                      : "border-primary-foreground/25 bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20",
+                  ].join(" ")}
+                >
+                  {brandName} · {count}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -114,7 +139,7 @@ function DistribuidoresPage() {
         </p>
 
         <div className="mt-10 space-y-12">
-          {distributorBrands.map((brand) => {
+          {visibleBrands.map((brand) => {
             const items = distributors.filter((d) => d.brands.includes(brand));
             if (items.length === 0) return null;
             return (

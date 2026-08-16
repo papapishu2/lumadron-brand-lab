@@ -90,9 +90,6 @@ function DronesPage() {
           value={category}
           onChange={setCategory}
         />
-        <div className="ml-auto text-sm text-muted-foreground">
-          {filtered.length} {filtered.length === 1 ? "producto" : "productos"}
-        </div>
       </div>
 
       <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

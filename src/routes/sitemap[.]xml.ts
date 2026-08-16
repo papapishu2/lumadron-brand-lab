@@ -24,6 +24,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/drones-mineria", changefreq: "monthly", priority: "0.9" },
           { path: "/drones-seguridad", changefreq: "monthly", priority: "0.9" },
           { path: "/drones-topografia", changefreq: "monthly", priority: "0.9" },
+          { path: "/drones-logistica", changefreq: "monthly", priority: "0.9" },
           { path: "/marcas", changefreq: "monthly", priority: "0.7" },
           { path: "/nosotros", changefreq: "monthly", priority: "0.6" },
           { path: "/contacto", changefreq: "monthly", priority: "0.6" },

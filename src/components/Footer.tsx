@@ -15,6 +15,7 @@ export function Footer() {
             <h4 className="font-heading text-sm font-semibold uppercase tracking-wider opacity-60">Categorías</h4>
             <ul className="mt-3 space-y-2 text-sm opacity-80">
               <li><Link to="/drones-agricultura" className="hover:opacity-100">Agricultura</Link></li>
+              <li><Link to="/drones-logistica" className="hover:opacity-100">Logística</Link></li>
               <li><Link to="/drones-oil-gas" className="hover:opacity-100">Oil & Gas</Link></li>
               <li><Link to="/drones-mineria" className="hover:opacity-100">Minería</Link></li>
               <li><Link to="/drones-seguridad" className="hover:opacity-100">Seguridad</Link></li>
@@ -27,6 +28,7 @@ export function Footer() {
               <li><Link to="/marcas" className="hover:opacity-100">DJI</Link></li>
               <li><Link to="/marcas" className="hover:opacity-100">XAG</Link></li>
               <li><Link to="/marcas" className="hover:opacity-100">Hylio</Link></li>
+              <li><Link to="/marcas" className="hover:opacity-100">TopXGun</Link></li>
             </ul>
           </div>
           <div>

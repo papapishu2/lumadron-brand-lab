@@ -9,6 +9,7 @@ const categoryRoutes: Record<string, string> = {
   mineria: "/drones-mineria",
   seguridad: "/drones-seguridad",
   topografia: "/drones-topografia",
+  logistica: "/drones-logistica",
 };
 
 export function CategoryLandingView({ category }: { category: CategoryLanding }) {

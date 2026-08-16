@@ -119,9 +119,19 @@ function DistribuidoresPage() {
             if (items.length === 0) return null;
             return (
               <div key={brand}>
-                <h3 className="font-heading text-xl font-semibold text-foreground">
-                  Distribuidores {brand}
-                </h3>
+                <div className="flex items-center gap-3">
+                  {brandLogos[brand] && (
+                    <img
+                      src={brandLogos[brand].src}
+                      alt={`Logo ${brand}`}
+                      className={`${brandLogos[brand].className} object-contain`}
+                      loading="lazy"
+                    />
+                  )}
+                  <h3 className="font-heading text-xl font-semibold text-foreground">
+                    Distribuidores {brand}
+                  </h3>
+                </div>
                 <div className="mt-5 grid gap-5 md:grid-cols-2">
                   {items.map((d) => (
                     <article

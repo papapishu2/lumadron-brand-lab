@@ -27,6 +27,7 @@ import { Route as MarcasIndexRouteImport } from './routes/marcas.index'
 import { Route as DronesIndexRouteImport } from './routes/drones.index'
 import { Route as CategoriasIndexRouteImport } from './routes/categorias.index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as MarcasBrandRouteImport } from './routes/marcas.$brand'
 import { Route as EmailUnsubscribeRouteImport } from './routes/email/unsubscribe'
 import { Route as DronesSlugRouteImport } from './routes/drones.$slug'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
@@ -126,6 +127,11 @@ const BlogIndexRoute = BlogIndexRouteImport.update({
   path: '/',
   getParentRoute: () => BlogRoute,
 } as any)
+const MarcasBrandRoute = MarcasBrandRouteImport.update({
+  id: '/$brand',
+  path: '/$brand',
+  getParentRoute: () => MarcasRoute,
+} as any)
 const EmailUnsubscribeRoute = EmailUnsubscribeRouteImport.update({
   id: '/email/unsubscribe',
   path: '/email/unsubscribe',
@@ -188,6 +194,7 @@ export interface FileRoutesByFullPath {
   '/blog/$slug': typeof BlogSlugRoute
   '/drones/$slug': typeof DronesSlugRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
+  '/marcas/$brand': typeof MarcasBrandRoute
   '/blog/': typeof BlogIndexRoute
   '/categorias/': typeof CategoriasIndexRoute
   '/drones/': typeof DronesIndexRoute
@@ -213,6 +220,7 @@ export interface FileRoutesByTo {
   '/blog/$slug': typeof BlogSlugRoute
   '/drones/$slug': typeof DronesSlugRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
+  '/marcas/$brand': typeof MarcasBrandRoute
   '/blog': typeof BlogIndexRoute
   '/categorias': typeof CategoriasIndexRoute
   '/drones': typeof DronesIndexRoute
@@ -242,6 +250,7 @@ export interface FileRoutesById {
   '/blog/$slug': typeof BlogSlugRoute
   '/drones/$slug': typeof DronesSlugRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
+  '/marcas/$brand': typeof MarcasBrandRoute
   '/blog/': typeof BlogIndexRoute
   '/categorias/': typeof CategoriasIndexRoute
   '/drones/': typeof DronesIndexRoute
@@ -272,6 +281,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/drones/$slug'
     | '/email/unsubscribe'
+    | '/marcas/$brand'
     | '/blog/'
     | '/categorias/'
     | '/drones/'
@@ -297,6 +307,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/drones/$slug'
     | '/email/unsubscribe'
+    | '/marcas/$brand'
     | '/blog'
     | '/categorias'
     | '/drones'
@@ -325,6 +336,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/drones/$slug'
     | '/email/unsubscribe'
+    | '/marcas/$brand'
     | '/blog/'
     | '/categorias/'
     | '/drones/'
@@ -488,6 +500,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof BlogRoute
     }
+    '/marcas/$brand': {
+      id: '/marcas/$brand'
+      path: '/$brand'
+      fullPath: '/marcas/$brand'
+      preLoaderRoute: typeof MarcasBrandRouteImport
+      parentRoute: typeof MarcasRoute
+    }
     '/email/unsubscribe': {
       id: '/email/unsubscribe'
       path: '/email/unsubscribe'
@@ -573,10 +592,12 @@ const DronesRouteWithChildren =
   DronesRoute._addFileChildren(DronesRouteChildren)
 
 interface MarcasRouteChildren {
+  MarcasBrandRoute: typeof MarcasBrandRoute
   MarcasIndexRoute: typeof MarcasIndexRoute
 }
 
 const MarcasRouteChildren: MarcasRouteChildren = {
+  MarcasBrandRoute: MarcasBrandRoute,
   MarcasIndexRoute: MarcasIndexRoute,
 }
 

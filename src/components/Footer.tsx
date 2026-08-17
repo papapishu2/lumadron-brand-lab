@@ -75,10 +75,10 @@ export function Footer() {
           <div>
             <h4 className="font-heading text-sm font-semibold uppercase tracking-wider opacity-60">Marcas</h4>
             <ul className="mt-3 space-y-2 text-sm opacity-80">
-              <li><Link to="/marcas" className="hover:opacity-100">DJI</Link></li>
-              <li><Link to="/marcas" className="hover:opacity-100">XAG</Link></li>
-              <li><Link to="/marcas" className="hover:opacity-100">Hylio</Link></li>
-              <li><Link to="/marcas" className="hover:opacity-100">TopXGun</Link></li>
+              <li><Link to="/marcas/$brand" params={{ brand: "dji" }} className="hover:opacity-100">DJI</Link></li>
+              <li><Link to="/marcas/$brand" params={{ brand: "xag" }} className="hover:opacity-100">XAG</Link></li>
+              <li><Link to="/marcas/$brand" params={{ brand: "hylio" }} className="hover:opacity-100">Hylio</Link></li>
+              <li><Link to="/marcas/$brand" params={{ brand: "topxgun" }} className="hover:opacity-100">TopXGun</Link></li>
               <li><Link to="/distribuidores" className="hover:opacity-100">Distribuidores</Link></li>
             </ul>
           </div>

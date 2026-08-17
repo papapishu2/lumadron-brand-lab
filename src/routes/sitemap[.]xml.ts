@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { allProducts } from "@/data/products";
 import { blogPosts } from "@/data/blog";
+import { brands } from "@/data/brands";
 
 const BASE_URL = "https://lumadron.com";
 
@@ -26,6 +27,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/drones-topografia", changefreq: "monthly", priority: "0.9" },
           { path: "/drones-logistica", changefreq: "monthly", priority: "0.9" },
           { path: "/marcas", changefreq: "monthly", priority: "0.7" },
+          ...brands.map((b) => ({ path: `/marcas/${b.slug}`, changefreq: "monthly" as const, priority: "0.8" })),
           { path: "/distribuidores", changefreq: "monthly", priority: "0.7" },
           { path: "/nosotros", changefreq: "monthly", priority: "0.6" },
           { path: "/contacto", changefreq: "monthly", priority: "0.6" },

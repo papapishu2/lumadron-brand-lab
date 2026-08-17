@@ -145,7 +145,8 @@ function HomePage() {
             {brands.map((brand) => (
               <Link
                 key={brand.name}
-                to="/marcas"
+                to="/marcas/$brand"
+                params={{ brand: brand.name.toLowerCase() }}
                 className="group rounded-xl border border-border bg-card p-8 text-center transition-all hover:border-accent/30 hover:shadow-lg"
               >
                 <div className="mx-auto flex h-16 w-auto items-center justify-center px-4">

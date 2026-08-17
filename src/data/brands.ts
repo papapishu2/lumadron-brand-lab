@@ -92,7 +92,7 @@ export const brands: BrandInfo[] = [
     ],
     categories: ["Agricultura"],
     productSlugs: ["hylio-pegasus", "hylio-ares-hyl-150", "hylio-atlas-hyl-300", "hylio-photon"],
-    officialUrl: "https://www.hyliousa.com",
+    officialUrl: "https://www.hyl.io/",
   },
   {
     slug: "topxgun",

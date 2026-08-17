@@ -48,7 +48,7 @@ export const brands: BrandInfo[] = [
       "dji-flycart-100",
       "dji-flycart-30",
     ],
-    officialUrl: "https://ag.dji.com",
+    officialUrl: "https://ag.dji.com/es",
   },
   {
     slug: "xag",

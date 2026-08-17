@@ -23,6 +23,7 @@ import { Route as DistribuidoresRouteImport } from './routes/distribuidores'
 import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as MarcasIndexRouteImport } from './routes/marcas.index'
 import { Route as DronesIndexRouteImport } from './routes/drones.index'
 import { Route as CategoriasIndexRouteImport } from './routes/categorias.index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
@@ -105,6 +106,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MarcasIndexRoute = MarcasIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => MarcasRoute,
+} as any)
 const DronesIndexRoute = DronesIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -176,7 +182,7 @@ export interface FileRoutesByFullPath {
   '/drones-oil-gas': typeof DronesOilGasRoute
   '/drones-seguridad': typeof DronesSeguridadRoute
   '/drones-topografia': typeof DronesTopografiaRoute
-  '/marcas': typeof MarcasRoute
+  '/marcas': typeof MarcasRouteWithChildren
   '/nosotros': typeof NosotrosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -185,6 +191,7 @@ export interface FileRoutesByFullPath {
   '/blog/': typeof BlogIndexRoute
   '/categorias/': typeof CategoriasIndexRoute
   '/drones/': typeof DronesIndexRoute
+  '/marcas/': typeof MarcasIndexRoute
   '/api/public/contact': typeof ApiPublicContactRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
   '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
@@ -201,7 +208,6 @@ export interface FileRoutesByTo {
   '/drones-oil-gas': typeof DronesOilGasRoute
   '/drones-seguridad': typeof DronesSeguridadRoute
   '/drones-topografia': typeof DronesTopografiaRoute
-  '/marcas': typeof MarcasRoute
   '/nosotros': typeof NosotrosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -210,6 +216,7 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogIndexRoute
   '/categorias': typeof CategoriasIndexRoute
   '/drones': typeof DronesIndexRoute
+  '/marcas': typeof MarcasIndexRoute
   '/api/public/contact': typeof ApiPublicContactRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
   '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
@@ -229,7 +236,7 @@ export interface FileRoutesById {
   '/drones-oil-gas': typeof DronesOilGasRoute
   '/drones-seguridad': typeof DronesSeguridadRoute
   '/drones-topografia': typeof DronesTopografiaRoute
-  '/marcas': typeof MarcasRoute
+  '/marcas': typeof MarcasRouteWithChildren
   '/nosotros': typeof NosotrosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -238,6 +245,7 @@ export interface FileRoutesById {
   '/blog/': typeof BlogIndexRoute
   '/categorias/': typeof CategoriasIndexRoute
   '/drones/': typeof DronesIndexRoute
+  '/marcas/': typeof MarcasIndexRoute
   '/api/public/contact': typeof ApiPublicContactRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
   '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
@@ -267,6 +275,7 @@ export interface FileRouteTypes {
     | '/blog/'
     | '/categorias/'
     | '/drones/'
+    | '/marcas/'
     | '/api/public/contact'
     | '/lovable/email/suppression'
     | '/lovable/email/queue/process'
@@ -283,7 +292,6 @@ export interface FileRouteTypes {
     | '/drones-oil-gas'
     | '/drones-seguridad'
     | '/drones-topografia'
-    | '/marcas'
     | '/nosotros'
     | '/sitemap.xml'
     | '/blog/$slug'
@@ -292,6 +300,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/categorias'
     | '/drones'
+    | '/marcas'
     | '/api/public/contact'
     | '/lovable/email/suppression'
     | '/lovable/email/queue/process'
@@ -319,6 +328,7 @@ export interface FileRouteTypes {
     | '/blog/'
     | '/categorias/'
     | '/drones/'
+    | '/marcas/'
     | '/api/public/contact'
     | '/lovable/email/suppression'
     | '/lovable/email/queue/process'
@@ -338,7 +348,7 @@ export interface RootRouteChildren {
   DronesOilGasRoute: typeof DronesOilGasRoute
   DronesSeguridadRoute: typeof DronesSeguridadRoute
   DronesTopografiaRoute: typeof DronesTopografiaRoute
-  MarcasRoute: typeof MarcasRoute
+  MarcasRoute: typeof MarcasRouteWithChildren
   NosotrosRoute: typeof NosotrosRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   EmailUnsubscribeRoute: typeof EmailUnsubscribeRoute
@@ -450,6 +460,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/marcas/': {
+      id: '/marcas/'
+      path: '/'
+      fullPath: '/marcas/'
+      preLoaderRoute: typeof MarcasIndexRouteImport
+      parentRoute: typeof MarcasRoute
+    }
     '/drones/': {
       id: '/drones/'
       path: '/'
@@ -555,6 +572,17 @@ const DronesRouteChildren: DronesRouteChildren = {
 const DronesRouteWithChildren =
   DronesRoute._addFileChildren(DronesRouteChildren)
 
+interface MarcasRouteChildren {
+  MarcasIndexRoute: typeof MarcasIndexRoute
+}
+
+const MarcasRouteChildren: MarcasRouteChildren = {
+  MarcasIndexRoute: MarcasIndexRoute,
+}
+
+const MarcasRouteWithChildren =
+  MarcasRoute._addFileChildren(MarcasRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BlogRoute: BlogRouteWithChildren,
@@ -567,7 +595,7 @@ const rootRouteChildren: RootRouteChildren = {
   DronesOilGasRoute: DronesOilGasRoute,
   DronesSeguridadRoute: DronesSeguridadRoute,
   DronesTopografiaRoute: DronesTopografiaRoute,
-  MarcasRoute: MarcasRoute,
+  MarcasRoute: MarcasRouteWithChildren,
   NosotrosRoute: NosotrosRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   EmailUnsubscribeRoute: EmailUnsubscribeRoute,

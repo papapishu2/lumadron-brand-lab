@@ -45,6 +45,7 @@ const brands = [
 ];
 
 const featuredProducts = [
+  { slug: "dji-agras-t55", name: "DJI Agras T55", brand: "DJI", categories: ["Agricultura"], description: "Drone agrícola liviano con tanque de 50 L, esparcido de 55 kg y operación totalmente automática.", image: productImages["dji-agras-t55"] },
   { slug: "dji-agras-t50", name: "DJI Agras T50", brand: "DJI", categories: ["Agricultura"], description: "Drone de pulverización de última generación con tanque de 40L.", image: productImages["dji-agras-t50"] },
   { slug: "xag-p150", name: "XAG P150", brand: "XAG", categories: ["Agricultura"], description: "Drone agrícola autónomo con capacidad de 50L y IA avanzada.", image: productImages["xag-p150"] },
   { slug: "dji-flycart-100", name: "DJI FlyCart 100", brand: "DJI", categories: ["Logística", "Oil & Gas"], description: "Drone de carga industrial de gran capacidad para zonas remotas.", image: productImages["dji-flycart-100"] },

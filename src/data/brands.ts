@@ -39,6 +39,7 @@ export const brands: BrandInfo[] = [
     ],
     categories: ["Agricultura", "Logística", "Oil & Gas", "Minería", "Seguridad", "Topografía"],
     productSlugs: [
+      "dji-agras-t55",
       "dji-agras-t100",
       "dji-agras-t70p",
       "dji-agras-t50",

@@ -1,4 +1,4 @@
-import djiT55 from "@/assets/products/dji-agras-t55-1.png";
+import djiT55 from "@/assets/products/dji-agras-t55-1.jpg.asset.json";
 import djiT100 from "@/assets/products/dji-agras-t100-1.png";
 import djiT70p from "@/assets/products/dji-agras-t70p-1.png";
 import djiT50 from "@/assets/products/dji-agras-t50-1.png";

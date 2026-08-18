@@ -38,17 +38,17 @@ export const Route = createFileRoute("/")({
 
 
 const brands = [
-  { name: "DJI", description: "Líder mundial en drones comerciales e industriales.", products: 8, logo: logoDJI, logoClass: "h-12" },
+  { name: "DJI", description: "Líder mundial en drones comerciales e industriales.", products: 9, logo: logoDJI, logoClass: "h-12" },
   { name: "XAG", description: "Especialista en drones agrícolas y smart farming.", products: 8, logo: logoXAG, logoClass: "h-10" },
   { name: "Hylio", description: "Drones de pulverización de alta capacidad.", products: 6, logo: logoHylio, logoClass: "h-8" },
   { name: "TopXGun", description: "Drones agrícolas y de carga para logística aérea.", products: 7, logo: logoTopXGun, logoClass: "h-8" },
 ];
 
 const featuredProducts = [
+  { slug: "dji-agras-t55", name: "DJI Agras T55", brand: "DJI", categories: ["Agricultura"], description: "Drone agrícola liviano con tanque de 50 L, esparcido de 55 kg y operación totalmente automática.", image: productImages["dji-agras-t55"] },
   { slug: "dji-agras-t50", name: "DJI Agras T50", brand: "DJI", categories: ["Agricultura"], description: "Drone de pulverización de última generación con tanque de 40L.", image: productImages["dji-agras-t50"] },
   { slug: "xag-p150", name: "XAG P150", brand: "XAG", categories: ["Agricultura"], description: "Drone agrícola autónomo con capacidad de 50L y IA avanzada.", image: productImages["xag-p150"] },
   { slug: "dji-flycart-100", name: "DJI FlyCart 100", brand: "DJI", categories: ["Logística", "Oil & Gas"], description: "Drone de carga industrial de gran capacidad para zonas remotas.", image: productImages["dji-flycart-100"] },
-  { slug: "topxgun-y160", name: "TopXGun Y160", brand: "TopXGun", categories: ["Logística"], description: "Drone de carga coaxial con 165 kg de carga útil para logística aérea.", image: productImages["topxgun-y160"] },
 ];
 
 const MONTHS: Record<string, number> = {

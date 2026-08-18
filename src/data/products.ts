@@ -1,3 +1,4 @@
+import djiT55 from "@/assets/products/dji-agras-t55-1.png";
 import djiT100 from "@/assets/products/dji-agras-t100-1.png";
 import djiT70p from "@/assets/products/dji-agras-t70p-1.png";
 import djiT50 from "@/assets/products/dji-agras-t50-1.png";
@@ -35,6 +36,7 @@ export interface Product {
 }
 
 export const productImages: Record<string, string> = {
+  "dji-agras-t55": djiT55,
   "dji-agras-t100": djiT100,
   "dji-agras-t70p": djiT70p,
   "dji-agras-t50": djiT50,
@@ -62,6 +64,33 @@ export const productImages: Record<string, string> = {
 
 export const allProducts: Product[] = [
   // ============ DJI Agriculture ============
+  {
+    slug: "dji-agras-t55",
+    name: "DJI Agras T55",
+    brand: "DJI",
+    categories: ["Agricultura"],
+    description:
+      "Drone agrícola liviano y fácil de operar, con tanque de aspersión de 50 L, esparcido de 55 kg y modo de levantamiento de cargas.",
+    features: [
+      "Tanque de aspersión de 50 L con caudal de hasta 50 L/min",
+      "Esparcido de 55 kg con caudal de 400 kg/min",
+      "Construcción liviana con manija de transporte para carga individual",
+      "Sistema de seguridad mejorado con esquive de obstáculos más fluido",
+      "Disipador de calor de batería a bordo para operación en altas temperaturas",
+      "Operación totalmente automática",
+    ],
+    specs: {
+      "Capacidad aspersión": "50 L",
+      "Caudal aspersión": "50 L/min (aspersores de niebla)",
+      "Carga esparcido": "55 kg",
+      "Caudal esparcido": "400 kg/min",
+      "Modos de trabajo": "Aspersión / esparcido / levantamiento",
+      "Sensores": "Radar y visión con esquive de obstáculos",
+      "Navegación": "DJI RTK",
+      "Refrigeración": "Disipador de calor de batería a bordo",
+    },
+    officialUrl: "https://ag.dji.com/es/t55",
+  },
   {
     slug: "dji-agras-t100",
     name: "DJI Agras T100",

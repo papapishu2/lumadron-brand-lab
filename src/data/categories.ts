@@ -45,6 +45,7 @@ export const categoryLandings: CategoryLanding[] = [
       ],
     },
     productSlugs: [
+      "dji-agras-t55",
       "dji-agras-t100",
       "dji-agras-t70p",
       "dji-agras-t50",
